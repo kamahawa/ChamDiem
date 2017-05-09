@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>D:\Research\DevExpress\setup\|D:\Research\DevExpress\|\\localhost\Users\Administrator.1JYBSHQ781IO1PK\Desktop\setup\|Users\Administrator.1JYBSHQ781IO1PK\Desktop\setup\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>\\localhost\Users\Administrator.1JYBSHQ781IO1PK\Desktop\setup\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>
