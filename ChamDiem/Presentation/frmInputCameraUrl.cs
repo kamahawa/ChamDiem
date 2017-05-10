@@ -60,7 +60,18 @@ namespace ChamDiem
             for(int i = 1; i <= SO_BE_BAN; i++)
             {
                 DataRow row = dt.NewRow();
-                row[0] = "Bệ số " + i;
+                if(i < 9)
+                {
+                    row[0] = "Bia 4 bệ số " + i;
+                }
+                else if(i < 17)
+                {
+                    row[0] = "Bia 7 bệ số " + (i - 8);
+                }
+                else
+                {
+                    row[0] = "Bia 8 bệ số " + (i - 17);
+                }
                 // urlCamera bat dau tu 0
                 row[1] = frmMain.urlCamera[i - 1];
                 dt.Rows.Add(row);

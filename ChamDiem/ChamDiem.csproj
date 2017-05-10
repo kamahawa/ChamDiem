@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\ProcessImage.cs" />
+    <Compile Include="Business\Solider.cs" />
     <Compile Include="Component\TranspCtrl .cs">
       <SubType>Component</SubType>
     </Compile>
@@ -199,6 +200,7 @@
     <Content Include="libs\FoxLearn.License.dll" />
     <Content Include="libs\WebEye.StreamPlayerControl.dll" />
     <Content Include="M4A1.ico" />
+    <None Include="Resources\table-grid.png" />
     <None Include="Resources\Tong_diem_ban_la.wav" />
     <None Include="Resources\target-icon.png" />
     <None Include="Resources\bia8-10.png" />

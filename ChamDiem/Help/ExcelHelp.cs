@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChamDiem;
+using System;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
@@ -333,8 +334,7 @@ namespace CameraApp.Help
                     releaseObject(worksheetTong);
                     releaseObject(workbook);
                     releaseObject(xlApp);
-                    MessageBox.Show("gioi" + numGioi, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MessageBox.Show("Xuất file hoàn tất." + dtBia.Rows.Count, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xuất file hoàn tất.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

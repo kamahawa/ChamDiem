@@ -632,6 +632,16 @@ namespace ChamDiem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap table_grid {
+            get {
+                object obj = ResourceManager.GetObject("table_grid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap target_icon {
             get {
                 object obj = ResourceManager.GetObject("target_icon", resourceCulture);
