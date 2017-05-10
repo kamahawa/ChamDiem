@@ -70,7 +70,7 @@ namespace ChamDiem
                 }
                 else
                 {
-                    row[0] = "Bia 8 bệ số " + (i - 17);
+                    row[0] = "Bia 8 bệ số " + (i - 16);
                 }
                 // urlCamera bat dau tu 0
                 row[1] = frmMain.urlCamera[i - 1];
