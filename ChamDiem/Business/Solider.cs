@@ -9,9 +9,9 @@ namespace ChamDiem
     class Solider
     {
         public string name = "";//ho va ten
-        public int luotBanBia4 = 0;//so luot ban bia 4
-        public int luotBanBia7 = 0;//so luot ban bia 7
-        public int luotBanBia8 = 0;//so luot ban bia 8
+        public int luotBanBia4 = 1;//so luot ban bia 4
+        public int luotBanBia7 = 1;//so luot ban bia 7
+        public int luotBanBia8 = 1;//so luot ban bia 8
 
         int tongDiemBia4 = 0;//tong diem luot ban o bia 4
         int tongDiemBia7 = 0;//tong diem luot ban o bia 7

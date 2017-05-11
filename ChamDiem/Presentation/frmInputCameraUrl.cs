@@ -17,6 +17,9 @@ namespace ChamDiem
         //3 bia moi bia 8 be
         const int SO_BE_BAN = 24;
 
+        //so nguoi 1 luot ban, hien tai la 8 nguoi
+        private int _numberPersonShot = 8;
+
         //bien de kiem tra co thay doi url hay k
         public static bool isOkClick = false;
         public frmInputCameraUrl()
@@ -60,17 +63,18 @@ namespace ChamDiem
             for(int i = 1; i <= SO_BE_BAN; i++)
             {
                 DataRow row = dt.NewRow();
-                if(i < 9)
+                // show so thu tu cua be camera
+                if(i <= _numberPersonShot)
                 {
                     row[0] = "Bia 4 bệ số " + i;
                 }
-                else if(i < 17)
+                else if(i <= _numberPersonShot * 2)
                 {
-                    row[0] = "Bia 7 bệ số " + (i - 8);
+                    row[0] = "Bia 7 bệ số " + (i - _numberPersonShot);
                 }
                 else
                 {
-                    row[0] = "Bia 8 bệ số " + (i - 16);
+                    row[0] = "Bia 8 bệ số " + (i - 2 * _numberPersonShot);
                 }
                 // urlCamera bat dau tu 0
                 row[1] = frmMain.urlCamera[i - 1];

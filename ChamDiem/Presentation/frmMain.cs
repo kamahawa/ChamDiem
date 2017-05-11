@@ -23,6 +23,7 @@ namespace ChamDiem
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        #region ----- STATIC VARIABLE -----
         //bia de chon ban
         const int SELECT_BIA_4 = 1;
         const int SELECT_BIA_7 = 2;
@@ -32,6 +33,9 @@ namespace ChamDiem
         //bien mac dinh ve luot
         const int RESET_LUOT_KHOI_DAU = 1;
         const int RESET_MEMBER_KHOI_DAU = 0;
+
+        //luot ban o 1 bia
+        const int LUOT_BAN_1_BIA = 3;
         
         //3 bia moi bia 8 be
         const int SO_BE_BAN = 24;
@@ -65,6 +69,8 @@ namespace ChamDiem
         //khong co chon bat ky camera thi gan gia tri nay
         const int NO_CAMERA_SMALL = 0;
 
+        #endregion
+
         //array camera url
         public static string[] urlCamera = new string[SO_BE_BAN];
 
@@ -76,6 +82,9 @@ namespace ChamDiem
 
         //luot ban hien tai o cac bia
         private int _currentTurn1 = 0, _currentTurn2 = 0, _currentTurn3 = 0;
+
+        //so nguoi 1 luot ban, hien tai la 8 nguoi
+        private int _numberPersonShot = 8;
         
         private Solider[] _solider;//so nguoi ban
 
@@ -208,17 +217,17 @@ namespace ChamDiem
             if(_tabControlCamera.SelectedTabPageIndex == 0)
             {
                 _lblScore4.Text = "0";
-                ChamDiem(0, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, 1);
+                ChamDiem(0, _gridControlScore4, _lblName4, _lblScore4, 1);
             }
             else if (_tabControlCamera.SelectedTabPageIndex == 1)
             {
                 _lblScore7.Text = "0";
-                ChamDiem(0, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, 2);
+                ChamDiem(0, _gridControlScore7, _lblName7, _lblScore7, 2);
             }
             else if (_tabControlCamera.SelectedTabPageIndex == 2)
             {
                 _lblScore8.Text = "0";
-                ChamDiem(0, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, 3);
+                ChamDiem(0, _gridControlScore8, _lblName8, _lblScore8, 3);
             }
         }
 
@@ -268,6 +277,10 @@ namespace ChamDiem
                         _gridControlScore4.DataSource = null;
                         _gridControlScore4.DataSource = table;
                         _gridViewScore4.BestFitColumns();
+
+                        //khoi tao so nguoi ban
+                        SoNguoiBan(table);
+
                         LoadNameBia4();//table);
                     }
                     else if (_selectedBia == SELECT_BIA_7)
@@ -277,6 +290,10 @@ namespace ChamDiem
                         _gridControlScore7.DataSource = null;
                         _gridControlScore7.DataSource = table;
                         _gridViewScore7.BestFitColumns();
+
+                        //khoi tao so nguoi ban
+                        SoNguoiBan(table);
+
                         LoadNameBia7();//table);
                     }
                     else //if (_selectedBia == BAN_BIA_8)
@@ -286,6 +303,10 @@ namespace ChamDiem
                         _gridControlScore8.DataSource = null;
                         _gridControlScore8.DataSource = table;
                         _gridViewScore8.BestFitColumns();
+
+                        //khoi tao so nguoi ban
+                        SoNguoiBan(table);
+
                         LoadNameBia8();//table);
                     }
                 }
@@ -294,42 +315,6 @@ namespace ChamDiem
             {
                 File.AppendAllText("log.txt", ex.ToString());
             }
-        }
-        
-        private void _spcCamera4_StreamFailed(object sender, StreamFailedEventArgs e)
-        {
-            _barStaticItem4.Caption = "Camera kết nối thất bại";
-            _btnReconnect4.Enabled = true;
-        }
-
-        private void _spcCamera4_StreamStarted(object sender, EventArgs e)
-        {
-            _barStaticItem4.Caption = "Camera đang chạy";
-            _btnReconnect4.Enabled = false;
-        }
-
-        private void _spcCamera7_StreamFailed(object sender, StreamFailedEventArgs e)
-        {
-            _barStaticItem7.Caption = "Camera kết nối thất bại";
-            _btnReconnect7.Enabled = true;
-        }
-
-        private void _spcCamera7_StreamStarted(object sender, EventArgs e)
-        {
-            _barStaticItem7.Caption = "Camera đang chạy";
-            _btnReconnect7.Enabled = false;
-        }
-
-        private void _spcCamera8_StreamFailed(object sender, StreamFailedEventArgs e)
-        {
-            _barStaticItem8.Caption = "Camera kết nối thất bại";
-            _btnReconnect8.Enabled = true;
-        }
-
-        private void _spcCamera8_StreamStarted(object sender, EventArgs e)
-        {
-            _barStaticItem8.Caption = "Camera đang chạy";
-            _btnReconnect8.Enabled = false;
         }
 
         private void _transpCtrl4_MouseDown(object sender, MouseEventArgs e)
@@ -445,19 +430,19 @@ namespace ChamDiem
 
         private void _btnNextTurns_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (_tabControlCamera.SelectedTabPageIndex == 0 && _currentTurn1 + 8 < _solider.Length)
+            if (_tabControlCamera.SelectedTabPageIndex == 0 && _currentTurn1 + _numberPersonShot < _solider.Length)
             {
-                _currentTurn1 += 8;
+                _currentTurn1 += _numberPersonShot;
                 LoadNameBia4();
             }
-            else if (_tabControlCamera.SelectedTabPageIndex == 1 && _currentTurn2 + 8 < _solider.Length)
+            else if (_tabControlCamera.SelectedTabPageIndex == 1 && _currentTurn2 + _numberPersonShot < _solider.Length)
             {
-                _currentTurn2 += 8;
+                _currentTurn2 += _numberPersonShot;
                 LoadNameBia7();
             }
-            else if (_tabControlCamera.SelectedTabPageIndex == 2 && _currentTurn3 + 8 < _solider.Length)
+            else if (_tabControlCamera.SelectedTabPageIndex == 2 && _currentTurn3 + _numberPersonShot < _solider.Length)
             {
-                _currentTurn3 += 8;
+                _currentTurn3 += _numberPersonShot;
                 LoadNameBia8();
             }
         }
@@ -826,6 +811,38 @@ namespace ChamDiem
             }
         }
 
+        private void _tabControlCamera_SelectedPageChanging(object sender, DevExpress.XtraTab.TabPageChangingEventArgs e)
+        {
+            if (_tabControlCamera.SelectedTabPageIndex == 0)
+            {
+                StopCameraBia4();
+            }
+            else if (_tabControlCamera.SelectedTabPageIndex == 1)
+            {
+                StopCameraBia7();
+            }
+            else if (_tabControlCamera.SelectedTabPageIndex == 2)
+            {
+                StopCameraBia8();
+            }
+        }
+
+        private void _tabControlCamera_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (_tabControlCamera.SelectedTabPageIndex == 0)
+            {
+                LoadCameraBia4();
+            }
+            else if (_tabControlCamera.SelectedTabPageIndex == 1)
+            {
+                LoadCameraBia7();
+            }
+            else if (_tabControlCamera.SelectedTabPageIndex == 2)
+            {
+                LoadCameraBia8();
+            }
+        }
+
         #region ---------- XU LY CHAM DIEM ----------
 
         private void AddShotIcon(int x, int y, PanelControl panCam)
@@ -852,72 +869,116 @@ namespace ChamDiem
             }
         }
 
-        private void ChamDiem(int diem, ref int luot, GridControl dtgScore, LabelControl lblName, LabelControl lblScore, int be)
+        private void ChamDiem(int diem, GridControl dtgScore, LabelControl lblName, LabelControl lblScore, int be)
         {
             try
             {
-                int currentMember = 0;
+                int currentMember = 0;//nguoi ban hien tai o bia 4/7/8
+                int luot = 0;//luot ban cua nguoi do tai bia 4/7/8
+
                 //be == 1 la bia 4, be == 2 la bia 7, con khong la bia 8
                 if (be == 1)
                 {
+                    // lay nguoi ban hien tai
                     currentMember = _currentMemberBia4;
+                    //lay luot hien tai
+                    luot = _solider[currentMember].luotBanBia4 <= LUOT_BAN_1_BIA ? _solider[currentMember].luotBanBia4 : 0;                    
                 }
                 else if (be == 2)
                 {
                     currentMember = _currentMemberBia7;
+                    luot = _solider[currentMember].luotBanBia7 <= LUOT_BAN_1_BIA ? _solider[currentMember].luotBanBia7 : 0;
                 }
                 else
                 {
                     currentMember = _currentMemberBia8;
+                    luot = _solider[currentMember].luotBanBia8 <= LUOT_BAN_1_BIA ? _solider[currentMember].luotBanBia8 : 0;
                 }
+
+                if (luot == 0)
+                    return;
 
                 DataTable dt = (DataTable)dtgScore.DataSource;
                 dt.Rows[currentMember][luot] = diem;
 
-                if(_selectedBia == SELECT_3_BIA)
+                if (be == 1)
                 {
-                    //set tong diem
-                    //_tong3Bia[currentMember] += diem;
+                    _solider[currentMember].SetTongDiemBia4(diem);
+                }
+                else if (be == 2)
+                {
+                    _solider[currentMember].SetTongDiemBia7(diem);
+                }
+                else
+                {
+                    _solider[currentMember].SetTongDiemBia8(diem);
+                }
 
+                if (_selectedBia == SELECT_3_BIA)
+                {
                     //set tong diem
                     setTongDiem3Bia(currentMember);
                 }
 
                 docDiem(diem);
-
-                //set ten va diem 
-                if (luot == 1)
-                {
-                    lblName.Text = dt.Rows[currentMember][0].ToString();
-                }
-
+                
                 if (luot == 3)
                 {
-                    //ban het luot thi tinh tong diem
-                    int l1 = Int32.Parse(dt.Rows[currentMember][1].ToString());
-                    int l2 = Int32.Parse(dt.Rows[currentMember][2].ToString());
-                    int l3 = Int32.Parse(dt.Rows[currentMember][3].ToString());
+                    int tong = 0;
+                    if (be == 1)
+                    {
+                        tong = _solider[currentMember].GetTongDiemBia4();
+                    }
+                    else if (be == 2)
+                    {
+                        tong = _solider[currentMember].GetTongDiemBia7();
+                    }
+                    else
+                    {
+                        tong = _solider[currentMember].GetTongDiemBia8();
+                    }
 
-                    int tong = l1 + l2 + l3;
-                    
+                    //ban het luot thi tinh tong diem
+                    //int l1 = Int32.Parse(dt.Rows[currentMember][1].ToString());
+                    //int l2 = Int32.Parse(dt.Rows[currentMember][2].ToString());
+                    //int l3 = Int32.Parse(dt.Rows[currentMember][3].ToString());
+                    //int tong = l1 + l2 + l3;                    
                     //tong diem
                     dt.Rows[currentMember][4] = tong;
 
                     //neu khong phai la 3 bia thi cho xep loai luon o day.
                     if(_selectedBia != SELECT_3_BIA)
                     {
-                        XepLoai1Bia(tong, currentMember, dt);
+                        if (be == 1)
+                        {
+                            dt.Rows[currentMember][5] = _solider[currentMember].XepLoai1Bia(_solider[currentMember].GetTongDiemBia4());
+                        }
+                        else if (be == 2)
+                        {
+                            dt.Rows[currentMember][5] = _solider[currentMember].XepLoai1Bia(_solider[currentMember].GetTongDiemBia7());
+                        }
+                        else
+                        {
+                            dt.Rows[currentMember][5] = _solider[currentMember].XepLoai1Bia(_solider[currentMember].GetTongDiemBia8());
+                        }
                     }
-
-                    luot = 1;
-                    currentMember++; // het luot thi nguoi khac vao ban
                     
                     Thread thread = new Thread(() => soundDiem(be, tong));
                     thread.Start();
                 }
+
+                //tang so luot cua nguoi ban len
+                if (be == 1)
+                {
+                    _solider[currentMember].luotBanBia4++;
+                }
+                else if (be == 2)
+                {
+                    _solider[currentMember].luotBanBia7++;
+                }
                 else
                 {
-                    luot++;
+                    _solider[currentMember].luotBanBia8++;
                 }
             }
             catch (Exception ex)
@@ -1115,19 +1176,20 @@ namespace ChamDiem
             else if (_tong3Bia[currentMember] >= 45 && _tong3Bia[currentMember] <= 58)
             {
                 xeploai = "Đạt";
-            }
+            }            
+            */
+            int tong3Bia = _solider[currentMember].GetTongDiem3Bia();
             DataTable dt = (DataTable)_gridControlScore4.DataSource;
-            dt.Rows[currentMember][5] = _tong3Bia[currentMember];
-            dt.Rows[currentMember][6] = xeploai;
+            dt.Rows[currentMember][5] = tong3Bia;
+            dt.Rows[currentMember][6] = _solider[currentMember].XepLoai3Bia(tong3Bia);
 
             DataTable dt2 = (DataTable)_gridControlScore7.DataSource;
-            dt2.Rows[currentMember][5] = _tong3Bia[currentMember];
-            dt2.Rows[currentMember][6] = xeploai;
+            dt2.Rows[currentMember][5] = _solider[currentMember].GetTongDiem3Bia();
+            dt2.Rows[currentMember][6] = _solider[currentMember].XepLoai3Bia(tong3Bia);
 
             DataTable dt3 = (DataTable)_gridControlScore8.DataSource;
-            dt3.Rows[currentMember][5] = _tong3Bia[currentMember];
-            dt3.Rows[currentMember][6] = xeploai;
-            */
+            dt3.Rows[currentMember][5] = _solider[currentMember].GetTongDiem3Bia();
+            dt3.Rows[currentMember][6] = _solider[currentMember].XepLoai3Bia(tong3Bia);
         }
         
         #endregion
@@ -1207,7 +1269,7 @@ namespace ChamDiem
             }
         }
 
-        void StopCameraSmall(StreamPlayerControl spc)
+        void StopCameraSmall(ref StreamPlayerControl spc)
         {
             if (spc.IsPlaying)
             {
@@ -1503,38 +1565,38 @@ namespace ChamDiem
 
         void StopCameraBia4()
         {
-            StopCameraSmall(_spcSmallCamera41);
-            StopCameraSmall(_spcSmallCamera42);
-            StopCameraSmall(_spcSmallCamera43);
-            StopCameraSmall(_spcSmallCamera44);
-            StopCameraSmall(_spcSmallCamera45);
-            StopCameraSmall(_spcSmallCamera46);
-            StopCameraSmall(_spcSmallCamera47);
-            StopCameraSmall(_spcSmallCamera48);
+            StopCameraSmall(ref _spcSmallCamera41);
+            StopCameraSmall(ref _spcSmallCamera42);
+            StopCameraSmall(ref _spcSmallCamera43);
+            StopCameraSmall(ref _spcSmallCamera44);
+            StopCameraSmall(ref _spcSmallCamera45);
+            StopCameraSmall(ref _spcSmallCamera46);
+            StopCameraSmall(ref _spcSmallCamera47);
+            StopCameraSmall(ref _spcSmallCamera48);
         }
 
         void StopCameraBia7()
         {
-            StopCameraSmall(_spcSmallCamera71);
-            StopCameraSmall(_spcSmallCamera72);
-            StopCameraSmall(_spcSmallCamera73);
-            StopCameraSmall(_spcSmallCamera74);
-            StopCameraSmall(_spcSmallCamera75);
-            StopCameraSmall(_spcSmallCamera76);
-            StopCameraSmall(_spcSmallCamera77);
-            StopCameraSmall(_spcSmallCamera78);
+            StopCameraSmall(ref _spcSmallCamera71);
+            StopCameraSmall(ref _spcSmallCamera72);
+            StopCameraSmall(ref _spcSmallCamera73);
+            StopCameraSmall(ref _spcSmallCamera74);
+            StopCameraSmall(ref _spcSmallCamera75);
+            StopCameraSmall(ref _spcSmallCamera76);
+            StopCameraSmall(ref _spcSmallCamera77);
+            StopCameraSmall(ref _spcSmallCamera78);
         }
 
         void StopCameraBia8()
         {
-            StopCameraSmall(_spcSmallCamera81);
-            StopCameraSmall(_spcSmallCamera82);
-            StopCameraSmall(_spcSmallCamera83);
-            StopCameraSmall(_spcSmallCamera84);
-            StopCameraSmall(_spcSmallCamera85);
-            StopCameraSmall(_spcSmallCamera86);
-            StopCameraSmall(_spcSmallCamera87);
-            StopCameraSmall(_spcSmallCamera88);
+            StopCameraSmall(ref _spcSmallCamera81);
+            StopCameraSmall(ref _spcSmallCamera82);
+            StopCameraSmall(ref _spcSmallCamera83);
+            StopCameraSmall(ref _spcSmallCamera84);
+            StopCameraSmall(ref _spcSmallCamera85);
+            StopCameraSmall(ref _spcSmallCamera86);
+            StopCameraSmall(ref _spcSmallCamera87);
+            StopCameraSmall(ref _spcSmallCamera88);
         }
 
         private void refreshControl()
@@ -1555,6 +1617,36 @@ namespace ChamDiem
             _lblScore7.Text = "";
             _lblScore8.Text = "";
 
+            //xoa name bia 4
+            _lblName41.Text = "";
+            _lblName42.Text = "";
+            _lblName43.Text = "";
+            _lblName44.Text = "";
+            _lblName45.Text = "";
+            _lblName46.Text = "";
+            _lblName47.Text = "";
+            _lblName48.Text = "";
+
+            //xoa name bia 7
+            _lblName71.Text = "";
+            _lblName72.Text = "";
+            _lblName73.Text = "";
+            _lblName74.Text = "";
+            _lblName75.Text = "";
+            _lblName76.Text = "";
+            _lblName77.Text = "";
+            _lblName78.Text = "";
+
+            //xoa name bia 8
+            _lblName81.Text = "";
+            _lblName82.Text = "";
+            _lblName83.Text = "";
+            _lblName84.Text = "";
+            _lblName85.Text = "";
+            _lblName86.Text = "";
+            _lblName87.Text = "";
+            _lblName88.Text = "";
+
             //reset diem ban
             XoaDiemBan();
             //reset bien
@@ -1572,6 +1664,7 @@ namespace ChamDiem
             _currentMemberBia8 = RESET_MEMBER_KHOI_DAU;
 
             //_tong3Bia = null;
+            _solider = null;
         }
 
         private void XoaDiemBan()
@@ -1627,13 +1720,13 @@ namespace ChamDiem
                     {
                         //10 diem
                         _lblScore4.Text = "10";
-                        ChamDiem(10, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, be);
+                        ChamDiem(10, _gridControlScore4, _lblName4, _lblScore4, be);
                     }
                     else
                     {
                         //9 diem
                         _lblScore4.Text = "9";
-                        ChamDiem(9, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, be);
+                        ChamDiem(9, _gridControlScore4, _lblName4, _lblScore4, be);
                     }
                 }
                 else
@@ -1641,7 +1734,7 @@ namespace ChamDiem
                     // neu khong nam trong 9 thi la 8 diem
                     //8 diem
                     _lblScore4.Text = "8";
-                    ChamDiem(8, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, be);
+                    ChamDiem(8, _gridControlScore4, _lblName4, _lblScore4, be);
                 }
             }
             else
@@ -1659,13 +1752,13 @@ namespace ChamDiem
                     {
                         //7 diem
                         _lblScore4.Text = "7";
-                        ChamDiem(7, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, be);
+                        ChamDiem(7, _gridControlScore4, _lblName4, _lblScore4, be);
                     }
                     else
                     {
                         //6 diem
                         _lblScore4.Text = "6";
-                        ChamDiem(6, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, be);
+                        ChamDiem(6, _gridControlScore4, _lblName4, _lblScore4, be);
                     }
                 }
                 else
@@ -1678,13 +1771,13 @@ namespace ChamDiem
                     {
                         //5 diem
                         _lblScore4.Text = "5";
-                        ChamDiem(5, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, be);
+                        ChamDiem(5, _gridControlScore4, _lblName4, _lblScore4, be);
                     }
                     else
                     {
                         //0 diem
                         _lblScore4.Text = "0";
-                        ChamDiem(0, ref _luotBia1, _gridControlScore4, _lblName4, _lblScore4, be);
+                        ChamDiem(0, _gridControlScore4, _lblName4, _lblScore4, be);
                     }
                 }
             }
@@ -1712,19 +1805,19 @@ namespace ChamDiem
                         {
                             //10 diem
                             _lblScore7.Text = "10";
-                            ChamDiem(10, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                            ChamDiem(10, _gridControlScore7, _lblName7, _lblScore7, be);
                         }
                         else
                         {
                             //9 diem
                             _lblScore7.Text = "9";
-                            ChamDiem(9, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                            ChamDiem(9, _gridControlScore7, _lblName7, _lblScore7, be);
                         }
                     }
                     else
                     {
                         _lblScore7.Text = "8";
-                        ChamDiem(8, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                        ChamDiem(8, _gridControlScore7, _lblName7, _lblScore7, be);
                     }
                 }
                 else
@@ -1739,20 +1832,20 @@ namespace ChamDiem
                         {
                             //7 diem
                             _lblScore7.Text = "7";
-                            ChamDiem(7, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                            ChamDiem(7, _gridControlScore7, _lblName7, _lblScore7, be);
                         }
                         else
                         {
                             //6 diem
                             _lblScore7.Text = "6";
-                            ChamDiem(6, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                            ChamDiem(6, _gridControlScore7, _lblName7, _lblScore7, be);
                         }
                     }
                     else
                     {
                         //5 diem
                         _lblScore7.Text = "5";
-                        ChamDiem(5, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                        ChamDiem(5, _gridControlScore7, _lblName7, _lblScore7, be);
                     }
                 }
             }
@@ -1768,13 +1861,13 @@ namespace ChamDiem
                     {
                         //4 diem
                         _lblScore7.Text = "4";
-                        ChamDiem(4, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                        ChamDiem(4, _gridControlScore7, _lblName7, _lblScore7, be);
                     }
                     else
                     {
                         //3 diem
                         _lblScore7.Text = "3";
-                        ChamDiem(3, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                        ChamDiem(3, _gridControlScore7, _lblName7, _lblScore7, be);
                     }
                 }
                 else
@@ -1789,20 +1882,20 @@ namespace ChamDiem
                         {
                             //2 diem
                             _lblScore7.Text = "2";
-                            ChamDiem(2, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                            ChamDiem(2, _gridControlScore7, _lblName7, _lblScore7, be);
                         }
                         else
                         {
                             //1 diem
                             _lblScore7.Text = "1";
-                            ChamDiem(1, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                            ChamDiem(1, _gridControlScore7, _lblName7, _lblScore7, be);
                         }
                     }
                     else
                     {
                         //0 diem
                         _lblScore7.Text = "0";
-                        ChamDiem(0, ref _luotBia2, _gridControlScore7, _lblName7, _lblScore7, be);
+                        ChamDiem(0, _gridControlScore7, _lblName7, _lblScore7, be);
                     }
                 }
             }
@@ -1830,19 +1923,19 @@ namespace ChamDiem
                         {
                             //10 diem
                             _lblScore8.Text = "10";
-                            ChamDiem(10, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                            ChamDiem(10, _gridControlScore8, _lblName8, _lblScore8, be);
                         }
                         else
                         {
                             //9 diem
                             _lblScore8.Text = "9";
-                            ChamDiem(9, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                            ChamDiem(9, _gridControlScore8, _lblName8, _lblScore8, be);
                         }
                     }
                     else
                     {
                         _lblScore8.Text = "8";
-                        ChamDiem(8, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                        ChamDiem(8, _gridControlScore8, _lblName8, _lblScore8, be);
                     }
                 }
                 else
@@ -1857,20 +1950,20 @@ namespace ChamDiem
                         {
                             //7 diem
                             _lblScore8.Text = "7";
-                            ChamDiem(7, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                            ChamDiem(7, _gridControlScore8, _lblName8, _lblScore8, be);
                         }
                         else
                         {
                             //6 diem
                             _lblScore8.Text = "6";
-                            ChamDiem(6, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                            ChamDiem(6, _gridControlScore8, _lblName8, _lblScore8, be);
                         }
                     }
                     else
                     {
                         //5 diem
                         _lblScore8.Text = "5";
-                        ChamDiem(5, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                        ChamDiem(5, _gridControlScore8, _lblName8, _lblScore8, be);
                     }
                 }
             }
@@ -1886,13 +1979,13 @@ namespace ChamDiem
                     {
                         //4 diem
                         _lblScore8.Text = "4";
-                        ChamDiem(4, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                        ChamDiem(4, _gridControlScore8, _lblName8, _lblScore8, be);
                     }
                     else
                     {
                         //3 diem
                         _lblScore8.Text = "3";
-                        ChamDiem(3, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                        ChamDiem(3, _gridControlScore8, _lblName8, _lblScore8, be);
                     }
                 }
                 else
@@ -1907,20 +2000,20 @@ namespace ChamDiem
                         {
                             //2 diem
                             _lblScore8.Text = "2";
-                            ChamDiem(2, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                            ChamDiem(2, _gridControlScore8, _lblName8, _lblScore8, be);
                         }
                         else
                         {
                             //1 diem
                             _lblScore8.Text = "1";
-                            ChamDiem(1, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                            ChamDiem(1, _gridControlScore8, _lblName8, _lblScore8, be);
                         }
                     }
                     else
                     {
                         //0 diem
                         _lblScore8.Text = "0";
-                        ChamDiem(0, ref _luotBia3, _gridControlScore8, _lblName8, _lblScore8, be);
+                        ChamDiem(0, _gridControlScore8, _lblName8, _lblScore8, be);
                     }
                 }
             }
