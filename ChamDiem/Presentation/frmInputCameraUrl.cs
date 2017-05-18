@@ -77,7 +77,7 @@ namespace ChamDiem
                     row[0] = "Bia 8 bệ số " + (i - 2 * _numberPersonShot);
                 }
                 // urlCamera bat dau tu 0
-                row[1] = frmMain.urlCamera[i - 1];
+                row[1] = frmMain._urlCamera[i - 1];
                 dt.Rows.Add(row);
             }
 

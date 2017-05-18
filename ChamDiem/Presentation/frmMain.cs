@@ -72,7 +72,7 @@ namespace ChamDiem
         #endregion
 
         //array camera url
-        public static string[] urlCamera = new string[SO_BE_BAN];
+        public static string[] _urlCamera = new string[SO_BE_BAN];
 
         //luot ban
         private int _luotBia1 = RESET_LUOT_KHOI_DAU, _luotBia2 = RESET_LUOT_KHOI_DAU, _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -449,10 +449,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera41_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera41);
-            _controlZoom4 = CAMERA_SMALL_41;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera41);
+                LoadCameraUrl(_urlCamera[0], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_41;
+                XoaDiemBan();
+
                 _lblName4.Text = _currentTurn1 < _solider.Length ? _solider[_currentTurn1].name : "";
                 _currentMemberBia4 = _currentTurn1;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -463,10 +471,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera42_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera42);
-            _controlZoom4 = CAMERA_SMALL_42;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera42);
+                LoadCameraUrl(_urlCamera[1], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_42;
+                XoaDiemBan();
+
                 _lblName4.Text = (_currentTurn1 + 1) < _solider.Length ? _solider[_currentTurn1 + 1].name : "";
                 _currentMemberBia4 = _currentTurn1 + 1;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -477,10 +493,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera43_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera43);
-            _controlZoom4 = CAMERA_SMALL_43;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera43);
+                LoadCameraUrl(_urlCamera[2], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_43;
+                XoaDiemBan();
+
                 _lblName4.Text = (_currentTurn1 + 2) < _solider.Length ? _solider[_currentTurn1 + 2].name : "";
                 _currentMemberBia4 = _currentTurn1 + 2;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -491,10 +515,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera44_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera44);
-            _controlZoom4 = CAMERA_SMALL_44;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera44);
+                LoadCameraUrl(_urlCamera[3], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_44;
+                XoaDiemBan();
+
                 _lblName4.Text = (_currentTurn1 + 3) < _solider.Length ? _solider[_currentTurn1 + 3].name : "";
                 _currentMemberBia4 = _currentTurn1 + 3;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -505,10 +537,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera45_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera45);
-            _controlZoom4 = CAMERA_SMALL_45;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera45);
+                LoadCameraUrl(_urlCamera[4], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_45;
+                XoaDiemBan();
+
                 _lblName4.Text = (_currentTurn1 + 4) < _solider.Length ? _solider[_currentTurn1 + 4].name : "";
                 _currentMemberBia4 = _currentTurn1 + 4;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -519,10 +559,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera46_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera46);
-            _controlZoom4 = CAMERA_SMALL_46;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera46);
+                LoadCameraUrl(_urlCamera[5], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_46;
+                XoaDiemBan();
+
                 _lblName4.Text = (_currentTurn1 + 5) < _solider.Length ? _solider[_currentTurn1 + 5].name : "";
                 _currentMemberBia4 = _currentTurn1 + 5;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -533,10 +581,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera47_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera47);
-            _controlZoom4 = CAMERA_SMALL_47;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera47);
+                LoadCameraUrl(_urlCamera[6], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_47;
+                XoaDiemBan();
+
                 _lblName4.Text = (_currentTurn1 + 6) < _solider.Length ? _solider[_currentTurn1 + 6].name : "";
                 _currentMemberBia4 = _currentTurn1 + 6;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -547,10 +603,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera48_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall4(_spcSmallCamera48);
-            _controlZoom4 = CAMERA_SMALL_48;
             try
             {
+                //ZoomCameraSmall4(_spcSmallCamera48);
+                LoadCameraUrl(_urlCamera[7], _spcCamera4);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl4.Enabled == false)
+                {
+                    _transpCtrl4.Enabled = true;
+                }
+                _controlZoom4 = CAMERA_SMALL_48;
+                XoaDiemBan();
+
                 _lblName4.Text = (_currentTurn1 + 7) < _solider.Length ? _solider[_currentTurn1 + 7].name : "";
                 _currentMemberBia4 = _currentTurn1 + 7;
                 _luotBia1 = RESET_LUOT_KHOI_DAU;
@@ -561,10 +625,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera71_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera71);
-            _controlZoom7 = CAMERA_SMALL_71;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera71);
+                LoadCameraUrl(_urlCamera[8], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_71;
+                XoaDiemBan();
+
                 _lblName7.Text = _currentTurn2 < _solider.Length ? _solider[_currentTurn2].name : "";
                 _currentMemberBia7 = _currentTurn2;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -575,10 +647,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera72_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera72);
-            _controlZoom7 = CAMERA_SMALL_72;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera72);
+                LoadCameraUrl(_urlCamera[9], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_72;
+                XoaDiemBan();
+
                 _lblName7.Text = (_currentTurn2 + 1) < _solider.Length ? _solider[_currentTurn2 + 1].name : "";
                 _currentMemberBia7 = _currentTurn2 + 1;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -589,10 +669,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera73_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera73);
-            _controlZoom7 = CAMERA_SMALL_73;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera73);
+                LoadCameraUrl(_urlCamera[10], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_73;
+                XoaDiemBan();
+
                 _lblName7.Text = (_currentTurn2 + 2) < _solider.Length ? _solider[_currentTurn2 + 2].name : "";
                 _currentMemberBia7 = _currentTurn2 + 2;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -603,10 +691,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera74_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera74);
-            _controlZoom7 = CAMERA_SMALL_74;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera74);
+                LoadCameraUrl(_urlCamera[11], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_74;
+                XoaDiemBan();
+
                 _lblName7.Text = (_currentTurn2 + 3) < _solider.Length ? _solider[_currentTurn2 + 3].name : "";
                 _currentMemberBia7 = _currentTurn2 + 3;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -617,10 +713,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera75_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera75);
-            _controlZoom7 = CAMERA_SMALL_75;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera75);
+                LoadCameraUrl(_urlCamera[12], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_75;
+                XoaDiemBan();
+
                 _lblName7.Text = (_currentTurn2 + 4) < _solider.Length ? _solider[_currentTurn2 + 4].name : "";
                 _currentMemberBia7 = _currentTurn2 + 4;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -631,10 +735,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera76_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera76);
-            _controlZoom7 = CAMERA_SMALL_76;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera76);
+                LoadCameraUrl(_urlCamera[13], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_76;
+                XoaDiemBan();
+
                 _lblName7.Text = (_currentTurn2 + 5) < _solider.Length ? _solider[_currentTurn2 + 5].name : "";
                 _currentMemberBia7 = _currentTurn2 + 5;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -645,10 +757,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera77_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera77);
-            _controlZoom7 = CAMERA_SMALL_77;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera77);
+                LoadCameraUrl(_urlCamera[14], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_77;
+                XoaDiemBan();
+
                 _lblName7.Text = (_currentTurn2 + 6) < _solider.Length ? _solider[_currentTurn2 + 6].name : "";
                 _currentMemberBia7 = _currentTurn2 + 6;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -659,10 +779,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera78_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall7(_spcSmallCamera78);
-            _controlZoom7 = CAMERA_SMALL_78;
             try
             {
+                //ZoomCameraSmall7(_spcSmallCamera78);
+                LoadCameraUrl(_urlCamera[15], _spcCamera7);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl7.Enabled == false)
+                {
+                    _transpCtrl7.Enabled = true;
+                }
+                _controlZoom7 = CAMERA_SMALL_78;
+                XoaDiemBan();
+
                 _lblName7.Text = (_currentTurn2 + 7) < _solider.Length ? _solider[_currentTurn2 + 7].name : "";
                 _currentMemberBia7 = _currentTurn2 + 7;
                 _luotBia2 = RESET_LUOT_KHOI_DAU;
@@ -673,10 +801,18 @@ namespace ChamDiem
         
         private void _spcSmallCamera81_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera81);
-            _controlZoom8 = CAMERA_SMALL_81;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera81);
+                LoadCameraUrl(_urlCamera[16], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_81;
+                XoaDiemBan();
+
                 _lblName8.Text = _currentTurn3 < _solider.Length ? _solider[_currentTurn3].name : "";
                 _currentMemberBia8 = _currentTurn3;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -687,10 +823,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera82_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera82);
-            _controlZoom8 = CAMERA_SMALL_82;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera82);
+                LoadCameraUrl(_urlCamera[17], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_82;
+                XoaDiemBan();
+
                 _lblName8.Text = (_currentTurn3 + 1) < _solider.Length ? _solider[_currentTurn3 + 1].name : "";
                 _currentMemberBia8 = _currentTurn3 + 1;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -701,10 +845,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera83_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera83);
-            _controlZoom8 = CAMERA_SMALL_83;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera83);
+                LoadCameraUrl(_urlCamera[18], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_83;
+                XoaDiemBan();
+
                 _lblName8.Text = (_currentTurn3 + 2) < _solider.Length ? _solider[_currentTurn3 + 2].name : "";
                 _currentMemberBia8 = _currentTurn3 + 2;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -715,10 +867,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera84_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera84);
-            _controlZoom8 = CAMERA_SMALL_84;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera84);
+                LoadCameraUrl(_urlCamera[19], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_84;
+                XoaDiemBan();
+
                 _lblName8.Text = (_currentTurn3 + 3) < _solider.Length ? _solider[_currentTurn3 + 3].name : "";
                 _currentMemberBia8 = _currentTurn3 + 3;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -729,10 +889,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera85_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera85);
-            _controlZoom8 = CAMERA_SMALL_85;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera85);
+                LoadCameraUrl(_urlCamera[20], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_85;
+                XoaDiemBan();
+
                 _lblName8.Text = (_currentTurn3 + 4) < _solider.Length ? _solider[_currentTurn3 + 4].name : "";
                 _currentMemberBia8 = _currentTurn3 + 4;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -743,10 +911,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera86_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera86);
-            _controlZoom8 = CAMERA_SMALL_86;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera86);
+                LoadCameraUrl(_urlCamera[21], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_86;
+                XoaDiemBan();
+
                 _lblName8.Text = (_currentTurn3 + 5) < _solider.Length ? _solider[_currentTurn3 + 5].name : "";
                 _currentMemberBia8 = _currentTurn3 + 5;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -757,10 +933,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera87_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera87);
-            _controlZoom8 = CAMERA_SMALL_87;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera87);
+                LoadCameraUrl(_urlCamera[22], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_87;
+                XoaDiemBan();
+
                 _lblName8.Text = (_currentTurn3 + 6) < _solider.Length ? _solider[_currentTurn3 + 6].name : "";
                 _currentMemberBia8 = _currentTurn3 + 6;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -771,10 +955,18 @@ namespace ChamDiem
 
         private void _spcSmallCamera88_MouseClick(object sender, MouseEventArgs e)
         {
-            ZoomCameraSmall8(_spcSmallCamera88);
-            _controlZoom8 = CAMERA_SMALL_88;
             try
             {
+                //ZoomCameraSmall8(_spcSmallCamera88);
+                LoadCameraUrl(_urlCamera[23], _spcCamera8);
+                //lan dau chua load camera thi bang false
+                if (_transpCtrl8.Enabled == false)
+                {
+                    _transpCtrl8.Enabled = true;
+                }
+                _controlZoom8 = CAMERA_SMALL_88;
+                XoaDiemBan();
+                
                 _lblName8.Text = (_currentTurn3 + 7) < _solider.Length ? _solider[_currentTurn3 + 7].name : "";
                 _currentMemberBia8 = _currentTurn3 + 7;
                 _luotBia3 = RESET_LUOT_KHOI_DAU;
@@ -1218,7 +1410,7 @@ namespace ChamDiem
                     {
                         if (line != null)
                         {
-                            urlCamera[i] = line;
+                            _urlCamera[i] = line;
 
                             //Read the next line
                             line = sr.ReadLine();
@@ -1260,7 +1452,7 @@ namespace ChamDiem
             }
         }
 
-        void LoadCameraSmall(string url, StreamPlayerControl spc)
+        void LoadCameraUrl(string url, StreamPlayerControl spc)
         {
             if (url != "")
             {
@@ -1413,8 +1605,8 @@ namespace ChamDiem
                             _spcSmallCamera82.Location = _cameraSmallLocation8;
                             break;
                         case CAMERA_SMALL_83:
-                            _spcSmallCamera83.Size = _cameraSmallSize;
-                            _spcSmallCamera83.Location = _cameraSmallLocation8;
+                            _lblName84.Size = _cameraSmallSize;
+                            _lblName84.Location = _cameraSmallLocation8;
                             break;
                         case CAMERA_SMALL_84:
                             _spcSmallCamera84.Size = _cameraSmallSize;
@@ -1501,66 +1693,66 @@ namespace ChamDiem
 
         void LoadCamera3Bia()
         {
-            LoadCameraSmall(urlCamera[0], _spcSmallCamera41);
-            LoadCameraSmall(urlCamera[1], _spcSmallCamera42);
-            LoadCameraSmall(urlCamera[2], _spcSmallCamera43);
-            LoadCameraSmall(urlCamera[3], _spcSmallCamera44);
-            LoadCameraSmall(urlCamera[4], _spcSmallCamera45);
-            LoadCameraSmall(urlCamera[5], _spcSmallCamera46);
-            LoadCameraSmall(urlCamera[6], _spcSmallCamera47);
-            LoadCameraSmall(urlCamera[7], _spcSmallCamera48);
-            LoadCameraSmall(urlCamera[8], _spcSmallCamera71);
-            LoadCameraSmall(urlCamera[9], _spcSmallCamera72);
-            LoadCameraSmall(urlCamera[10], _spcSmallCamera73);
-            LoadCameraSmall(urlCamera[11], _spcSmallCamera74);
-            LoadCameraSmall(urlCamera[12], _spcSmallCamera75);
-            LoadCameraSmall(urlCamera[13], _spcSmallCamera76);
-            LoadCameraSmall(urlCamera[14], _spcSmallCamera77);
-            LoadCameraSmall(urlCamera[15], _spcSmallCamera78);
-            LoadCameraSmall(urlCamera[16], _spcSmallCamera81);
-            LoadCameraSmall(urlCamera[17], _spcSmallCamera82);
-            LoadCameraSmall(urlCamera[18], _spcSmallCamera83);
-            LoadCameraSmall(urlCamera[19], _spcSmallCamera84);
-            LoadCameraSmall(urlCamera[20], _spcSmallCamera85);
-            LoadCameraSmall(urlCamera[21], _spcSmallCamera86);
-            LoadCameraSmall(urlCamera[22], _spcSmallCamera87);
-            LoadCameraSmall(urlCamera[23], _spcSmallCamera88);
+            LoadCameraUrl(_urlCamera[0], _spcSmallCamera41);
+            LoadCameraUrl(_urlCamera[1], _spcSmallCamera42);
+            LoadCameraUrl(_urlCamera[2], _spcSmallCamera43);
+            LoadCameraUrl(_urlCamera[3], _spcSmallCamera44);
+            LoadCameraUrl(_urlCamera[4], _spcSmallCamera45);
+            LoadCameraUrl(_urlCamera[5], _spcSmallCamera46);
+            LoadCameraUrl(_urlCamera[6], _spcSmallCamera47);
+            LoadCameraUrl(_urlCamera[7], _spcSmallCamera48);
+            LoadCameraUrl(_urlCamera[8], _spcSmallCamera71);
+            LoadCameraUrl(_urlCamera[9], _spcSmallCamera72);
+            LoadCameraUrl(_urlCamera[10], _spcSmallCamera73);
+            LoadCameraUrl(_urlCamera[11], _spcSmallCamera74);
+            LoadCameraUrl(_urlCamera[12], _spcSmallCamera75);
+            LoadCameraUrl(_urlCamera[13], _spcSmallCamera76);
+            LoadCameraUrl(_urlCamera[14], _spcSmallCamera77);
+            LoadCameraUrl(_urlCamera[15], _spcSmallCamera78);
+            LoadCameraUrl(_urlCamera[16], _spcSmallCamera81);
+            LoadCameraUrl(_urlCamera[17], _spcSmallCamera82);
+            LoadCameraUrl(_urlCamera[18], _spcSmallCamera83);
+            LoadCameraUrl(_urlCamera[19], _spcSmallCamera84);
+            LoadCameraUrl(_urlCamera[20], _spcSmallCamera85);
+            LoadCameraUrl(_urlCamera[21], _spcSmallCamera86);
+            LoadCameraUrl(_urlCamera[22], _spcSmallCamera87);
+            LoadCameraUrl(_urlCamera[23], _spcSmallCamera88);
         }
 
         void LoadCameraBia4()
         {
-            LoadCameraSmall(urlCamera[0], _spcSmallCamera41);
-            LoadCameraSmall(urlCamera[1], _spcSmallCamera42);
-            LoadCameraSmall(urlCamera[2], _spcSmallCamera43);
-            LoadCameraSmall(urlCamera[3], _spcSmallCamera44);
-            LoadCameraSmall(urlCamera[4], _spcSmallCamera45);
-            LoadCameraSmall(urlCamera[5], _spcSmallCamera46);
-            LoadCameraSmall(urlCamera[6], _spcSmallCamera47);
-            LoadCameraSmall(urlCamera[7], _spcSmallCamera48);
+            LoadCameraUrl(_urlCamera[0], _spcSmallCamera41);
+            LoadCameraUrl(_urlCamera[1], _spcSmallCamera42);
+            LoadCameraUrl(_urlCamera[2], _spcSmallCamera43);
+            LoadCameraUrl(_urlCamera[3], _spcSmallCamera44);
+            LoadCameraUrl(_urlCamera[4], _spcSmallCamera45);
+            LoadCameraUrl(_urlCamera[5], _spcSmallCamera46);
+            LoadCameraUrl(_urlCamera[6], _spcSmallCamera47);
+            LoadCameraUrl(_urlCamera[7], _spcSmallCamera48);
         }
 
         void LoadCameraBia7()
         {
-            LoadCameraSmall(urlCamera[8], _spcSmallCamera71);
-            LoadCameraSmall(urlCamera[9], _spcSmallCamera72);
-            LoadCameraSmall(urlCamera[10], _spcSmallCamera73);
-            LoadCameraSmall(urlCamera[11], _spcSmallCamera74);
-            LoadCameraSmall(urlCamera[12], _spcSmallCamera75);
-            LoadCameraSmall(urlCamera[13], _spcSmallCamera76);
-            LoadCameraSmall(urlCamera[14], _spcSmallCamera77);
-            LoadCameraSmall(urlCamera[15], _spcSmallCamera78);
+            LoadCameraUrl(_urlCamera[8], _spcSmallCamera71);
+            LoadCameraUrl(_urlCamera[9], _spcSmallCamera72);
+            LoadCameraUrl(_urlCamera[10], _spcSmallCamera73);
+            LoadCameraUrl(_urlCamera[11], _spcSmallCamera74);
+            LoadCameraUrl(_urlCamera[12], _spcSmallCamera75);
+            LoadCameraUrl(_urlCamera[13], _spcSmallCamera76);
+            LoadCameraUrl(_urlCamera[14], _spcSmallCamera77);
+            LoadCameraUrl(_urlCamera[15], _spcSmallCamera78);
         }
 
         void LoadCameraBia8()
         {
-            LoadCameraSmall(urlCamera[16], _spcSmallCamera81);
-            LoadCameraSmall(urlCamera[17], _spcSmallCamera82);
-            LoadCameraSmall(urlCamera[18], _spcSmallCamera83);
-            LoadCameraSmall(urlCamera[19], _spcSmallCamera84);
-            LoadCameraSmall(urlCamera[20], _spcSmallCamera85);
-            LoadCameraSmall(urlCamera[21], _spcSmallCamera86);
-            LoadCameraSmall(urlCamera[22], _spcSmallCamera87);
-            LoadCameraSmall(urlCamera[23], _spcSmallCamera88);
+            LoadCameraUrl(_urlCamera[16], _spcSmallCamera81);
+            LoadCameraUrl(_urlCamera[17], _spcSmallCamera82);
+            LoadCameraUrl(_urlCamera[18], _spcSmallCamera83);
+            LoadCameraUrl(_urlCamera[19], _spcSmallCamera84);
+            LoadCameraUrl(_urlCamera[20], _spcSmallCamera85);
+            LoadCameraUrl(_urlCamera[21], _spcSmallCamera86);
+            LoadCameraUrl(_urlCamera[22], _spcSmallCamera87);
+            LoadCameraUrl(_urlCamera[23], _spcSmallCamera88);
         }
 
         void StopCameraBia4()

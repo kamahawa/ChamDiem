@@ -59,32 +59,35 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.ribbonStatusBar2 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this._barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonStatusBar3 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this._barStaticItem8 = new DevExpress.XtraBars.BarStaticItem();
+            this.ribbonStatusBar2 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this._barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this._tabControlCamera = new DevExpress.XtraTab.XtraTabControl();
             this._tabCamera4 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this._spcSmallCamera41 = new WebEye.StreamPlayerControl();
+            this._lblName41 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera42 = new WebEye.StreamPlayerControl();
+            this._lblName42 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera43 = new WebEye.StreamPlayerControl();
+            this._lblName43 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera44 = new WebEye.StreamPlayerControl();
+            this._lblName44 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera45 = new WebEye.StreamPlayerControl();
+            this._lblName45 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera46 = new WebEye.StreamPlayerControl();
+            this._lblName46 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera47 = new WebEye.StreamPlayerControl();
+            this._lblName47 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera48 = new WebEye.StreamPlayerControl();
+            this._lblName48 = new DevExpress.XtraEditors.LabelControl();
             this._panCam4 = new DevExpress.XtraEditors.PanelControl();
             this._transpCtrl4 = new CameraApp.TranspCtrl();
-            this._lblName41 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera41 = new WebEye.StreamPlayerControl();
-            this._lblName42 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera42 = new WebEye.StreamPlayerControl();
-            this._lblName43 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera43 = new WebEye.StreamPlayerControl();
-            this._lblName44 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera44 = new WebEye.StreamPlayerControl();
-            this._lblName45 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera45 = new WebEye.StreamPlayerControl();
-            this._lblName46 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera46 = new WebEye.StreamPlayerControl();
-            this._lblName47 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera47 = new WebEye.StreamPlayerControl();
-            this._lblName48 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera48 = new WebEye.StreamPlayerControl();
+            this._spcCamera4 = new WebEye.StreamPlayerControl();
             this._ptbCamera = new System.Windows.Forms.PictureBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this._lblScore4 = new DevExpress.XtraEditors.LabelControl();
@@ -96,22 +99,6 @@
             this._tabCamera7 = new DevExpress.XtraTab.XtraTabPage();
             this._panCam7 = new DevExpress.XtraEditors.PanelControl();
             this._transpCtrl7 = new CameraApp.TranspCtrl();
-            this._lblName71 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera71 = new WebEye.StreamPlayerControl();
-            this._lblName72 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera72 = new WebEye.StreamPlayerControl();
-            this._lblName73 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera73 = new WebEye.StreamPlayerControl();
-            this._lblName74 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera74 = new WebEye.StreamPlayerControl();
-            this._lblName75 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera75 = new WebEye.StreamPlayerControl();
-            this._lblName76 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera76 = new WebEye.StreamPlayerControl();
-            this._lblName77 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera77 = new WebEye.StreamPlayerControl();
-            this._lblName78 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera78 = new WebEye.StreamPlayerControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this._lblScore7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -122,22 +109,6 @@
             this._tabCamera8 = new DevExpress.XtraTab.XtraTabPage();
             this._panCam8 = new DevExpress.XtraEditors.PanelControl();
             this._transpCtrl8 = new CameraApp.TranspCtrl();
-            this._lblName81 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera81 = new WebEye.StreamPlayerControl();
-            this._lblName82 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera82 = new WebEye.StreamPlayerControl();
-            this._lblName83 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera83 = new WebEye.StreamPlayerControl();
-            this._lblName84 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera84 = new WebEye.StreamPlayerControl();
-            this._lblName85 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera85 = new WebEye.StreamPlayerControl();
-            this._lblName86 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera86 = new WebEye.StreamPlayerControl();
-            this._lblName87 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera87 = new WebEye.StreamPlayerControl();
-            this._lblName88 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera88 = new WebEye.StreamPlayerControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this._lblScore8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -145,11 +116,52 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this._gridControlScore8 = new DevExpress.XtraGrid.GridControl();
             this._gridViewScore8 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraScrollableControl2 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this._spcSmallCamera71 = new WebEye.StreamPlayerControl();
+            this._lblName71 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera72 = new WebEye.StreamPlayerControl();
+            this._lblName72 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera73 = new WebEye.StreamPlayerControl();
+            this._lblName73 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera74 = new WebEye.StreamPlayerControl();
+            this._lblName74 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera75 = new WebEye.StreamPlayerControl();
+            this._lblName75 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera76 = new WebEye.StreamPlayerControl();
+            this._lblName76 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera77 = new WebEye.StreamPlayerControl();
+            this._lblName77 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera78 = new WebEye.StreamPlayerControl();
+            this._lblName78 = new DevExpress.XtraEditors.LabelControl();
+            this._spcCamera7 = new WebEye.StreamPlayerControl();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraScrollableControl3 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this._spcSmallCamera81 = new WebEye.StreamPlayerControl();
+            this._lblName81 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera82 = new WebEye.StreamPlayerControl();
+            this._lblName82 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera83 = new WebEye.StreamPlayerControl();
+            this._lblName83 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera84 = new WebEye.StreamPlayerControl();
+            this._lblName84 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera85 = new WebEye.StreamPlayerControl();
+            this._lblName85 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera86 = new WebEye.StreamPlayerControl();
+            this._lblName86 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera87 = new WebEye.StreamPlayerControl();
+            this._lblName87 = new DevExpress.XtraEditors.LabelControl();
+            this._spcSmallCamera88 = new WebEye.StreamPlayerControl();
+            this._lblName88 = new DevExpress.XtraEditors.LabelControl();
+            this._spcCamera8 = new WebEye.StreamPlayerControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._tabControlCamera)).BeginInit();
             this._tabControlCamera.SuspendLayout();
             this._tabCamera4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            this.xtraScrollableControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._panCam4)).BeginInit();
             this._panCam4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._ptbCamera)).BeginInit();
@@ -171,6 +183,12 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
+            this.xtraScrollableControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
+            this.panelControl6.SuspendLayout();
+            this.xtraScrollableControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -209,8 +227,8 @@
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1775, 143);
-            this.ribbonControl1.StatusBar = this.ribbonStatusBar3;
+            this.ribbonControl1.Size = new System.Drawing.Size(1311, 143);
+            this.ribbonControl1.StatusBar = this.ribbonStatusBar2;
             // 
             // _btnAddList
             // 
@@ -427,27 +445,13 @@
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
-            // ribbonStatusBar2
-            // 
-            this.ribbonStatusBar2.ItemLinks.Add(this._barStaticItem7);
-            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 636);
-            this.ribbonStatusBar2.Name = "ribbonStatusBar2";
-            this.ribbonStatusBar2.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar2.Size = new System.Drawing.Size(1769, 27);
-            // 
-            // _barStaticItem7
-            // 
-            this._barStaticItem7.Id = 24;
-            this._barStaticItem7.Name = "_barStaticItem7";
-            this._barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this._barStaticItem4);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 636);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1769, 27);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1305, 27);
             // 
             // ribbonStatusBar3
             // 
@@ -455,13 +459,27 @@
             this.ribbonStatusBar3.Location = new System.Drawing.Point(0, 636);
             this.ribbonStatusBar3.Name = "ribbonStatusBar3";
             this.ribbonStatusBar3.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar3.Size = new System.Drawing.Size(1769, 27);
+            this.ribbonStatusBar3.Size = new System.Drawing.Size(1305, 27);
             // 
             // _barStaticItem8
             // 
             this._barStaticItem8.Id = 24;
             this._barStaticItem8.Name = "_barStaticItem8";
             this._barStaticItem8.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // ribbonStatusBar2
+            // 
+            this.ribbonStatusBar2.ItemLinks.Add(this._barStaticItem7);
+            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 636);
+            this.ribbonStatusBar2.Name = "ribbonStatusBar2";
+            this.ribbonStatusBar2.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar2.Size = new System.Drawing.Size(1305, 27);
+            // 
+            // _barStaticItem7
+            // 
+            this._barStaticItem7.Id = 24;
+            this._barStaticItem7.Name = "_barStaticItem7";
+            this._barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // ribbonPageGroup3
             // 
@@ -477,7 +495,7 @@
             this._tabControlCamera.Location = new System.Drawing.Point(0, 143);
             this._tabControlCamera.Name = "_tabControlCamera";
             this._tabControlCamera.SelectedTabPage = this._tabCamera4;
-            this._tabControlCamera.Size = new System.Drawing.Size(1775, 691);
+            this._tabControlCamera.Size = new System.Drawing.Size(1311, 691);
             this._tabControlCamera.TabIndex = 8;
             this._tabControlCamera.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this._tabCamera4,
@@ -486,13 +504,184 @@
             // 
             // _tabCamera4
             // 
+            this._tabCamera4.Controls.Add(this.panelControl4);
             this._tabCamera4.Controls.Add(this.ribbonStatusBar1);
             this._tabCamera4.Controls.Add(this._panCam4);
             this._tabCamera4.Controls.Add(this.panelControl1);
             this._tabCamera4.Controls.Add(this._gridControlScore4);
             this._tabCamera4.Name = "_tabCamera4";
-            this._tabCamera4.Size = new System.Drawing.Size(1769, 663);
+            this._tabCamera4.Size = new System.Drawing.Size(1305, 663);
             this._tabCamera4.Text = "Bắn bia số 4";
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControl4.Controls.Add(this.xtraScrollableControl1);
+            this.panelControl4.Location = new System.Drawing.Point(4, 3);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(176, 623);
+            this.panelControl4.TabIndex = 12;
+            // 
+            // xtraScrollableControl1
+            // 
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera41);
+            this.xtraScrollableControl1.Controls.Add(this._lblName41);
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera42);
+            this.xtraScrollableControl1.Controls.Add(this._lblName42);
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera43);
+            this.xtraScrollableControl1.Controls.Add(this._lblName43);
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera44);
+            this.xtraScrollableControl1.Controls.Add(this._lblName44);
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera45);
+            this.xtraScrollableControl1.Controls.Add(this._lblName45);
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera46);
+            this.xtraScrollableControl1.Controls.Add(this._lblName46);
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera47);
+            this.xtraScrollableControl1.Controls.Add(this._lblName47);
+            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera48);
+            this.xtraScrollableControl1.Controls.Add(this._lblName48);
+            this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl1.Location = new System.Drawing.Point(2, 2);
+            this.xtraScrollableControl1.Name = "xtraScrollableControl1";
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(172, 619);
+            this.xtraScrollableControl1.TabIndex = 5;
+            // 
+            // _spcSmallCamera41
+            // 
+            this._spcSmallCamera41.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera41.Location = new System.Drawing.Point(2, 2);
+            this._spcSmallCamera41.Name = "_spcSmallCamera41";
+            this._spcSmallCamera41.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera41.TabIndex = 0;
+            this._spcSmallCamera41.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera41_MouseClick);
+            // 
+            // _lblName41
+            // 
+            this._lblName41.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName41.Location = new System.Drawing.Point(2, 140);
+            this._lblName41.Name = "_lblName41";
+            this._lblName41.Size = new System.Drawing.Size(0, 16);
+            this._lblName41.TabIndex = 1;
+            // 
+            // _spcSmallCamera42
+            // 
+            this._spcSmallCamera42.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera42.Location = new System.Drawing.Point(2, 170);
+            this._spcSmallCamera42.Name = "_spcSmallCamera42";
+            this._spcSmallCamera42.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera42.TabIndex = 0;
+            this._spcSmallCamera42.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera42_MouseClick);
+            // 
+            // _lblName42
+            // 
+            this._lblName42.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName42.Location = new System.Drawing.Point(2, 310);
+            this._lblName42.Name = "_lblName42";
+            this._lblName42.Size = new System.Drawing.Size(0, 16);
+            this._lblName42.TabIndex = 1;
+            // 
+            // _spcSmallCamera43
+            // 
+            this._spcSmallCamera43.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera43.Location = new System.Drawing.Point(0, 340);
+            this._spcSmallCamera43.Name = "_spcSmallCamera43";
+            this._spcSmallCamera43.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera43.TabIndex = 0;
+            this._spcSmallCamera43.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera43_MouseClick);
+            // 
+            // _lblName43
+            // 
+            this._lblName43.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName43.Location = new System.Drawing.Point(2, 480);
+            this._lblName43.Name = "_lblName43";
+            this._lblName43.Size = new System.Drawing.Size(0, 16);
+            this._lblName43.TabIndex = 1;
+            // 
+            // _spcSmallCamera44
+            // 
+            this._spcSmallCamera44.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera44.Location = new System.Drawing.Point(2, 510);
+            this._spcSmallCamera44.Name = "_spcSmallCamera44";
+            this._spcSmallCamera44.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera44.TabIndex = 0;
+            this._spcSmallCamera44.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera44_MouseClick);
+            // 
+            // _lblName44
+            // 
+            this._lblName44.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName44.Location = new System.Drawing.Point(2, 650);
+            this._lblName44.Name = "_lblName44";
+            this._lblName44.Size = new System.Drawing.Size(0, 16);
+            this._lblName44.TabIndex = 1;
+            // 
+            // _spcSmallCamera45
+            // 
+            this._spcSmallCamera45.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera45.Location = new System.Drawing.Point(2, 680);
+            this._spcSmallCamera45.Name = "_spcSmallCamera45";
+            this._spcSmallCamera45.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera45.TabIndex = 0;
+            this._spcSmallCamera45.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera45_MouseClick);
+            // 
+            // _lblName45
+            // 
+            this._lblName45.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName45.Location = new System.Drawing.Point(2, 820);
+            this._lblName45.Name = "_lblName45";
+            this._lblName45.Size = new System.Drawing.Size(0, 16);
+            this._lblName45.TabIndex = 1;
+            // 
+            // _spcSmallCamera46
+            // 
+            this._spcSmallCamera46.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera46.Location = new System.Drawing.Point(2, 850);
+            this._spcSmallCamera46.Name = "_spcSmallCamera46";
+            this._spcSmallCamera46.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera46.TabIndex = 0;
+            this._spcSmallCamera46.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera46_MouseClick);
+            // 
+            // _lblName46
+            // 
+            this._lblName46.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
+            this._lblName46.Location = new System.Drawing.Point(2, 990);
+            this._lblName46.Name = "_lblName46";
+            this._lblName46.Size = new System.Drawing.Size(0, 16);
+            this._lblName46.TabIndex = 1;
+            // 
+            // _spcSmallCamera47
+            // 
+            this._spcSmallCamera47.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera47.Location = new System.Drawing.Point(2, 1020);
+            this._spcSmallCamera47.Name = "_spcSmallCamera47";
+            this._spcSmallCamera47.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera47.TabIndex = 0;
+            this._spcSmallCamera47.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera47_MouseClick);
+            // 
+            // _lblName47
+            // 
+            this._lblName47.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName47.Location = new System.Drawing.Point(2, 1160);
+            this._lblName47.Name = "_lblName47";
+            this._lblName47.Size = new System.Drawing.Size(0, 16);
+            this._lblName47.TabIndex = 1;
+            // 
+            // _spcSmallCamera48
+            // 
+            this._spcSmallCamera48.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera48.Location = new System.Drawing.Point(2, 1190);
+            this._spcSmallCamera48.Name = "_spcSmallCamera48";
+            this._spcSmallCamera48.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera48.TabIndex = 0;
+            this._spcSmallCamera48.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera48_MouseClick);
+            // 
+            // _lblName48
+            // 
+            this._lblName48.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName48.Location = new System.Drawing.Point(2, 1330);
+            this._lblName48.Name = "_lblName48";
+            this._lblName48.Size = new System.Drawing.Size(0, 16);
+            this._lblName48.TabIndex = 1;
             // 
             // _panCam4
             // 
@@ -502,26 +691,11 @@
             this._panCam4.Appearance.BackColor = System.Drawing.Color.Transparent;
             this._panCam4.Appearance.Options.UseBackColor = true;
             this._panCam4.Controls.Add(this._transpCtrl4);
-            this._panCam4.Controls.Add(this._lblName41);
-            this._panCam4.Controls.Add(this._spcSmallCamera41);
-            this._panCam4.Controls.Add(this._lblName42);
-            this._panCam4.Controls.Add(this._spcSmallCamera42);
-            this._panCam4.Controls.Add(this._lblName43);
-            this._panCam4.Controls.Add(this._spcSmallCamera43);
-            this._panCam4.Controls.Add(this._lblName44);
-            this._panCam4.Controls.Add(this._spcSmallCamera44);
-            this._panCam4.Controls.Add(this._lblName45);
-            this._panCam4.Controls.Add(this._spcSmallCamera45);
-            this._panCam4.Controls.Add(this._lblName46);
-            this._panCam4.Controls.Add(this._spcSmallCamera46);
-            this._panCam4.Controls.Add(this._lblName47);
-            this._panCam4.Controls.Add(this._spcSmallCamera47);
-            this._panCam4.Controls.Add(this._lblName48);
-            this._panCam4.Controls.Add(this._spcSmallCamera48);
+            this._panCam4.Controls.Add(this._spcCamera4);
             this._panCam4.Controls.Add(this._ptbCamera);
-            this._panCam4.Location = new System.Drawing.Point(3, 3);
+            this._panCam4.Location = new System.Drawing.Point(182, 3);
             this._panCam4.Name = "_panCam4";
-            this._panCam4.Size = new System.Drawing.Size(1033, 627);
+            this._panCam4.Size = new System.Drawing.Size(567, 627);
             this._panCam4.TabIndex = 4;
             // 
             // _transpCtrl4
@@ -532,153 +706,25 @@
             this._transpCtrl4.Location = new System.Drawing.Point(2, 2);
             this._transpCtrl4.Name = "_transpCtrl4";
             this._transpCtrl4.Opacity = 100;
-            this._transpCtrl4.Size = new System.Drawing.Size(1029, 623);
+            this._transpCtrl4.Size = new System.Drawing.Size(563, 623);
             this._transpCtrl4.TabIndex = 3;
             this._transpCtrl4.Text = "transpCtrl1";
             this._transpCtrl4.MouseDown += new System.Windows.Forms.MouseEventHandler(this._transpCtrl4_MouseDown);
             // 
-            // _lblName41
+            // _spcCamera4
             // 
-            this._lblName41.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName41.Location = new System.Drawing.Point(8, 218);
-            this._lblName41.Name = "_lblName41";
-            this._lblName41.Size = new System.Drawing.Size(0, 23);
-            this._lblName41.TabIndex = 1;
-            // 
-            // _spcSmallCamera41
-            // 
-            this._spcSmallCamera41.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera41.Location = new System.Drawing.Point(6, 8);
-            this._spcSmallCamera41.Name = "_spcSmallCamera41";
-            this._spcSmallCamera41.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera41.TabIndex = 0;
-            this._spcSmallCamera41.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera41_MouseClick);
-            // 
-            // _lblName42
-            // 
-            this._lblName42.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName42.Location = new System.Drawing.Point(262, 218);
-            this._lblName42.Name = "_lblName42";
-            this._lblName42.Size = new System.Drawing.Size(0, 23);
-            this._lblName42.TabIndex = 1;
-            // 
-            // _spcSmallCamera42
-            // 
-            this._spcSmallCamera42.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera42.Location = new System.Drawing.Point(262, 8);
-            this._spcSmallCamera42.Name = "_spcSmallCamera42";
-            this._spcSmallCamera42.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera42.TabIndex = 0;
-            this._spcSmallCamera42.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera42_MouseClick);
-            // 
-            // _lblName43
-            // 
-            this._lblName43.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName43.Location = new System.Drawing.Point(518, 218);
-            this._lblName43.Name = "_lblName43";
-            this._lblName43.Size = new System.Drawing.Size(0, 23);
-            this._lblName43.TabIndex = 1;
-            // 
-            // _spcSmallCamera43
-            // 
-            this._spcSmallCamera43.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera43.Location = new System.Drawing.Point(518, 8);
-            this._spcSmallCamera43.Name = "_spcSmallCamera43";
-            this._spcSmallCamera43.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera43.TabIndex = 0;
-            this._spcSmallCamera43.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera43_MouseClick);
-            // 
-            // _lblName44
-            // 
-            this._lblName44.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName44.Location = new System.Drawing.Point(774, 218);
-            this._lblName44.Name = "_lblName44";
-            this._lblName44.Size = new System.Drawing.Size(0, 23);
-            this._lblName44.TabIndex = 1;
-            // 
-            // _spcSmallCamera44
-            // 
-            this._spcSmallCamera44.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera44.Location = new System.Drawing.Point(774, 8);
-            this._spcSmallCamera44.Name = "_spcSmallCamera44";
-            this._spcSmallCamera44.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera44.TabIndex = 0;
-            this._spcSmallCamera44.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera44_MouseClick);
-            // 
-            // _lblName45
-            // 
-            this._lblName45.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName45.Location = new System.Drawing.Point(8, 477);
-            this._lblName45.Name = "_lblName45";
-            this._lblName45.Size = new System.Drawing.Size(0, 23);
-            this._lblName45.TabIndex = 1;
-            // 
-            // _spcSmallCamera45
-            // 
-            this._spcSmallCamera45.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera45.Location = new System.Drawing.Point(6, 268);
-            this._spcSmallCamera45.Name = "_spcSmallCamera45";
-            this._spcSmallCamera45.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera45.TabIndex = 0;
-            this._spcSmallCamera45.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera45_MouseClick);
-            // 
-            // _lblName46
-            // 
-            this._lblName46.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
-            this._lblName46.Location = new System.Drawing.Point(262, 477);
-            this._lblName46.Name = "_lblName46";
-            this._lblName46.Size = new System.Drawing.Size(0, 23);
-            this._lblName46.TabIndex = 1;
-            // 
-            // _spcSmallCamera46
-            // 
-            this._spcSmallCamera46.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera46.Location = new System.Drawing.Point(262, 268);
-            this._spcSmallCamera46.Name = "_spcSmallCamera46";
-            this._spcSmallCamera46.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera46.TabIndex = 0;
-            this._spcSmallCamera46.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera46_MouseClick);
-            // 
-            // _lblName47
-            // 
-            this._lblName47.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName47.Location = new System.Drawing.Point(518, 477);
-            this._lblName47.Name = "_lblName47";
-            this._lblName47.Size = new System.Drawing.Size(0, 23);
-            this._lblName47.TabIndex = 1;
-            // 
-            // _spcSmallCamera47
-            // 
-            this._spcSmallCamera47.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera47.Location = new System.Drawing.Point(518, 268);
-            this._spcSmallCamera47.Name = "_spcSmallCamera47";
-            this._spcSmallCamera47.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera47.TabIndex = 0;
-            this._spcSmallCamera47.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera47_MouseClick);
-            // 
-            // _lblName48
-            // 
-            this._lblName48.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName48.Location = new System.Drawing.Point(774, 477);
-            this._lblName48.Name = "_lblName48";
-            this._lblName48.Size = new System.Drawing.Size(0, 23);
-            this._lblName48.TabIndex = 1;
-            // 
-            // _spcSmallCamera48
-            // 
-            this._spcSmallCamera48.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera48.Location = new System.Drawing.Point(774, 268);
-            this._spcSmallCamera48.Name = "_spcSmallCamera48";
-            this._spcSmallCamera48.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera48.TabIndex = 0;
-            this._spcSmallCamera48.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera48_MouseClick);
+            this._spcCamera4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._spcCamera4.Location = new System.Drawing.Point(2, 2);
+            this._spcCamera4.Name = "_spcCamera4";
+            this._spcCamera4.Size = new System.Drawing.Size(563, 623);
+            this._spcCamera4.TabIndex = 5;
             // 
             // _ptbCamera
             // 
             this._ptbCamera.Dock = System.Windows.Forms.DockStyle.Fill;
             this._ptbCamera.Location = new System.Drawing.Point(2, 2);
             this._ptbCamera.Name = "_ptbCamera";
-            this._ptbCamera.Size = new System.Drawing.Size(1029, 623);
+            this._ptbCamera.Size = new System.Drawing.Size(563, 623);
             this._ptbCamera.TabIndex = 4;
             this._ptbCamera.TabStop = false;
             // 
@@ -689,36 +735,36 @@
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this._lblName4);
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Location = new System.Drawing.Point(1042, 5);
+            this.panelControl1.Location = new System.Drawing.Point(752, 3);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(720, 60);
+            this.panelControl1.Size = new System.Drawing.Size(550, 60);
             this.panelControl1.TabIndex = 11;
             // 
             // _lblScore4
             // 
-            this._lblScore4.Appearance.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 40F);
+            this._lblScore4.Appearance.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 35F);
             this._lblScore4.Appearance.ForeColor = System.Drawing.Color.Red;
-            this._lblScore4.Location = new System.Drawing.Point(650, -10);
+            this._lblScore4.Location = new System.Drawing.Point(494, -7);
             this._lblScore4.Name = "_lblScore4";
-            this._lblScore4.Size = new System.Drawing.Size(0, 71);
+            this._lblScore4.Size = new System.Drawing.Size(0, 62);
             this._lblScore4.TabIndex = 3;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.labelControl2.Location = new System.Drawing.Point(570, 14);
+            this.labelControl2.Location = new System.Drawing.Point(430, 14);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(79, 29);
+            this.labelControl2.Size = new System.Drawing.Size(71, 29);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Điểm : ";
+            this.labelControl2.Text = "Điểm: ";
             // 
             // _lblName4
             // 
-            this._lblName4.Appearance.Font = new System.Drawing.Font("Tahoma", 26F);
+            this._lblName4.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
             this._lblName4.Appearance.ForeColor = System.Drawing.Color.Green;
-            this._lblName4.Location = new System.Drawing.Point(134, 4);
+            this._lblName4.Location = new System.Drawing.Point(116, 11);
             this._lblName4.Name = "_lblName4";
-            this._lblName4.Size = new System.Drawing.Size(0, 42);
+            this._lblName4.Size = new System.Drawing.Size(0, 33);
             this._lblName4.TabIndex = 1;
             // 
             // labelControl1
@@ -726,18 +772,18 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
             this.labelControl1.Location = new System.Drawing.Point(5, 14);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(128, 29);
+            this.labelControl1.Size = new System.Drawing.Size(120, 29);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Họ và tên : ";
+            this.labelControl1.Text = "Họ và tên: ";
             // 
             // _gridControlScore4
             // 
             this._gridControlScore4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this._gridControlScore4.Location = new System.Drawing.Point(1042, 71);
+            this._gridControlScore4.Location = new System.Drawing.Point(752, 64);
             this._gridControlScore4.MainView = this._gridViewScore4;
             this._gridControlScore4.Name = "_gridControlScore4";
-            this._gridControlScore4.Size = new System.Drawing.Size(720, 559);
+            this._gridControlScore4.Size = new System.Drawing.Size(550, 565);
             this._gridControlScore4.TabIndex = 3;
             this._gridControlScore4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._gridViewScore4});
@@ -751,12 +797,13 @@
             // 
             // _tabCamera7
             // 
+            this._tabCamera7.Controls.Add(this.panelControl5);
             this._tabCamera7.Controls.Add(this.ribbonStatusBar2);
             this._tabCamera7.Controls.Add(this._panCam7);
             this._tabCamera7.Controls.Add(this.panelControl2);
             this._tabCamera7.Controls.Add(this._gridControlScore7);
             this._tabCamera7.Name = "_tabCamera7";
-            this._tabCamera7.Size = new System.Drawing.Size(1769, 663);
+            this._tabCamera7.Size = new System.Drawing.Size(1305, 663);
             this._tabCamera7.Text = "Bắn bia số 7";
             // 
             // _panCam7
@@ -767,25 +814,10 @@
             this._panCam7.Appearance.BackColor = System.Drawing.Color.Transparent;
             this._panCam7.Appearance.Options.UseBackColor = true;
             this._panCam7.Controls.Add(this._transpCtrl7);
-            this._panCam7.Controls.Add(this._lblName71);
-            this._panCam7.Controls.Add(this._spcSmallCamera71);
-            this._panCam7.Controls.Add(this._lblName72);
-            this._panCam7.Controls.Add(this._spcSmallCamera72);
-            this._panCam7.Controls.Add(this._lblName73);
-            this._panCam7.Controls.Add(this._spcSmallCamera73);
-            this._panCam7.Controls.Add(this._lblName74);
-            this._panCam7.Controls.Add(this._spcSmallCamera74);
-            this._panCam7.Controls.Add(this._lblName75);
-            this._panCam7.Controls.Add(this._spcSmallCamera75);
-            this._panCam7.Controls.Add(this._lblName76);
-            this._panCam7.Controls.Add(this._spcSmallCamera76);
-            this._panCam7.Controls.Add(this._lblName77);
-            this._panCam7.Controls.Add(this._spcSmallCamera77);
-            this._panCam7.Controls.Add(this._lblName78);
-            this._panCam7.Controls.Add(this._spcSmallCamera78);
-            this._panCam7.Location = new System.Drawing.Point(3, 3);
+            this._panCam7.Controls.Add(this._spcCamera7);
+            this._panCam7.Location = new System.Drawing.Point(182, 3);
             this._panCam7.Name = "_panCam7";
-            this._panCam7.Size = new System.Drawing.Size(1033, 627);
+            this._panCam7.Size = new System.Drawing.Size(567, 627);
             this._panCam7.TabIndex = 5;
             // 
             // _transpCtrl7
@@ -796,146 +828,10 @@
             this._transpCtrl7.Location = new System.Drawing.Point(2, 2);
             this._transpCtrl7.Name = "_transpCtrl7";
             this._transpCtrl7.Opacity = 100;
-            this._transpCtrl7.Size = new System.Drawing.Size(1029, 623);
+            this._transpCtrl7.Size = new System.Drawing.Size(563, 623);
             this._transpCtrl7.TabIndex = 3;
             this._transpCtrl7.Text = "transpCtrl1";
             this._transpCtrl7.MouseDown += new System.Windows.Forms.MouseEventHandler(this._transpCtrl7_MouseDown);
-            // 
-            // _lblName71
-            // 
-            this._lblName71.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName71.Location = new System.Drawing.Point(8, 218);
-            this._lblName71.Name = "_lblName71";
-            this._lblName71.Size = new System.Drawing.Size(0, 23);
-            this._lblName71.TabIndex = 1;
-            // 
-            // _spcSmallCamera71
-            // 
-            this._spcSmallCamera71.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera71.Location = new System.Drawing.Point(6, 8);
-            this._spcSmallCamera71.Name = "_spcSmallCamera71";
-            this._spcSmallCamera71.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera71.TabIndex = 0;
-            this._spcSmallCamera71.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera71_MouseClick);
-            // 
-            // _lblName72
-            // 
-            this._lblName72.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName72.Location = new System.Drawing.Point(262, 218);
-            this._lblName72.Name = "_lblName72";
-            this._lblName72.Size = new System.Drawing.Size(0, 23);
-            this._lblName72.TabIndex = 1;
-            // 
-            // _spcSmallCamera72
-            // 
-            this._spcSmallCamera72.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera72.Location = new System.Drawing.Point(262, 8);
-            this._spcSmallCamera72.Name = "_spcSmallCamera72";
-            this._spcSmallCamera72.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera72.TabIndex = 0;
-            this._spcSmallCamera72.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera72_MouseClick);
-            // 
-            // _lblName73
-            // 
-            this._lblName73.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName73.Location = new System.Drawing.Point(518, 218);
-            this._lblName73.Name = "_lblName73";
-            this._lblName73.Size = new System.Drawing.Size(0, 23);
-            this._lblName73.TabIndex = 1;
-            // 
-            // _spcSmallCamera73
-            // 
-            this._spcSmallCamera73.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera73.Location = new System.Drawing.Point(518, 8);
-            this._spcSmallCamera73.Name = "_spcSmallCamera73";
-            this._spcSmallCamera73.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera73.TabIndex = 0;
-            this._spcSmallCamera73.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera73_MouseClick);
-            // 
-            // _lblName74
-            // 
-            this._lblName74.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName74.Location = new System.Drawing.Point(774, 218);
-            this._lblName74.Name = "_lblName74";
-            this._lblName74.Size = new System.Drawing.Size(0, 23);
-            this._lblName74.TabIndex = 1;
-            // 
-            // _spcSmallCamera74
-            // 
-            this._spcSmallCamera74.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera74.Location = new System.Drawing.Point(774, 8);
-            this._spcSmallCamera74.Name = "_spcSmallCamera74";
-            this._spcSmallCamera74.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera74.TabIndex = 0;
-            this._spcSmallCamera74.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera74_MouseClick);
-            // 
-            // _lblName75
-            // 
-            this._lblName75.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName75.Location = new System.Drawing.Point(8, 477);
-            this._lblName75.Name = "_lblName75";
-            this._lblName75.Size = new System.Drawing.Size(0, 23);
-            this._lblName75.TabIndex = 1;
-            // 
-            // _spcSmallCamera75
-            // 
-            this._spcSmallCamera75.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera75.Location = new System.Drawing.Point(6, 268);
-            this._spcSmallCamera75.Name = "_spcSmallCamera75";
-            this._spcSmallCamera75.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera75.TabIndex = 0;
-            this._spcSmallCamera75.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera75_MouseClick);
-            // 
-            // _lblName76
-            // 
-            this._lblName76.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName76.Location = new System.Drawing.Point(262, 477);
-            this._lblName76.Name = "_lblName76";
-            this._lblName76.Size = new System.Drawing.Size(0, 23);
-            this._lblName76.TabIndex = 1;
-            // 
-            // _spcSmallCamera76
-            // 
-            this._spcSmallCamera76.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera76.Location = new System.Drawing.Point(262, 268);
-            this._spcSmallCamera76.Name = "_spcSmallCamera76";
-            this._spcSmallCamera76.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera76.TabIndex = 0;
-            this._spcSmallCamera76.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera76_MouseClick);
-            // 
-            // _lblName77
-            // 
-            this._lblName77.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName77.Location = new System.Drawing.Point(518, 477);
-            this._lblName77.Name = "_lblName77";
-            this._lblName77.Size = new System.Drawing.Size(0, 23);
-            this._lblName77.TabIndex = 1;
-            // 
-            // _spcSmallCamera77
-            // 
-            this._spcSmallCamera77.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera77.Location = new System.Drawing.Point(518, 268);
-            this._spcSmallCamera77.Name = "_spcSmallCamera77";
-            this._spcSmallCamera77.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera77.TabIndex = 0;
-            this._spcSmallCamera77.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera77_MouseClick);
-            // 
-            // _lblName78
-            // 
-            this._lblName78.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName78.Location = new System.Drawing.Point(774, 477);
-            this._lblName78.Name = "_lblName78";
-            this._lblName78.Size = new System.Drawing.Size(0, 23);
-            this._lblName78.TabIndex = 1;
-            // 
-            // _spcSmallCamera78
-            // 
-            this._spcSmallCamera78.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera78.Location = new System.Drawing.Point(774, 268);
-            this._spcSmallCamera78.Name = "_spcSmallCamera78";
-            this._spcSmallCamera78.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera78.TabIndex = 0;
-            this._spcSmallCamera78.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera78_MouseClick);
             // 
             // panelControl2
             // 
@@ -944,24 +840,24 @@
             this.panelControl2.Controls.Add(this.labelControl4);
             this.panelControl2.Controls.Add(this._lblName7);
             this.panelControl2.Controls.Add(this.labelControl6);
-            this.panelControl2.Location = new System.Drawing.Point(1042, 5);
+            this.panelControl2.Location = new System.Drawing.Point(752, 3);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(720, 60);
+            this.panelControl2.Size = new System.Drawing.Size(550, 60);
             this.panelControl2.TabIndex = 12;
             // 
             // _lblScore7
             // 
-            this._lblScore7.Appearance.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 40F);
+            this._lblScore7.Appearance.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 35F);
             this._lblScore7.Appearance.ForeColor = System.Drawing.Color.Red;
-            this._lblScore7.Location = new System.Drawing.Point(650, -10);
+            this._lblScore7.Location = new System.Drawing.Point(494, -7);
             this._lblScore7.Name = "_lblScore7";
-            this._lblScore7.Size = new System.Drawing.Size(0, 71);
+            this._lblScore7.Size = new System.Drawing.Size(0, 62);
             this._lblScore7.TabIndex = 3;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.labelControl4.Location = new System.Drawing.Point(570, 14);
+            this.labelControl4.Location = new System.Drawing.Point(430, 14);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(79, 29);
             this.labelControl4.TabIndex = 2;
@@ -969,11 +865,11 @@
             // 
             // _lblName7
             // 
-            this._lblName7.Appearance.Font = new System.Drawing.Font("Tahoma", 26F);
+            this._lblName7.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
             this._lblName7.Appearance.ForeColor = System.Drawing.Color.Green;
-            this._lblName7.Location = new System.Drawing.Point(134, 4);
+            this._lblName7.Location = new System.Drawing.Point(116, 11);
             this._lblName7.Name = "_lblName7";
-            this._lblName7.Size = new System.Drawing.Size(0, 42);
+            this._lblName7.Size = new System.Drawing.Size(0, 33);
             this._lblName7.TabIndex = 1;
             // 
             // labelControl6
@@ -981,18 +877,18 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
             this.labelControl6.Location = new System.Drawing.Point(5, 14);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(128, 29);
+            this.labelControl6.Size = new System.Drawing.Size(120, 29);
             this.labelControl6.TabIndex = 0;
-            this.labelControl6.Text = "Họ và tên : ";
+            this.labelControl6.Text = "Họ và tên: ";
             // 
             // _gridControlScore7
             // 
             this._gridControlScore7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this._gridControlScore7.Location = new System.Drawing.Point(1042, 71);
+            this._gridControlScore7.Location = new System.Drawing.Point(752, 64);
             this._gridControlScore7.MainView = this._gridViewScore7;
             this._gridControlScore7.Name = "_gridControlScore7";
-            this._gridControlScore7.Size = new System.Drawing.Size(720, 559);
+            this._gridControlScore7.Size = new System.Drawing.Size(550, 565);
             this._gridControlScore7.TabIndex = 13;
             this._gridControlScore7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._gridViewScore7});
@@ -1006,12 +902,13 @@
             // 
             // _tabCamera8
             // 
+            this._tabCamera8.Controls.Add(this.panelControl6);
             this._tabCamera8.Controls.Add(this.ribbonStatusBar3);
             this._tabCamera8.Controls.Add(this._panCam8);
             this._tabCamera8.Controls.Add(this.panelControl3);
             this._tabCamera8.Controls.Add(this._gridControlScore8);
             this._tabCamera8.Name = "_tabCamera8";
-            this._tabCamera8.Size = new System.Drawing.Size(1769, 663);
+            this._tabCamera8.Size = new System.Drawing.Size(1305, 663);
             this._tabCamera8.Text = "Bắn bia số 8";
             // 
             // _panCam8
@@ -1022,25 +919,10 @@
             this._panCam8.Appearance.BackColor = System.Drawing.Color.Transparent;
             this._panCam8.Appearance.Options.UseBackColor = true;
             this._panCam8.Controls.Add(this._transpCtrl8);
-            this._panCam8.Controls.Add(this._lblName81);
-            this._panCam8.Controls.Add(this._spcSmallCamera81);
-            this._panCam8.Controls.Add(this._lblName82);
-            this._panCam8.Controls.Add(this._spcSmallCamera82);
-            this._panCam8.Controls.Add(this._lblName83);
-            this._panCam8.Controls.Add(this._spcSmallCamera83);
-            this._panCam8.Controls.Add(this._lblName84);
-            this._panCam8.Controls.Add(this._spcSmallCamera84);
-            this._panCam8.Controls.Add(this._lblName85);
-            this._panCam8.Controls.Add(this._spcSmallCamera85);
-            this._panCam8.Controls.Add(this._lblName86);
-            this._panCam8.Controls.Add(this._spcSmallCamera86);
-            this._panCam8.Controls.Add(this._lblName87);
-            this._panCam8.Controls.Add(this._spcSmallCamera87);
-            this._panCam8.Controls.Add(this._lblName88);
-            this._panCam8.Controls.Add(this._spcSmallCamera88);
-            this._panCam8.Location = new System.Drawing.Point(3, 3);
+            this._panCam8.Controls.Add(this._spcCamera8);
+            this._panCam8.Location = new System.Drawing.Point(182, 3);
             this._panCam8.Name = "_panCam8";
-            this._panCam8.Size = new System.Drawing.Size(1033, 627);
+            this._panCam8.Size = new System.Drawing.Size(567, 627);
             this._panCam8.TabIndex = 16;
             // 
             // _transpCtrl8
@@ -1051,146 +933,10 @@
             this._transpCtrl8.Location = new System.Drawing.Point(2, 2);
             this._transpCtrl8.Name = "_transpCtrl8";
             this._transpCtrl8.Opacity = 100;
-            this._transpCtrl8.Size = new System.Drawing.Size(1029, 623);
+            this._transpCtrl8.Size = new System.Drawing.Size(563, 623);
             this._transpCtrl8.TabIndex = 3;
             this._transpCtrl8.Text = "transpCtrl1";
             this._transpCtrl8.MouseDown += new System.Windows.Forms.MouseEventHandler(this._transpCtrl8_MouseDown);
-            // 
-            // _lblName81
-            // 
-            this._lblName81.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName81.Location = new System.Drawing.Point(8, 218);
-            this._lblName81.Name = "_lblName81";
-            this._lblName81.Size = new System.Drawing.Size(0, 23);
-            this._lblName81.TabIndex = 1;
-            // 
-            // _spcSmallCamera81
-            // 
-            this._spcSmallCamera81.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera81.Location = new System.Drawing.Point(6, 8);
-            this._spcSmallCamera81.Name = "_spcSmallCamera81";
-            this._spcSmallCamera81.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera81.TabIndex = 0;
-            this._spcSmallCamera81.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera81_MouseClick);
-            // 
-            // _lblName82
-            // 
-            this._lblName82.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName82.Location = new System.Drawing.Point(262, 218);
-            this._lblName82.Name = "_lblName82";
-            this._lblName82.Size = new System.Drawing.Size(0, 23);
-            this._lblName82.TabIndex = 1;
-            // 
-            // _spcSmallCamera82
-            // 
-            this._spcSmallCamera82.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera82.Location = new System.Drawing.Point(262, 8);
-            this._spcSmallCamera82.Name = "_spcSmallCamera82";
-            this._spcSmallCamera82.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera82.TabIndex = 0;
-            this._spcSmallCamera82.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera82_MouseClick);
-            // 
-            // _lblName83
-            // 
-            this._lblName83.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName83.Location = new System.Drawing.Point(518, 218);
-            this._lblName83.Name = "_lblName83";
-            this._lblName83.Size = new System.Drawing.Size(0, 23);
-            this._lblName83.TabIndex = 1;
-            // 
-            // _spcSmallCamera83
-            // 
-            this._spcSmallCamera83.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera83.Location = new System.Drawing.Point(518, 8);
-            this._spcSmallCamera83.Name = "_spcSmallCamera83";
-            this._spcSmallCamera83.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera83.TabIndex = 0;
-            this._spcSmallCamera83.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera83_MouseClick);
-            // 
-            // _lblName84
-            // 
-            this._lblName84.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName84.Location = new System.Drawing.Point(774, 218);
-            this._lblName84.Name = "_lblName84";
-            this._lblName84.Size = new System.Drawing.Size(0, 23);
-            this._lblName84.TabIndex = 1;
-            // 
-            // _spcSmallCamera84
-            // 
-            this._spcSmallCamera84.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera84.Location = new System.Drawing.Point(774, 8);
-            this._spcSmallCamera84.Name = "_spcSmallCamera84";
-            this._spcSmallCamera84.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera84.TabIndex = 0;
-            this._spcSmallCamera84.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera84_MouseClick);
-            // 
-            // _lblName85
-            // 
-            this._lblName85.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName85.Location = new System.Drawing.Point(8, 477);
-            this._lblName85.Name = "_lblName85";
-            this._lblName85.Size = new System.Drawing.Size(0, 23);
-            this._lblName85.TabIndex = 1;
-            // 
-            // _spcSmallCamera85
-            // 
-            this._spcSmallCamera85.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera85.Location = new System.Drawing.Point(6, 268);
-            this._spcSmallCamera85.Name = "_spcSmallCamera85";
-            this._spcSmallCamera85.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera85.TabIndex = 0;
-            this._spcSmallCamera85.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera85_MouseClick);
-            // 
-            // _lblName86
-            // 
-            this._lblName86.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName86.Location = new System.Drawing.Point(262, 477);
-            this._lblName86.Name = "_lblName86";
-            this._lblName86.Size = new System.Drawing.Size(0, 23);
-            this._lblName86.TabIndex = 1;
-            // 
-            // _spcSmallCamera86
-            // 
-            this._spcSmallCamera86.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera86.Location = new System.Drawing.Point(262, 268);
-            this._spcSmallCamera86.Name = "_spcSmallCamera86";
-            this._spcSmallCamera86.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera86.TabIndex = 0;
-            this._spcSmallCamera86.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera86_MouseClick);
-            // 
-            // _lblName87
-            // 
-            this._lblName87.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName87.Location = new System.Drawing.Point(518, 477);
-            this._lblName87.Name = "_lblName87";
-            this._lblName87.Size = new System.Drawing.Size(0, 23);
-            this._lblName87.TabIndex = 1;
-            // 
-            // _spcSmallCamera87
-            // 
-            this._spcSmallCamera87.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera87.Location = new System.Drawing.Point(518, 268);
-            this._spcSmallCamera87.Name = "_spcSmallCamera87";
-            this._spcSmallCamera87.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera87.TabIndex = 0;
-            this._spcSmallCamera87.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera87_MouseClick);
-            // 
-            // _lblName88
-            // 
-            this._lblName88.Appearance.Font = new System.Drawing.Font("Tahoma", 14F);
-            this._lblName88.Location = new System.Drawing.Point(774, 477);
-            this._lblName88.Name = "_lblName88";
-            this._lblName88.Size = new System.Drawing.Size(0, 23);
-            this._lblName88.TabIndex = 1;
-            // 
-            // _spcSmallCamera88
-            // 
-            this._spcSmallCamera88.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera88.Location = new System.Drawing.Point(774, 268);
-            this._spcSmallCamera88.Name = "_spcSmallCamera88";
-            this._spcSmallCamera88.Size = new System.Drawing.Size(250, 187);
-            this._spcSmallCamera88.TabIndex = 0;
-            this._spcSmallCamera88.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera88_MouseClick);
             // 
             // panelControl3
             // 
@@ -1199,24 +945,24 @@
             this.panelControl3.Controls.Add(this.labelControl5);
             this.panelControl3.Controls.Add(this._lblName8);
             this.panelControl3.Controls.Add(this.labelControl8);
-            this.panelControl3.Location = new System.Drawing.Point(1042, 5);
+            this.panelControl3.Location = new System.Drawing.Point(752, 3);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(720, 60);
+            this.panelControl3.Size = new System.Drawing.Size(550, 60);
             this.panelControl3.TabIndex = 15;
             // 
             // _lblScore8
             // 
-            this._lblScore8.Appearance.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 40F);
+            this._lblScore8.Appearance.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 35F);
             this._lblScore8.Appearance.ForeColor = System.Drawing.Color.Red;
-            this._lblScore8.Location = new System.Drawing.Point(650, -10);
+            this._lblScore8.Location = new System.Drawing.Point(494, -7);
             this._lblScore8.Name = "_lblScore8";
-            this._lblScore8.Size = new System.Drawing.Size(0, 71);
+            this._lblScore8.Size = new System.Drawing.Size(0, 62);
             this._lblScore8.TabIndex = 3;
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.labelControl5.Location = new System.Drawing.Point(570, 14);
+            this.labelControl5.Location = new System.Drawing.Point(430, 14);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(79, 29);
             this.labelControl5.TabIndex = 2;
@@ -1224,11 +970,11 @@
             // 
             // _lblName8
             // 
-            this._lblName8.Appearance.Font = new System.Drawing.Font("Tahoma", 26F);
+            this._lblName8.Appearance.Font = new System.Drawing.Font("Tahoma", 20F);
             this._lblName8.Appearance.ForeColor = System.Drawing.Color.Green;
-            this._lblName8.Location = new System.Drawing.Point(134, 4);
+            this._lblName8.Location = new System.Drawing.Point(116, 11);
             this._lblName8.Name = "_lblName8";
-            this._lblName8.Size = new System.Drawing.Size(0, 42);
+            this._lblName8.Size = new System.Drawing.Size(0, 33);
             this._lblName8.TabIndex = 1;
             // 
             // labelControl8
@@ -1236,18 +982,18 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
             this.labelControl8.Location = new System.Drawing.Point(5, 14);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(128, 29);
+            this.labelControl8.Size = new System.Drawing.Size(120, 29);
             this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "Họ và tên : ";
+            this.labelControl8.Text = "Họ và tên: ";
             // 
             // _gridControlScore8
             // 
             this._gridControlScore8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this._gridControlScore8.Location = new System.Drawing.Point(1042, 71);
+            this._gridControlScore8.Location = new System.Drawing.Point(752, 64);
             this._gridControlScore8.MainView = this._gridViewScore8;
             this._gridControlScore8.Name = "_gridControlScore8";
-            this._gridControlScore8.Size = new System.Drawing.Size(720, 559);
+            this._gridControlScore8.Size = new System.Drawing.Size(550, 565);
             this._gridControlScore8.TabIndex = 14;
             this._gridControlScore8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._gridViewScore8});
@@ -1259,17 +1005,372 @@
             this._gridViewScore8.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this._gridViewScore8.OptionsView.ShowGroupPanel = false;
             // 
+            // panelControl5
+            // 
+            this.panelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControl5.Controls.Add(this.xtraScrollableControl2);
+            this.panelControl5.Location = new System.Drawing.Point(4, 3);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(176, 623);
+            this.panelControl5.TabIndex = 13;
+            // 
+            // xtraScrollableControl2
+            // 
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera71);
+            this.xtraScrollableControl2.Controls.Add(this._lblName71);
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera72);
+            this.xtraScrollableControl2.Controls.Add(this._lblName72);
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera73);
+            this.xtraScrollableControl2.Controls.Add(this._lblName73);
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera74);
+            this.xtraScrollableControl2.Controls.Add(this._lblName74);
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera75);
+            this.xtraScrollableControl2.Controls.Add(this._lblName75);
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera76);
+            this.xtraScrollableControl2.Controls.Add(this._lblName76);
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera77);
+            this.xtraScrollableControl2.Controls.Add(this._lblName77);
+            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera78);
+            this.xtraScrollableControl2.Controls.Add(this._lblName78);
+            this.xtraScrollableControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl2.Location = new System.Drawing.Point(2, 2);
+            this.xtraScrollableControl2.Name = "xtraScrollableControl2";
+            this.xtraScrollableControl2.Size = new System.Drawing.Size(172, 619);
+            this.xtraScrollableControl2.TabIndex = 5;
+            // 
+            // _spcSmallCamera71
+            // 
+            this._spcSmallCamera71.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera71.Location = new System.Drawing.Point(2, 2);
+            this._spcSmallCamera71.Name = "_spcSmallCamera71";
+            this._spcSmallCamera71.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera71.TabIndex = 0;
+            this._spcSmallCamera71.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera71_MouseClick);
+            // 
+            // _lblName71
+            // 
+            this._lblName71.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName71.Location = new System.Drawing.Point(2, 140);
+            this._lblName71.Name = "_lblName71";
+            this._lblName71.Size = new System.Drawing.Size(0, 16);
+            this._lblName71.TabIndex = 1;
+            // 
+            // _spcSmallCamera72
+            // 
+            this._spcSmallCamera72.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera72.Location = new System.Drawing.Point(2, 170);
+            this._spcSmallCamera72.Name = "_spcSmallCamera72";
+            this._spcSmallCamera72.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera72.TabIndex = 0;
+            this._spcSmallCamera72.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera72_MouseClick);
+            // 
+            // _lblName72
+            // 
+            this._lblName72.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName72.Location = new System.Drawing.Point(2, 310);
+            this._lblName72.Name = "_lblName72";
+            this._lblName72.Size = new System.Drawing.Size(0, 16);
+            this._lblName72.TabIndex = 1;
+            // 
+            // _spcSmallCamera73
+            // 
+            this._spcSmallCamera73.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera73.Location = new System.Drawing.Point(0, 340);
+            this._spcSmallCamera73.Name = "_spcSmallCamera73";
+            this._spcSmallCamera73.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera73.TabIndex = 0;
+            this._spcSmallCamera73.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera73_MouseClick);
+            // 
+            // _lblName73
+            // 
+            this._lblName73.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName73.Location = new System.Drawing.Point(2, 480);
+            this._lblName73.Name = "_lblName73";
+            this._lblName73.Size = new System.Drawing.Size(0, 16);
+            this._lblName73.TabIndex = 1;
+            // 
+            // _spcSmallCamera74
+            // 
+            this._spcSmallCamera74.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera74.Location = new System.Drawing.Point(2, 510);
+            this._spcSmallCamera74.Name = "_spcSmallCamera74";
+            this._spcSmallCamera74.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera74.TabIndex = 0;
+            this._spcSmallCamera74.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera74_MouseClick);
+            // 
+            // _lblName74
+            // 
+            this._lblName74.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName74.Location = new System.Drawing.Point(2, 650);
+            this._lblName74.Name = "_lblName74";
+            this._lblName74.Size = new System.Drawing.Size(0, 16);
+            this._lblName74.TabIndex = 1;
+            // 
+            // _spcSmallCamera75
+            // 
+            this._spcSmallCamera75.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera75.Location = new System.Drawing.Point(2, 680);
+            this._spcSmallCamera75.Name = "_spcSmallCamera75";
+            this._spcSmallCamera75.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera75.TabIndex = 0;
+            this._spcSmallCamera75.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera75_MouseClick);
+            // 
+            // _lblName75
+            // 
+            this._lblName75.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName75.Location = new System.Drawing.Point(2, 820);
+            this._lblName75.Name = "_lblName75";
+            this._lblName75.Size = new System.Drawing.Size(0, 16);
+            this._lblName75.TabIndex = 1;
+            // 
+            // _spcSmallCamera76
+            // 
+            this._spcSmallCamera76.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera76.Location = new System.Drawing.Point(2, 850);
+            this._spcSmallCamera76.Name = "_spcSmallCamera76";
+            this._spcSmallCamera76.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera76.TabIndex = 0;
+            this._spcSmallCamera76.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera76_MouseClick);
+            // 
+            // _lblName76
+            // 
+            this._lblName76.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
+            this._lblName76.Location = new System.Drawing.Point(2, 990);
+            this._lblName76.Name = "_lblName76";
+            this._lblName76.Size = new System.Drawing.Size(0, 16);
+            this._lblName76.TabIndex = 1;
+            // 
+            // _spcSmallCamera77
+            // 
+            this._spcSmallCamera77.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera77.Location = new System.Drawing.Point(2, 1020);
+            this._spcSmallCamera77.Name = "_spcSmallCamera77";
+            this._spcSmallCamera77.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera77.TabIndex = 0;
+            this._spcSmallCamera77.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera77_MouseClick);
+            // 
+            // _lblName77
+            // 
+            this._lblName77.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName77.Location = new System.Drawing.Point(2, 1160);
+            this._lblName77.Name = "_lblName77";
+            this._lblName77.Size = new System.Drawing.Size(0, 16);
+            this._lblName77.TabIndex = 1;
+            // 
+            // _spcSmallCamera78
+            // 
+            this._spcSmallCamera78.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera78.Location = new System.Drawing.Point(2, 1190);
+            this._spcSmallCamera78.Name = "_spcSmallCamera78";
+            this._spcSmallCamera78.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera78.TabIndex = 0;
+            this._spcSmallCamera78.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera78_MouseClick);
+            // 
+            // _lblName78
+            // 
+            this._lblName78.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName78.Location = new System.Drawing.Point(2, 1330);
+            this._lblName78.Name = "_lblName78";
+            this._lblName78.Size = new System.Drawing.Size(0, 16);
+            this._lblName78.TabIndex = 1;
+            // 
+            // _spcCamera7
+            // 
+            this._spcCamera7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._spcCamera7.Location = new System.Drawing.Point(2, 2);
+            this._spcCamera7.Name = "_spcCamera7";
+            this._spcCamera7.Size = new System.Drawing.Size(563, 623);
+            this._spcCamera7.TabIndex = 6;
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControl6.Controls.Add(this.xtraScrollableControl3);
+            this.panelControl6.Location = new System.Drawing.Point(4, 3);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(176, 623);
+            this.panelControl6.TabIndex = 14;
+            // 
+            // xtraScrollableControl3
+            // 
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera81);
+            this.xtraScrollableControl3.Controls.Add(this._lblName81);
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera82);
+            this.xtraScrollableControl3.Controls.Add(this._lblName82);
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera83);
+            this.xtraScrollableControl3.Controls.Add(this._lblName83);
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera84);
+            this.xtraScrollableControl3.Controls.Add(this._lblName84);
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera85);
+            this.xtraScrollableControl3.Controls.Add(this._lblName85);
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera86);
+            this.xtraScrollableControl3.Controls.Add(this._lblName86);
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera87);
+            this.xtraScrollableControl3.Controls.Add(this._lblName87);
+            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera88);
+            this.xtraScrollableControl3.Controls.Add(this._lblName88);
+            this.xtraScrollableControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl3.Location = new System.Drawing.Point(2, 2);
+            this.xtraScrollableControl3.Name = "xtraScrollableControl3";
+            this.xtraScrollableControl3.Size = new System.Drawing.Size(172, 619);
+            this.xtraScrollableControl3.TabIndex = 5;
+            // 
+            // _spcSmallCamera81
+            // 
+            this._spcSmallCamera81.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera81.Location = new System.Drawing.Point(2, 2);
+            this._spcSmallCamera81.Name = "_spcSmallCamera81";
+            this._spcSmallCamera81.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera81.TabIndex = 0;
+            this._spcSmallCamera81.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera81_MouseClick);
+            // 
+            // _lblName81
+            // 
+            this._lblName81.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName81.Location = new System.Drawing.Point(2, 140);
+            this._lblName81.Name = "_lblName81";
+            this._lblName81.Size = new System.Drawing.Size(0, 16);
+            this._lblName81.TabIndex = 1;
+            // 
+            // _spcSmallCamera82
+            // 
+            this._spcSmallCamera82.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera82.Location = new System.Drawing.Point(2, 170);
+            this._spcSmallCamera82.Name = "_spcSmallCamera82";
+            this._spcSmallCamera82.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera82.TabIndex = 0;
+            this._spcSmallCamera82.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera82_MouseClick);
+            // 
+            // _lblName82
+            // 
+            this._lblName82.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName82.Location = new System.Drawing.Point(2, 310);
+            this._lblName82.Name = "_lblName82";
+            this._lblName82.Size = new System.Drawing.Size(0, 16);
+            this._lblName82.TabIndex = 1;
+            // 
+            // _spcSmallCamera83
+            // 
+            this._spcSmallCamera83.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera83.Location = new System.Drawing.Point(0, 340);
+            this._spcSmallCamera83.Name = "_spcSmallCamera83";
+            this._spcSmallCamera83.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera83.TabIndex = 0;
+            this._spcSmallCamera83.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera83_MouseClick);
+            // 
+            // _lblName83
+            // 
+            this._lblName83.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName83.Location = new System.Drawing.Point(2, 480);
+            this._lblName83.Name = "_lblName83";
+            this._lblName83.Size = new System.Drawing.Size(0, 16);
+            this._lblName83.TabIndex = 1;
+            // 
+            // _spcSmallCamera84
+            // 
+            this._spcSmallCamera84.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera84.Location = new System.Drawing.Point(2, 510);
+            this._spcSmallCamera84.Name = "_spcSmallCamera84";
+            this._spcSmallCamera84.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera84.TabIndex = 0;
+            this._spcSmallCamera84.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera84_MouseClick);
+            // 
+            // _lblName84
+            // 
+            this._lblName84.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName84.Location = new System.Drawing.Point(2, 650);
+            this._lblName84.Name = "_lblName84";
+            this._lblName84.Size = new System.Drawing.Size(0, 16);
+            this._lblName84.TabIndex = 1;
+            // 
+            // _spcSmallCamera85
+            // 
+            this._spcSmallCamera85.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera85.Location = new System.Drawing.Point(2, 680);
+            this._spcSmallCamera85.Name = "_spcSmallCamera85";
+            this._spcSmallCamera85.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera85.TabIndex = 0;
+            this._spcSmallCamera85.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera85_MouseClick);
+            // 
+            // _lblName85
+            // 
+            this._lblName85.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName85.Location = new System.Drawing.Point(2, 820);
+            this._lblName85.Name = "_lblName85";
+            this._lblName85.Size = new System.Drawing.Size(0, 16);
+            this._lblName85.TabIndex = 1;
+            // 
+            // _spcSmallCamera86
+            // 
+            this._spcSmallCamera86.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera86.Location = new System.Drawing.Point(2, 850);
+            this._spcSmallCamera86.Name = "_spcSmallCamera86";
+            this._spcSmallCamera86.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera86.TabIndex = 0;
+            this._spcSmallCamera86.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera86_MouseClick);
+            // 
+            // _lblName86
+            // 
+            this._lblName86.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
+            this._lblName86.Location = new System.Drawing.Point(2, 990);
+            this._lblName86.Name = "_lblName86";
+            this._lblName86.Size = new System.Drawing.Size(0, 16);
+            this._lblName86.TabIndex = 1;
+            // 
+            // _spcSmallCamera87
+            // 
+            this._spcSmallCamera87.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera87.Location = new System.Drawing.Point(2, 1020);
+            this._spcSmallCamera87.Name = "_spcSmallCamera87";
+            this._spcSmallCamera87.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera87.TabIndex = 0;
+            this._spcSmallCamera87.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera87_MouseClick);
+            // 
+            // _lblName87
+            // 
+            this._lblName87.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName87.Location = new System.Drawing.Point(2, 1160);
+            this._lblName87.Name = "_lblName87";
+            this._lblName87.Size = new System.Drawing.Size(0, 16);
+            this._lblName87.TabIndex = 1;
+            // 
+            // _spcSmallCamera88
+            // 
+            this._spcSmallCamera88.BackColor = System.Drawing.Color.Silver;
+            this._spcSmallCamera88.Location = new System.Drawing.Point(2, 1190);
+            this._spcSmallCamera88.Name = "_spcSmallCamera88";
+            this._spcSmallCamera88.Size = new System.Drawing.Size(150, 126);
+            this._spcSmallCamera88.TabIndex = 0;
+            this._spcSmallCamera88.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera88_MouseClick);
+            // 
+            // _lblName88
+            // 
+            this._lblName88.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName88.Location = new System.Drawing.Point(2, 1330);
+            this._lblName88.Name = "_lblName88";
+            this._lblName88.Size = new System.Drawing.Size(0, 16);
+            this._lblName88.TabIndex = 1;
+            // 
+            // _spcCamera8
+            // 
+            this._spcCamera8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._spcCamera8.Location = new System.Drawing.Point(2, 2);
+            this._spcCamera8.Name = "_spcCamera8";
+            this._spcCamera8.Size = new System.Drawing.Size(563, 623);
+            this._spcCamera8.TabIndex = 7;
+            // 
             // frmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1775, 834);
+            this.ClientSize = new System.Drawing.Size(1311, 834);
             this.Controls.Add(this._tabControlCamera);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MinimumSize = new System.Drawing.Size(1785, 835);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
@@ -1281,9 +1382,12 @@
             ((System.ComponentModel.ISupportInitialize)(this._tabControlCamera)).EndInit();
             this._tabControlCamera.ResumeLayout(false);
             this._tabCamera4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.xtraScrollableControl1.ResumeLayout(false);
+            this.xtraScrollableControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._panCam4)).EndInit();
             this._panCam4.ResumeLayout(false);
-            this._panCam4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._ptbCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -1293,7 +1397,6 @@
             this._tabCamera7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._panCam7)).EndInit();
             this._panCam7.ResumeLayout(false);
-            this._panCam7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
@@ -1302,12 +1405,19 @@
             this._tabCamera8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._panCam8)).EndInit();
             this._panCam8.ResumeLayout(false);
-            this._panCam8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            this.xtraScrollableControl2.ResumeLayout(false);
+            this.xtraScrollableControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
+            this.panelControl6.ResumeLayout(false);
+            this.xtraScrollableControl3.ResumeLayout(false);
+            this.xtraScrollableControl3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1397,40 +1507,49 @@
         private WebEye.StreamPlayerControl _spcSmallCamera46;
         private DevExpress.XtraEditors.LabelControl _lblName45;
         private WebEye.StreamPlayerControl _spcSmallCamera45;
-        private DevExpress.XtraEditors.LabelControl _lblName78;
-        private WebEye.StreamPlayerControl _spcSmallCamera78;
-        private DevExpress.XtraEditors.LabelControl _lblName77;
-        private WebEye.StreamPlayerControl _spcSmallCamera77;
-        private DevExpress.XtraEditors.LabelControl _lblName76;
-        private WebEye.StreamPlayerControl _spcSmallCamera76;
-        private DevExpress.XtraEditors.LabelControl _lblName75;
-        private WebEye.StreamPlayerControl _spcSmallCamera75;
-        private DevExpress.XtraEditors.LabelControl _lblName74;
-        private WebEye.StreamPlayerControl _spcSmallCamera74;
-        private DevExpress.XtraEditors.LabelControl _lblName73;
-        private WebEye.StreamPlayerControl _spcSmallCamera73;
-        private DevExpress.XtraEditors.LabelControl _lblName72;
-        private WebEye.StreamPlayerControl _spcSmallCamera72;
-        private DevExpress.XtraEditors.LabelControl _lblName71;
-        private WebEye.StreamPlayerControl _spcSmallCamera71;
-        private DevExpress.XtraEditors.LabelControl _lblName88;
-        private WebEye.StreamPlayerControl _spcSmallCamera88;
-        private DevExpress.XtraEditors.LabelControl _lblName87;
-        private WebEye.StreamPlayerControl _spcSmallCamera87;
-        private DevExpress.XtraEditors.LabelControl _lblName86;
-        private WebEye.StreamPlayerControl _spcSmallCamera86;
-        private DevExpress.XtraEditors.LabelControl _lblName85;
-        private WebEye.StreamPlayerControl _spcSmallCamera85;
-        private DevExpress.XtraEditors.LabelControl _lblName84;
-        private WebEye.StreamPlayerControl _spcSmallCamera84;
-        private DevExpress.XtraEditors.LabelControl _lblName83;
-        private WebEye.StreamPlayerControl _spcSmallCamera83;
-        private DevExpress.XtraEditors.LabelControl _lblName82;
-        private WebEye.StreamPlayerControl _spcSmallCamera82;
-        private DevExpress.XtraEditors.LabelControl _lblName81;
-        private WebEye.StreamPlayerControl _spcSmallCamera81;
         private DevExpress.XtraBars.BarButtonItem _btnNextTurns;
         private DevExpress.XtraBars.BarButtonItem _btnBack;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
+        private WebEye.StreamPlayerControl _spcCamera4;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl2;
+        private WebEye.StreamPlayerControl _spcSmallCamera71;
+        private DevExpress.XtraEditors.LabelControl _lblName71;
+        private WebEye.StreamPlayerControl _spcSmallCamera72;
+        private DevExpress.XtraEditors.LabelControl _lblName72;
+        private WebEye.StreamPlayerControl _spcSmallCamera73;
+        private DevExpress.XtraEditors.LabelControl _lblName73;
+        private WebEye.StreamPlayerControl _spcSmallCamera74;
+        private DevExpress.XtraEditors.LabelControl _lblName74;
+        private WebEye.StreamPlayerControl _spcSmallCamera75;
+        private DevExpress.XtraEditors.LabelControl _lblName75;
+        private WebEye.StreamPlayerControl _spcSmallCamera76;
+        private DevExpress.XtraEditors.LabelControl _lblName76;
+        private WebEye.StreamPlayerControl _spcSmallCamera77;
+        private DevExpress.XtraEditors.LabelControl _lblName77;
+        private WebEye.StreamPlayerControl _spcSmallCamera78;
+        private DevExpress.XtraEditors.LabelControl _lblName78;
+        private WebEye.StreamPlayerControl _spcCamera7;
+        private DevExpress.XtraEditors.PanelControl panelControl6;
+        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl3;
+        private WebEye.StreamPlayerControl _spcSmallCamera81;
+        private DevExpress.XtraEditors.LabelControl _lblName81;
+        private WebEye.StreamPlayerControl _spcSmallCamera82;
+        private DevExpress.XtraEditors.LabelControl _lblName82;
+        private WebEye.StreamPlayerControl _spcSmallCamera83;
+        private DevExpress.XtraEditors.LabelControl _lblName83;
+        private WebEye.StreamPlayerControl _spcSmallCamera84;
+        private DevExpress.XtraEditors.LabelControl _lblName84;
+        private WebEye.StreamPlayerControl _spcSmallCamera85;
+        private DevExpress.XtraEditors.LabelControl _lblName85;
+        private WebEye.StreamPlayerControl _spcSmallCamera86;
+        private DevExpress.XtraEditors.LabelControl _lblName86;
+        private WebEye.StreamPlayerControl _spcSmallCamera87;
+        private DevExpress.XtraEditors.LabelControl _lblName87;
+        private WebEye.StreamPlayerControl _spcSmallCamera88;
+        private DevExpress.XtraEditors.LabelControl _lblName88;
+        private WebEye.StreamPlayerControl _spcCamera8;
     }
 }
 
