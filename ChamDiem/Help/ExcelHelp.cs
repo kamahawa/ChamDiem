@@ -12,10 +12,11 @@ namespace CameraApp.Help
 {
     class ExcelHelp
     {
+
         public static void ExportExcel(DataTable dtBia1, DataTable dtBia2, DataTable dtBia3)
         {
             try
-            {
+            {                
                 SaveFileDialog sd = new SaveFileDialog();
                 sd.Filter = "xls files (*.xls)|*.xls";
                 sd.FilterIndex = 2;

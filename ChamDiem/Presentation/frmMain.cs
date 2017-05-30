@@ -100,6 +100,8 @@ namespace ChamDiem
         private int _controlZoom7 = NO_CAMERA_SMALL;//control camera bia 7 is zooming
         private int _controlZoom8 = NO_CAMERA_SMALL;//control camera bia 8 is zooming
 
+        private bool isActive = false;//bien kiem tra kich hoat
+
         public frmMain()
         {
             InitializeComponent();
@@ -108,7 +110,6 @@ namespace ChamDiem
             LicenseInfo lic = new LicenseInfo();
             int value = km.LoadSuretyFile(string.Format(@"{0}\Key.lic", Application.StartupPath), ref lic);
             string productKey = lic.ProductKey;
-            bool isActive = false;//bien kiem tra kich hoat
             if (km.ValidKey(ref productKey))
             {
                 KeyValuesClass kv = new KeyValuesClass();
@@ -129,13 +130,7 @@ namespace ChamDiem
                 }
             }
 
-            if (isActive)
-            {
-                //da kich hoat thi load url camera
-                LoadUrlCamera();
-                LoadCamera();
-            }
-            else
+            if (!isActive)
             {
                 using (frmRegistration frm = new frmRegistration())
                 {
@@ -148,29 +143,15 @@ namespace ChamDiem
 
         private void _btnExportScoreFile_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(_selectedBia == SELECT_3_BIA)
-            {
-                ExcelHelp.ExportExcel((DataTable)_gridControlScore4.DataSource, (DataTable)_gridControlScore7.DataSource, (DataTable)_gridControlScore8.DataSource);
-            }
-            else if (_selectedBia == SELECT_BIA_4)
-            {
-                ExcelHelp.ExportExcel1Bia((DataTable)_gridControlScore4.DataSource);
-            }
-
-            else if (_selectedBia == SELECT_BIA_7)
-            {
-                ExcelHelp.ExportExcel1Bia((DataTable)_gridControlScore7.DataSource);
-            }
-
-            else if (_selectedBia == SELECT_BIA_8)
-            {
-                ExcelHelp.ExportExcel1Bia((DataTable)_gridControlScore8.DataSource);
-            }
-
+            Thread t = new Thread(ExportExcel);
+            t.Start();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            //da kich hoat thi load url camera
+            LoadUrlCamera();
+            LoadCamera();
             _cameraSmallSize = _spcSmallCamera41.Size;
         }
 
@@ -361,6 +342,7 @@ namespace ChamDiem
             if (dr == DialogResult.OK)
             {
                 _selectedBia = SELECT_BIA_4;
+                LoadCamera();
                 //enable tab page 4 and disable tab page 7, tab page 8
                 _tabCamera4.PageEnabled = true;
                 _tabCamera7.PageEnabled = false;
@@ -380,6 +362,7 @@ namespace ChamDiem
             if (dr == DialogResult.OK)
             {
                 _selectedBia = SELECT_BIA_7;
+                LoadCamera();
                 //enable tab page 7 and disable tab page 4, tab page 8
                 _tabCamera4.PageEnabled = false;
                 _tabCamera7.PageEnabled = true;
@@ -399,6 +382,7 @@ namespace ChamDiem
             if (dr == DialogResult.OK)
             {
                 _selectedBia = SELECT_BIA_8;
+                LoadCamera();
                 //enable tab page 8 and disable tab page 7, tab page 4
                 _tabCamera4.PageEnabled = false;
                 _tabCamera7.PageEnabled = false;
@@ -418,6 +402,7 @@ namespace ChamDiem
             if (dr == DialogResult.OK)
             {
                 _selectedBia = SELECT_3_BIA;
+                LoadCamera();
                 //enable tab page 4, tab page 7, tab page 8
                 _tabCamera4.PageEnabled = true;
                 _tabCamera7.PageEnabled = true;
@@ -1430,7 +1415,27 @@ namespace ChamDiem
         {           
             try
             {
-                LoadCamera3Bia();
+                switch(_selectedBia)
+                {
+                    case SELECT_3_BIA:
+                        Thread t = new Thread(LoadCamera3Bia);
+                        t.Start();
+                        break;
+                    case SELECT_BIA_4:
+                        Thread t4 = new Thread(LoadCameraBia4);
+                        t4.Start();
+                        break;
+                    case SELECT_BIA_7:
+                        Thread t7 = new Thread(LoadCameraBia7);
+                        t7.Start();
+                        break;
+                    case SELECT_BIA_8:
+                        Thread t8 = new Thread(LoadCameraBia8);
+                        t8.Start();
+                        break;
+                }
+                
+                //LoadCamera3Bia();
                 /*
                 if (_tabControlCamera.SelectedTabPageIndex == 0)
                 {
@@ -1451,17 +1456,54 @@ namespace ChamDiem
                 File.AppendAllText("log.txt", ex.ToString());
             }
         }
-
+        
         void LoadCameraUrl(string url, StreamPlayerControl spc)
         {
+            /*
             if (url != "")
             {
                 var uri = new Uri(url);
                 spc.StartPlay(uri, TimeSpan.FromSeconds(15.0));
             }
+            */
+            if (url != "")
+            {
+                var uri = new Uri(url);
+                spc.Invoke(new MethodInvoker(delegate {
+                    spc.StartPlay(uri, TimeSpan.FromSeconds(15.0));
+                }));
+            }
+        }
+        
+        private void ExportExcel()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(ExportExcel));
+            }
+            else
+            {
+                if (_selectedBia == SELECT_3_BIA)
+                {                
+                    ExcelHelp.ExportExcel((DataTable)_gridControlScore4.DataSource, (DataTable)_gridControlScore7.DataSource, (DataTable)_gridControlScore8.DataSource);
+                }
+                else if (_selectedBia == SELECT_BIA_4)
+                {
+                    ExcelHelp.ExportExcel1Bia((DataTable)_gridControlScore4.DataSource);
+                }
+
+                else if (_selectedBia == SELECT_BIA_7)
+                {
+                    ExcelHelp.ExportExcel1Bia((DataTable)_gridControlScore7.DataSource);
+                }
+                else if (_selectedBia == SELECT_BIA_8)
+                {
+                    ExcelHelp.ExportExcel1Bia((DataTable)_gridControlScore8.DataSource);
+                }
+            }
         }
 
-        void StopCameraSmall(ref StreamPlayerControl spc)
+        void StopCameraSmall(StreamPlayerControl spc)
         {
             if (spc.IsPlaying)
             {
@@ -1757,38 +1799,38 @@ namespace ChamDiem
 
         void StopCameraBia4()
         {
-            StopCameraSmall(ref _spcSmallCamera41);
-            StopCameraSmall(ref _spcSmallCamera42);
-            StopCameraSmall(ref _spcSmallCamera43);
-            StopCameraSmall(ref _spcSmallCamera44);
-            StopCameraSmall(ref _spcSmallCamera45);
-            StopCameraSmall(ref _spcSmallCamera46);
-            StopCameraSmall(ref _spcSmallCamera47);
-            StopCameraSmall(ref _spcSmallCamera48);
+            StopCameraSmall(_spcSmallCamera41);
+            StopCameraSmall(_spcSmallCamera42);
+            StopCameraSmall(_spcSmallCamera43);
+            StopCameraSmall(_spcSmallCamera44);
+            StopCameraSmall(_spcSmallCamera45);
+            StopCameraSmall(_spcSmallCamera46);
+            StopCameraSmall(_spcSmallCamera47);
+            StopCameraSmall(_spcSmallCamera48);
         }
 
         void StopCameraBia7()
         {
-            StopCameraSmall(ref _spcSmallCamera71);
-            StopCameraSmall(ref _spcSmallCamera72);
-            StopCameraSmall(ref _spcSmallCamera73);
-            StopCameraSmall(ref _spcSmallCamera74);
-            StopCameraSmall(ref _spcSmallCamera75);
-            StopCameraSmall(ref _spcSmallCamera76);
-            StopCameraSmall(ref _spcSmallCamera77);
-            StopCameraSmall(ref _spcSmallCamera78);
+            StopCameraSmall(_spcSmallCamera71);
+            StopCameraSmall(_spcSmallCamera72);
+            StopCameraSmall(_spcSmallCamera73);
+            StopCameraSmall(_spcSmallCamera74);
+            StopCameraSmall(_spcSmallCamera75);
+            StopCameraSmall(_spcSmallCamera76);
+            StopCameraSmall(_spcSmallCamera77);
+            StopCameraSmall(_spcSmallCamera78);
         }
 
         void StopCameraBia8()
         {
-            StopCameraSmall(ref _spcSmallCamera81);
-            StopCameraSmall(ref _spcSmallCamera82);
-            StopCameraSmall(ref _spcSmallCamera83);
-            StopCameraSmall(ref _spcSmallCamera84);
-            StopCameraSmall(ref _spcSmallCamera85);
-            StopCameraSmall(ref _spcSmallCamera86);
-            StopCameraSmall(ref _spcSmallCamera87);
-            StopCameraSmall(ref _spcSmallCamera88);
+            StopCameraSmall(_spcSmallCamera81);
+            StopCameraSmall(_spcSmallCamera82);
+            StopCameraSmall(_spcSmallCamera83);
+            StopCameraSmall(_spcSmallCamera84);
+            StopCameraSmall(_spcSmallCamera85);
+            StopCameraSmall(_spcSmallCamera86);
+            StopCameraSmall(_spcSmallCamera87);
+            StopCameraSmall(_spcSmallCamera88);
         }
 
         private void refreshControl()
