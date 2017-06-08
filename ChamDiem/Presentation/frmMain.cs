@@ -21,7 +21,7 @@ using CameraApp;
 
 namespace ChamDiem
 {
-    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
         #region ----- STATIC VARIABLE -----
         //bia de chon ban
@@ -36,7 +36,7 @@ namespace ChamDiem
 
         //luot ban o 1 bia
         const int LUOT_BAN_1_BIA = 3;
-        
+
         //3 bia moi bia 8 be
         const int SO_BE_BAN = 24;
 
@@ -74,9 +74,6 @@ namespace ChamDiem
         //array camera url
         public static string[] _urlCamera = new string[SO_BE_BAN];
 
-        //luot ban
-        private int _luotBia1 = RESET_LUOT_KHOI_DAU, _luotBia2 = RESET_LUOT_KHOI_DAU, _luotBia3 = RESET_LUOT_KHOI_DAU;
-
         //nguoi ban hien tai o cac bia
         private int _currentMemberBia4 = 0, _currentMemberBia7 = 0, _currentMemberBia8 = 0;
 
@@ -84,24 +81,55 @@ namespace ChamDiem
         private int _currentTurn1 = 0, _currentTurn2 = 0, _currentTurn3 = 0;
 
         //so nguoi 1 luot ban, hien tai la 8 nguoi
-        private int _numberPersonShot = 8;
-        
+        private const int NUMBER_PERSON_SHOT = 8;
+
         private Solider[] _solider;//so nguoi ban
 
         //chon bia de ban
         private int _selectedBia = SELECT_3_BIA;// mac dinh la chon 3 bia
-
-        private Size _cameraSmallSize;//size of camera small
-        private Point _cameraSmallLocation4;//location of camera small bia 4 before zoom
-        private Point _cameraSmallLocation7;//location of camera small bia 7 before zoom
-        private Point _cameraSmallLocation8;//location of camera small bia 8 before zoom
-
-        private int _controlZoom4 = NO_CAMERA_SMALL;//control camera bia 4 is zooming
-        private int _controlZoom7 = NO_CAMERA_SMALL;//control camera bia 7 is zooming
-        private int _controlZoom8 = NO_CAMERA_SMALL;//control camera bia 8 is zooming
-
+        
         private bool isActive = false;//bien kiem tra kich hoat
 
+        List<PictureBox> _lstPbBia41 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia42 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia43 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia44 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia45 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia46 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia47 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia48 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia71 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia72 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia73 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia74 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia75 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia76 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia77 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia78 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia81 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia82 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia83 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia84 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia85 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia86 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia87 = new List<PictureBox>();
+        List<PictureBox> _lstPbBia88 = new List<PictureBox>();
+        
+        private Color[] COLOR_FOR_EACH_TURN = new Color[] 
+        {
+            Color.Red,
+            Color.Yellow,
+            Color.Green,
+            Color.Blue,
+            Color.Pink,
+            Color.Orange,
+            Color.Purple,
+            Color.Brown,
+            Color.YellowGreen,
+            Color.Violet
+        };
+
+        //D8GXC-MVBVA-H3009-1YL09-828HF-PJYMC
         public frmMain()
         {
             InitializeComponent();
@@ -152,14 +180,13 @@ namespace ChamDiem
             //da kich hoat thi load url camera
             LoadUrlCamera();
             LoadCamera();
-            _cameraSmallSize = _spcSmallCamera41.Size;
         }
 
         private void _btnInputCameraUrl_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmInputCameraUrl frm = new frmInputCameraUrl();
             frm.ShowDialog();
-            if(frmInputCameraUrl.isOkClick)
+            if (frmInputCameraUrl.isOkClick)
             {
                 LoadUrlCamera();
                 LoadCamera();
@@ -195,7 +222,7 @@ namespace ChamDiem
 
         private void _btnMissShot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(_tabControlCamera.SelectedTabPageIndex == 0)
+            if (_tabControlCamera.SelectedTabPageIndex == 0)
             {
                 _lblScore4.Text = "0";
                 ChamDiem(0, _gridControlScore4, _lblName4, _lblScore4, 1);
@@ -220,7 +247,7 @@ namespace ChamDiem
             {
                 if (op.ShowDialog() == DialogResult.OK)
                 {
-                    if(_selectedBia == SELECT_3_BIA)
+                    if (_selectedBia == SELECT_3_BIA)
                     {
                         //load info be so 1
                         DataTable table = ExcelHelp.getDataTableExcelFor3Bia(op.FileName);
@@ -228,7 +255,7 @@ namespace ChamDiem
                         _gridControlScore4.DataSource = null;
                         _gridControlScore4.DataSource = table;
                         _gridViewScore4.BestFitColumns();
-                        
+
                         //load info be so 2
                         DataTable table2 = table.Copy();//ExcelHelp.getDataTableExcel(op.FileName);
                         _gridViewScore7.Columns.Clear();
@@ -250,8 +277,8 @@ namespace ChamDiem
                         LoadNameBia4();//table);
                         LoadNameBia7();//table);
                         LoadNameBia8();//table);
-                    }                    
-                    else if(_selectedBia == SELECT_BIA_4)
+                    }
+                    else if (_selectedBia == SELECT_BIA_4)
                     {
                         DataTable table = ExcelHelp.getDataTableExcelFor1Bia(op.FileName);
                         _gridViewScore4.Columns.Clear();
@@ -305,7 +332,12 @@ namespace ChamDiem
             {
                 return;
             }
-            AddShotIcon(e.X, e.Y, _panCam4);
+            // vuot qua so luot thi k show nua
+            if (_solider[_currentMemberBia4].luotBanBia4 == 4)
+            {
+                return;
+            }
+            AddShotIcon(e.X, e.Y, _panCam4, 4);
             XuLyBe1(e.X, e.Y);
         }
 
@@ -316,7 +348,12 @@ namespace ChamDiem
             {
                 return;
             }
-            AddShotIcon(e.X, e.Y, _panCam7);
+            // vuot qua so luot thi k show nua
+            if (_solider[_currentMemberBia7].luotBanBia7 == 4)
+            {
+                return;
+            }
+            AddShotIcon(e.X, e.Y, _panCam7, 7);
             XuLyBe2(e.X, e.Y);
         }
 
@@ -327,10 +364,15 @@ namespace ChamDiem
             {
                 return;
             }
-            AddShotIcon(e.X, e.Y, _panCam8);
+            // vuot qua so luot thi k show nua
+            if (_solider[_currentMemberBia8].luotBanBia8 == 4)
+            {
+                return;
+            }
+            AddShotIcon(e.X, e.Y, _panCam8, 8);
             XuLyBe3(e.X, e.Y);
         }
-        
+
         private void _btnChooseBia4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //neu bia ban ma la bia hien tai thi k lam gi
@@ -415,631 +457,957 @@ namespace ChamDiem
 
         private void _btnNextTurns_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (_tabControlCamera.SelectedTabPageIndex == 0 && _currentTurn1 + _numberPersonShot < _solider.Length)
+            if (_tabControlCamera.SelectedTabPageIndex == 0 && _currentTurn1 + NUMBER_PERSON_SHOT < _solider.Length)
             {
-                _currentTurn1 += _numberPersonShot;
+                _currentTurn1 += NUMBER_PERSON_SHOT;
                 LoadNameBia4();
             }
-            else if (_tabControlCamera.SelectedTabPageIndex == 1 && _currentTurn2 + _numberPersonShot < _solider.Length)
+            else if (_tabControlCamera.SelectedTabPageIndex == 1 && _currentTurn2 + NUMBER_PERSON_SHOT < _solider.Length)
             {
-                _currentTurn2 += _numberPersonShot;
+                _currentTurn2 += NUMBER_PERSON_SHOT;
                 LoadNameBia7();
             }
-            else if (_tabControlCamera.SelectedTabPageIndex == 2 && _currentTurn3 + _numberPersonShot < _solider.Length)
+            else if (_tabControlCamera.SelectedTabPageIndex == 2 && _currentTurn3 + NUMBER_PERSON_SHOT < _solider.Length)
             {
-                _currentTurn3 += _numberPersonShot;
+                _currentTurn3 += NUMBER_PERSON_SHOT;
                 LoadNameBia8();
             }
         }
 
-        private void _spcSmallCamera41_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe41_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera41);
                 LoadCameraUrl(_urlCamera[0], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_41;
-                XoaDiemBan();
+                LoadTransControl(4, 1);
 
                 _lblName4.Text = _currentTurn1 < _solider.Length ? _solider[_currentTurn1].name : "";
                 _currentMemberBia4 = _currentTurn1;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
-            catch(Exception ex)
-            { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void _spcSmallCamera42_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe42_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera42);
                 LoadCameraUrl(_urlCamera[1], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_42;
-                XoaDiemBan();
+                LoadTransControl(4, 2);
 
                 _lblName4.Text = (_currentTurn1 + 1) < _solider.Length ? _solider[_currentTurn1 + 1].name : "";
                 _currentMemberBia4 = _currentTurn1 + 1;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera43_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe43_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera43);
                 LoadCameraUrl(_urlCamera[2], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_43;
-                XoaDiemBan();
+                LoadTransControl(4, 3);
 
                 _lblName4.Text = (_currentTurn1 + 2) < _solider.Length ? _solider[_currentTurn1 + 2].name : "";
                 _currentMemberBia4 = _currentTurn1 + 2;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera44_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe44_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera44);
                 LoadCameraUrl(_urlCamera[3], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_44;
-                XoaDiemBan();
+                LoadTransControl(4, 4);
 
                 _lblName4.Text = (_currentTurn1 + 3) < _solider.Length ? _solider[_currentTurn1 + 3].name : "";
                 _currentMemberBia4 = _currentTurn1 + 3;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera45_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe45_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera45);
                 LoadCameraUrl(_urlCamera[4], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_45;
-                XoaDiemBan();
+                LoadTransControl(4, 5);
 
                 _lblName4.Text = (_currentTurn1 + 4) < _solider.Length ? _solider[_currentTurn1 + 4].name : "";
                 _currentMemberBia4 = _currentTurn1 + 4;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera46_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe46_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera46);
                 LoadCameraUrl(_urlCamera[5], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_46;
-                XoaDiemBan();
+                LoadTransControl(4, 6);
 
                 _lblName4.Text = (_currentTurn1 + 5) < _solider.Length ? _solider[_currentTurn1 + 5].name : "";
                 _currentMemberBia4 = _currentTurn1 + 5;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera47_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe47_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera47);
                 LoadCameraUrl(_urlCamera[6], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_47;
-                XoaDiemBan();
+                LoadTransControl(4, 7);
 
                 _lblName4.Text = (_currentTurn1 + 6) < _solider.Length ? _solider[_currentTurn1 + 6].name : "";
                 _currentMemberBia4 = _currentTurn1 + 6;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera48_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe48_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall4(_spcSmallCamera48);
                 LoadCameraUrl(_urlCamera[7], _spcCamera4);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl4.Enabled == false)
                 {
                     _transpCtrl4.Enabled = true;
                 }
-                _controlZoom4 = CAMERA_SMALL_48;
-                XoaDiemBan();
+                LoadTransControl(4, 8);
 
                 _lblName4.Text = (_currentTurn1 + 7) < _solider.Length ? _solider[_currentTurn1 + 7].name : "";
                 _currentMemberBia4 = _currentTurn1 + 7;
-                _luotBia1 = RESET_LUOT_KHOI_DAU;
+                _lblScore4.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera71_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe71_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera71);
                 LoadCameraUrl(_urlCamera[8], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_71;
-                XoaDiemBan();
+                LoadTransControl(7, 1);
 
                 _lblName7.Text = _currentTurn2 < _solider.Length ? _solider[_currentTurn2].name : "";
                 _currentMemberBia7 = _currentTurn2;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera72_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe72_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera72);
                 LoadCameraUrl(_urlCamera[9], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_72;
-                XoaDiemBan();
+                LoadTransControl(7, 2);
 
                 _lblName7.Text = (_currentTurn2 + 1) < _solider.Length ? _solider[_currentTurn2 + 1].name : "";
                 _currentMemberBia7 = _currentTurn2 + 1;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera73_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe73_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera73);
                 LoadCameraUrl(_urlCamera[10], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_73;
-                XoaDiemBan();
+                LoadTransControl(7, 3);
 
                 _lblName7.Text = (_currentTurn2 + 2) < _solider.Length ? _solider[_currentTurn2 + 2].name : "";
                 _currentMemberBia7 = _currentTurn2 + 2;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera74_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe74_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera74);
                 LoadCameraUrl(_urlCamera[11], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_74;
-                XoaDiemBan();
+                LoadTransControl(7, 4);
 
                 _lblName7.Text = (_currentTurn2 + 3) < _solider.Length ? _solider[_currentTurn2 + 3].name : "";
                 _currentMemberBia7 = _currentTurn2 + 3;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera75_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe75_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera75);
                 LoadCameraUrl(_urlCamera[12], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_75;
-                XoaDiemBan();
+                LoadTransControl(7, 5);
 
                 _lblName7.Text = (_currentTurn2 + 4) < _solider.Length ? _solider[_currentTurn2 + 4].name : "";
                 _currentMemberBia7 = _currentTurn2 + 4;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera76_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe76_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera76);
                 LoadCameraUrl(_urlCamera[13], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_76;
-                XoaDiemBan();
+                LoadTransControl(7, 6);
 
                 _lblName7.Text = (_currentTurn2 + 5) < _solider.Length ? _solider[_currentTurn2 + 5].name : "";
                 _currentMemberBia7 = _currentTurn2 + 5;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera77_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe77_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera77);
                 LoadCameraUrl(_urlCamera[14], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_77;
-                XoaDiemBan();
+                LoadTransControl(7, 7);
 
                 _lblName7.Text = (_currentTurn2 + 6) < _solider.Length ? _solider[_currentTurn2 + 6].name : "";
                 _currentMemberBia7 = _currentTurn2 + 6;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera78_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe78_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall7(_spcSmallCamera78);
                 LoadCameraUrl(_urlCamera[15], _spcCamera7);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl7.Enabled == false)
                 {
                     _transpCtrl7.Enabled = true;
                 }
-                _controlZoom7 = CAMERA_SMALL_78;
-                XoaDiemBan();
+                LoadTransControl(7, 8);
 
                 _lblName7.Text = (_currentTurn2 + 7) < _solider.Length ? _solider[_currentTurn2 + 7].name : "";
                 _currentMemberBia7 = _currentTurn2 + 7;
-                _luotBia2 = RESET_LUOT_KHOI_DAU;
+                _lblScore7.Text = "";
             }
             catch (Exception ex)
             { }
         }
-        
-        private void _spcSmallCamera81_MouseClick(object sender, MouseEventArgs e)
+
+        private void _btnLoadCameraBe81_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera81);
                 LoadCameraUrl(_urlCamera[16], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_81;
-                XoaDiemBan();
+                LoadTransControl(8, 1);
 
                 _lblName8.Text = _currentTurn3 < _solider.Length ? _solider[_currentTurn3].name : "";
                 _currentMemberBia8 = _currentTurn3;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera82_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe82_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera82);
                 LoadCameraUrl(_urlCamera[17], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_82;
-                XoaDiemBan();
+                LoadTransControl(8, 2);
 
                 _lblName8.Text = (_currentTurn3 + 1) < _solider.Length ? _solider[_currentTurn3 + 1].name : "";
                 _currentMemberBia8 = _currentTurn3 + 1;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera83_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe83_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera83);
                 LoadCameraUrl(_urlCamera[18], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_83;
-                XoaDiemBan();
+                LoadTransControl(8, 3);
 
                 _lblName8.Text = (_currentTurn3 + 2) < _solider.Length ? _solider[_currentTurn3 + 2].name : "";
                 _currentMemberBia8 = _currentTurn3 + 2;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera84_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe84_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera84);
                 LoadCameraUrl(_urlCamera[19], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_84;
-                XoaDiemBan();
+                LoadTransControl(8, 4);
 
                 _lblName8.Text = (_currentTurn3 + 3) < _solider.Length ? _solider[_currentTurn3 + 3].name : "";
                 _currentMemberBia8 = _currentTurn3 + 3;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera85_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe85_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera85);
                 LoadCameraUrl(_urlCamera[20], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_85;
-                XoaDiemBan();
+                LoadTransControl(8, 5);
 
                 _lblName8.Text = (_currentTurn3 + 4) < _solider.Length ? _solider[_currentTurn3 + 4].name : "";
                 _currentMemberBia8 = _currentTurn3 + 4;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera86_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe86_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera86);
                 LoadCameraUrl(_urlCamera[21], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_86;
-                XoaDiemBan();
+                LoadTransControl(8, 6);
 
                 _lblName8.Text = (_currentTurn3 + 5) < _solider.Length ? _solider[_currentTurn3 + 5].name : "";
                 _currentMemberBia8 = _currentTurn3 + 5;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera87_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe87_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera87);
                 LoadCameraUrl(_urlCamera[22], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_87;
-                XoaDiemBan();
+                LoadTransControl(8, 7);
 
                 _lblName8.Text = (_currentTurn3 + 6) < _solider.Length ? _solider[_currentTurn3 + 6].name : "";
                 _currentMemberBia8 = _currentTurn3 + 6;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _spcSmallCamera88_MouseClick(object sender, MouseEventArgs e)
+        private void _btnLoadCameraBe88_Click(object sender, EventArgs e)
         {
             try
             {
-                //ZoomCameraSmall8(_spcSmallCamera88);
                 LoadCameraUrl(_urlCamera[23], _spcCamera8);
                 //lan dau chua load camera thi bang false
                 if (_transpCtrl8.Enabled == false)
                 {
                     _transpCtrl8.Enabled = true;
                 }
-                _controlZoom8 = CAMERA_SMALL_88;
-                XoaDiemBan();
-                
+                LoadTransControl(8, 8);
+
                 _lblName8.Text = (_currentTurn3 + 7) < _solider.Length ? _solider[_currentTurn3 + 7].name : "";
                 _currentMemberBia8 = _currentTurn3 + 7;
-                _luotBia3 = RESET_LUOT_KHOI_DAU;
+                _lblScore8.Text = "";
             }
             catch (Exception ex)
             { }
         }
 
-        private void _btnBack_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (_tabControlCamera.SelectedTabPageIndex == 0)
-            {
-                //khong co chon camera nao thi khong duoc zoomback
-                if (_controlZoom4 == NO_CAMERA_SMALL)
-                    return;
-                // cho bia so 4 zoom nho lai
-                ZoomBack(4);
-            }
-            else if (_tabControlCamera.SelectedTabPageIndex == 1)
-            {
-                //khong co chon camera nao thi khong duoc zoomback
-                if (_controlZoom7 == NO_CAMERA_SMALL)
-                    return;
-                // cho bia so 7 zoom nho lai
-                ZoomBack(7);
-            }
-            else if (_tabControlCamera.SelectedTabPageIndex == 2)
-            {
-                //khong co chon camera nao thi khong duoc zoomback
-                if (_controlZoom8 == NO_CAMERA_SMALL)
-                    return;
-                // cho bia so 7 zoom nho lai
-                ZoomBack(8);
-            }
-        }
-
-        private void _tabControlCamera_SelectedPageChanging(object sender, DevExpress.XtraTab.TabPageChangingEventArgs e)
-        {
-            if (_tabControlCamera.SelectedTabPageIndex == 0)
-            {
-                StopCameraBia4();
-            }
-            else if (_tabControlCamera.SelectedTabPageIndex == 1)
-            {
-                StopCameraBia7();
-            }
-            else if (_tabControlCamera.SelectedTabPageIndex == 2)
-            {
-                StopCameraBia8();
-            }
-        }
-
-        private void _tabControlCamera_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
-        {
-            if (_tabControlCamera.SelectedTabPageIndex == 0)
-            {
-                LoadCameraBia4();
-            }
-            else if (_tabControlCamera.SelectedTabPageIndex == 1)
-            {
-                LoadCameraBia7();
-            }
-            else if (_tabControlCamera.SelectedTabPageIndex == 2)
-            {
-                LoadCameraBia8();
-            }
-        }
-
         #region ---------- XU LY CHAM DIEM ----------
 
-        private void AddShotIcon(int x, int y, PanelControl panCam)
+        private void AddShotIcon(int x, int y, PanelControl panCam, int be)
         {
             PictureBox px = new PictureBox();
             px.Size = new Size(4, 4);
-            px.BackColor = Color.Transparent;
-            px.SizeMode = PictureBoxSizeMode.StretchImage;
-            px.Image = Properties.Resources.x;
-            // tru di 4 don vi de chinh giua hinh
+            if (be == 4)
+            {
+                px.BackColor = COLOR_FOR_EACH_TURN[_currentTurn1 % 10];//Color.Transparent;
+            }
+            else if (be == 7)
+            {
+                px.BackColor = COLOR_FOR_EACH_TURN[_currentTurn2 % 10];//Color.Transparent;
+            }
+            else
+            {
+                px.BackColor = COLOR_FOR_EACH_TURN[_currentTurn3 % 10];//Color.Transparent;
+            }                
+
+            // tru di 2 don vi de chinh giua hinh
             px.Location = new Point(x - 2, y - 2);
-            //_panCam.Controls.Add(px);
             panCam.Controls.Add(px);
             px.BringToFront();
+            if (be == 4)
+            {
+                if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 0)
+                {
+                    _lstPbBia41.Add(px);
+                }
+                else if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 1)
+                {
+                    _lstPbBia42.Add(px);
+                }
+                else if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 2)
+                {
+                    _lstPbBia43.Add(px);
+                }
+                else if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 3)
+                {
+                    _lstPbBia44.Add(px);
+                }
+                else if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 4)
+                {
+                    _lstPbBia45.Add(px);
+                }
+                else if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 5)
+                {
+                    _lstPbBia46.Add(px);
+                }
+                else if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 6)
+                {
+                    _lstPbBia47.Add(px);
+                }
+                else if (_currentMemberBia4 % NUMBER_PERSON_SHOT == 7)
+                {
+                    _lstPbBia48.Add(px);
+                }
+            }
+            else if (be == 7)
+            {
+                if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 0)
+                {
+                    _lstPbBia71.Add(px);
+                }
+                else if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 1)
+                {
+                    _lstPbBia72.Add(px);
+                }
+                else if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 2)
+                {
+                    _lstPbBia73.Add(px);
+                }
+                else if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 3)
+                {
+                    _lstPbBia74.Add(px);
+                }
+                else if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 4)
+                {
+                    _lstPbBia75.Add(px);
+                }
+                else if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 5)
+                {
+                    _lstPbBia76.Add(px);
+                }
+                else if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 6)
+                {
+                    _lstPbBia77.Add(px);
+                }
+                else if (_currentMemberBia7 % NUMBER_PERSON_SHOT == 7)
+                {
+                    _lstPbBia78.Add(px);
+                }
+            }
+            else
+            {
+                if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 0)
+                {
+                    _lstPbBia81.Add(px);
+                }
+                else if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 1)
+                {
+                    _lstPbBia82.Add(px);
+                }
+                else if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 2)
+                {
+                    _lstPbBia83.Add(px);
+                }
+                else if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 3)
+                {
+                    _lstPbBia84.Add(px);
+                }
+                else if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 4)
+                {
+                    _lstPbBia85.Add(px);
+                }
+                else if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 5)
+                {
+                    _lstPbBia86.Add(px);
+                }
+                else if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 6)
+                {
+                    _lstPbBia87.Add(px);
+                }
+                else if (_currentMemberBia8 % NUMBER_PERSON_SHOT == 7)
+                {
+                    _lstPbBia88.Add(px);
+                }
+            }
+        }
+
+        private void EnableShot(List<PictureBox> lst, bool enable)
+        {
+            foreach (PictureBox px in lst)
+            {
+                px.Enabled = enable;
+            }
+        }
+
+        private void LoadTransControl(int bia, int be)
+        {
+            if (bia == 4)
+            {
+                switch (be)
+                {
+                    case 1:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia41.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia41.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia41.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia41.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 2:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia42.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia42.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia42.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia42.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 3:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia43.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia43.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia43.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia43.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 4:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia44.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia44.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia44.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia44.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 5:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia45.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia45.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia45.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia45.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 6:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia46.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia46.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia46.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia46.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 7:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia47.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia47.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia47.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia47.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 8:
+                        XoaDiemBanBeSo4();
+                        for (int i = 0; i < _lstPbBia48.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia48.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia48.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia48.ElementAt(i).Location;
+                            _panCam4.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                }
+            }
+            else if (bia == 7)
+            {
+                switch (be)
+                {
+                    case 1:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia71.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia71.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia71.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia71.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 2:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia72.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia72.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia72.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia72.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 3:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia73.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia73.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia73.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia73.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 4:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia74.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia74.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia74.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia74.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 5:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia75.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia75.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia75.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia75.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 6:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia76.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia76.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia76.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia76.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 7:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia77.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia77.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia77.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia77.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 8:
+                        XoaDiemBanBeSo7();
+                        for (int i = 0; i < _lstPbBia78.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia78.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia78.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia78.ElementAt(i).Location;
+                            _panCam7.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                }
+            }
+            else if (bia == 8)
+            {
+                switch (be)
+                {
+                    case 1:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia81.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia81.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia81.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia81.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 2:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia82.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia82.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia82.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia82.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 3:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia83.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia83.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia83.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia83.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 4:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia84.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia84.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia84.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia84.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 5:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia85.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia85.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia85.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia85.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 6:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia86.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia86.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia86.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia86.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 7:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia87.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia87.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia87.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia87.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                    case 8:
+                        XoaDiemBanBeSo8();
+                        for (int i = 0; i < _lstPbBia88.Count; i++)
+                        {
+                            PictureBox px = new PictureBox();
+                            px.Size = _lstPbBia88.ElementAt(i).Size;
+                            px.BackColor = _lstPbBia88.ElementAt(i).BackColor;
+                            px.Location = _lstPbBia88.ElementAt(i).Location;
+                            _panCam8.Controls.Add(px);
+                            px.BringToFront();
+                        }
+                        break;
+                }
+            }
         }
 
         private void SoNguoiBan(DataTable dt)
         {
             _solider = new Solider[dt.Rows.Count];
-            for(int i = 0; i < dt.Rows.Count; i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                 _solider[i] = new Solider();
                 _solider[i].name = dt.Rows[i][0].ToString();
@@ -1059,7 +1427,7 @@ namespace ChamDiem
                     // lay nguoi ban hien tai
                     currentMember = _currentMemberBia4;
                     //lay luot hien tai
-                    luot = _solider[currentMember].luotBanBia4 <= LUOT_BAN_1_BIA ? _solider[currentMember].luotBanBia4 : 0;                    
+                    luot = _solider[currentMember].luotBanBia4 <= LUOT_BAN_1_BIA ? _solider[currentMember].luotBanBia4 : 0;
                 }
                 else if (be == 2)
                 {
@@ -1098,7 +1466,7 @@ namespace ChamDiem
                 }
 
                 docDiem(diem);
-                
+
                 if (luot == 3)
                 {
                     int tong = 0;
@@ -1124,7 +1492,7 @@ namespace ChamDiem
                     dt.Rows[currentMember][4] = tong;
 
                     //neu khong phai la 3 bia thi cho xep loai luon o day.
-                    if(_selectedBia != SELECT_3_BIA)
+                    if (_selectedBia != SELECT_3_BIA)
                     {
                         if (be == 1)
                         {
@@ -1139,7 +1507,7 @@ namespace ChamDiem
                             dt.Rows[currentMember][5] = _solider[currentMember].XepLoai1Bia(_solider[currentMember].GetTongDiemBia8());
                         }
                     }
-                    
+
                     Thread thread = new Thread(() => soundDiem(be, tong));
                     thread.Start();
                 }
@@ -1196,7 +1564,7 @@ namespace ChamDiem
             //nghi 1 giay de doc so diem o luot 3
             Thread.Sleep(1000);
             //neu la 3 bia thi kiem tra xem dang o be nao, con khong thi chi doc tong
-            if(_selectedBia == SELECT_3_BIA)
+            if (_selectedBia == SELECT_3_BIA)
             {
                 //neu la o be nao thi phat len tong o be do
                 if (be == 1)
@@ -1221,7 +1589,7 @@ namespace ChamDiem
                 playSound(Properties.Resources.Tong_diem_ban_la);
                 Thread.Sleep(1500);
             }
-            
+
             //nghi 2 giay de doc so diem o luot tong diem be
             docDiem(tong);
         }
@@ -1337,7 +1705,7 @@ namespace ChamDiem
                     break;
             }
         }
-        
+
         private void setTongDiem3Bia(int currentMember)
         {
             /*
@@ -1368,7 +1736,7 @@ namespace ChamDiem
             dt3.Rows[currentMember][5] = _solider[currentMember].GetTongDiem3Bia();
             dt3.Rows[currentMember][6] = _solider[currentMember].XepLoai3Bia(tong3Bia);
         }
-        
+
         #endregion
 
         #region --------- FUNCTION CODE ---------
@@ -1412,69 +1780,30 @@ namespace ChamDiem
         }
 
         void LoadCamera()
-        {           
+        {
             try
             {
-                switch(_selectedBia)
-                {
-                    case SELECT_3_BIA:
-                        Thread t = new Thread(LoadCamera3Bia);
-                        t.Start();
-                        break;
-                    case SELECT_BIA_4:
-                        Thread t4 = new Thread(LoadCameraBia4);
-                        t4.Start();
-                        break;
-                    case SELECT_BIA_7:
-                        Thread t7 = new Thread(LoadCameraBia7);
-                        t7.Start();
-                        break;
-                    case SELECT_BIA_8:
-                        Thread t8 = new Thread(LoadCameraBia8);
-                        t8.Start();
-                        break;
-                }
-                
-                //LoadCamera3Bia();
-                /*
-                if (_tabControlCamera.SelectedTabPageIndex == 0)
-                {
-                    LoadCameraBia4();
-                }
-                else if (_tabControlCamera.SelectedTabPageIndex == 1)
-                {
-                    LoadCameraBia7();
-                }
-                else if (_tabControlCamera.SelectedTabPageIndex == 2)
-                {
-                    LoadCameraBia8();
-                }
-                */
+
             }
             catch (Exception ex)
             {
                 File.AppendAllText("log.txt", ex.ToString());
             }
         }
-        
+
         void LoadCameraUrl(string url, StreamPlayerControl spc)
         {
-            /*
+            if(spc.IsPlaying)
+            {
+                spc.Stop();
+            }
             if (url != "")
             {
                 var uri = new Uri(url);
                 spc.StartPlay(uri, TimeSpan.FromSeconds(15.0));
             }
-            */
-            if (url != "")
-            {
-                var uri = new Uri(url);
-                spc.Invoke(new MethodInvoker(delegate {
-                    spc.StartPlay(uri, TimeSpan.FromSeconds(15.0));
-                }));
-            }
         }
-        
+
         private void ExportExcel()
         {
             if (this.InvokeRequired)
@@ -1484,7 +1813,7 @@ namespace ChamDiem
             else
             {
                 if (_selectedBia == SELECT_3_BIA)
-                {                
+                {
                     ExcelHelp.ExportExcel((DataTable)_gridControlScore4.DataSource, (DataTable)_gridControlScore7.DataSource, (DataTable)_gridControlScore8.DataSource);
                 }
                 else if (_selectedBia == SELECT_BIA_4)
@@ -1511,177 +1840,6 @@ namespace ChamDiem
             }
         }
 
-        //zoom camera nho thanh camra lon de cham diem bia so 4
-        void ZoomCameraSmall4(StreamPlayerControl spc)
-        {
-            _cameraSmallLocation4 = spc.Location;
-            spc.Size = _transpCtrl4.Size;
-            spc.Location = _transpCtrl4.Location;
-            _transpCtrl4.Enabled = true;
-            //cho camera len tren cung, khong bi cac control khac de len
-            spc.BringToFront();
-            _transpCtrl4.BringToFront();
-        }
-
-        //zoom camera nho thanh camra lon de cham diem bia so 7
-        void ZoomCameraSmall7(StreamPlayerControl spc)
-        {
-            _cameraSmallLocation7 = spc.Location;
-            spc.Size = _transpCtrl7.Size;
-            spc.Location = _transpCtrl7.Location;
-            _transpCtrl7.Enabled = true;
-            //cho camera len tren cung, khong bi cac control khac de len
-            spc.BringToFront();
-            _transpCtrl7.BringToFront();
-        }
-
-        //zoom camera nho thanh camra lon de cham diem bia so 8
-        void ZoomCameraSmall8(StreamPlayerControl spc)
-        {
-            _cameraSmallLocation8 = spc.Location;
-            spc.Size = _transpCtrl8.Size;
-            spc.Location = _transpCtrl8.Location;
-            _transpCtrl8.Enabled = true;
-            //cho camera len tren cung, khong bi cac control khac de len
-            spc.BringToFront();
-            _transpCtrl8.BringToFront();
-        }
-
-        // back tu zoom camera o man hinh chinh thanh camera nho
-        void ZoomBack(int bia)
-        {
-            try
-            {
-                if (bia == 4)
-                {
-                    switch (_controlZoom4)
-                    {
-                        case CAMERA_SMALL_41:
-                            _spcSmallCamera41.Size = _cameraSmallSize;
-                            _spcSmallCamera41.Location = _cameraSmallLocation4;
-                            break;
-                        case CAMERA_SMALL_42:
-                            _spcSmallCamera42.Size = _cameraSmallSize;
-                            _spcSmallCamera42.Location = _cameraSmallLocation4;
-                            break;
-                        case CAMERA_SMALL_43:
-                            _spcSmallCamera43.Size = _cameraSmallSize;
-                            _spcSmallCamera43.Location = _cameraSmallLocation4;
-                            break;
-                        case CAMERA_SMALL_44:
-                            _spcSmallCamera44.Size = _cameraSmallSize;
-                            _spcSmallCamera44.Location = _cameraSmallLocation4;
-                            break;
-                        case CAMERA_SMALL_45:
-                            _spcSmallCamera45.Size = _cameraSmallSize;
-                            _spcSmallCamera45.Location = _cameraSmallLocation4;
-                            break;
-                        case CAMERA_SMALL_46:
-                            _spcSmallCamera46.Size = _cameraSmallSize;
-                            _spcSmallCamera46.Location = _cameraSmallLocation4;
-                            break;
-                        case CAMERA_SMALL_47:
-                            _spcSmallCamera47.Size = _cameraSmallSize;
-                            _spcSmallCamera47.Location = _cameraSmallLocation4;
-                            break;
-                        case CAMERA_SMALL_48:
-                            _spcSmallCamera48.Size = _cameraSmallSize;
-                            _spcSmallCamera48.Location = _cameraSmallLocation4;
-                            break;
-                    }
-                    _controlZoom4 = NO_CAMERA_SMALL;
-                    _transpCtrl4.Enabled = false;
-                    XoaDiemBan();
-                }
-                else if (bia == 7)
-                {
-                    switch (_controlZoom7)
-                    {
-                        case CAMERA_SMALL_71:
-                            _spcSmallCamera71.Size = _cameraSmallSize;
-                            _spcSmallCamera71.Location = _cameraSmallLocation7;
-                            break;
-                        case CAMERA_SMALL_72:
-                            _spcSmallCamera72.Size = _cameraSmallSize;
-                            _spcSmallCamera72.Location = _cameraSmallLocation7;
-                            break;
-                        case CAMERA_SMALL_73:
-                            _spcSmallCamera73.Size = _cameraSmallSize;
-                            _spcSmallCamera73.Location = _cameraSmallLocation7;
-                            break;
-                        case CAMERA_SMALL_74:
-                            _spcSmallCamera74.Size = _cameraSmallSize;
-                            _spcSmallCamera74.Location = _cameraSmallLocation7;
-                            break;
-                        case CAMERA_SMALL_75:
-                            _spcSmallCamera75.Size = _cameraSmallSize;
-                            _spcSmallCamera75.Location = _cameraSmallLocation7;
-                            break;
-                        case CAMERA_SMALL_76:
-                            _spcSmallCamera76.Size = _cameraSmallSize;
-                            _spcSmallCamera76.Location = _cameraSmallLocation7;
-                            break;
-                        case CAMERA_SMALL_77:
-                            _spcSmallCamera77.Size = _cameraSmallSize;
-                            _spcSmallCamera77.Location = _cameraSmallLocation7;
-                            break;
-                        case CAMERA_SMALL_78:
-                            _spcSmallCamera78.Size = _cameraSmallSize;
-                            _spcSmallCamera78.Location = _cameraSmallLocation7;
-                            break;
-                    }
-                    _controlZoom7 = NO_CAMERA_SMALL;
-                    _transpCtrl7.Enabled = false;
-                    XoaDiemBan();
-                }
-                else
-                {
-                    switch (_controlZoom8)
-                    {
-                        case CAMERA_SMALL_81:
-                            _spcSmallCamera81.Size = _cameraSmallSize;
-                            _spcSmallCamera81.Location = _cameraSmallLocation8;
-                            break;
-                        case CAMERA_SMALL_82:
-                            _spcSmallCamera82.Size = _cameraSmallSize;
-                            _spcSmallCamera82.Location = _cameraSmallLocation8;
-                            break;
-                        case CAMERA_SMALL_83:
-                            _lblName84.Size = _cameraSmallSize;
-                            _lblName84.Location = _cameraSmallLocation8;
-                            break;
-                        case CAMERA_SMALL_84:
-                            _spcSmallCamera84.Size = _cameraSmallSize;
-                            _spcSmallCamera84.Location = _cameraSmallLocation8;
-                            break;
-                        case CAMERA_SMALL_85:
-                            _spcSmallCamera85.Size = _cameraSmallSize;
-                            _spcSmallCamera85.Location = _cameraSmallLocation8;
-                            break;
-                        case CAMERA_SMALL_86:
-                            _spcSmallCamera86.Size = _cameraSmallSize;
-                            _spcSmallCamera86.Location = _cameraSmallLocation8;
-                            break;
-                        case CAMERA_SMALL_87:
-                            _spcSmallCamera87.Size = _cameraSmallSize;
-                            _spcSmallCamera87.Location = _cameraSmallLocation8;
-                            break;
-                        case CAMERA_SMALL_88:
-                            _spcSmallCamera88.Size = _cameraSmallSize;
-                            _spcSmallCamera88.Location = _cameraSmallLocation8;
-                            break;
-                    }
-                    _controlZoom8 = NO_CAMERA_SMALL;
-                    _transpCtrl8.Enabled = false;
-                    XoaDiemBan();
-                }
-            }
-            catch(Exception ex)
-            {
-
-            }
-        }
-        
         void LoadNameBia4()//DataTable table)
         {
             try
@@ -1695,7 +1853,7 @@ namespace ChamDiem
                 _lblName47.Text = (_currentTurn1 + 6) < _solider.Length ? _solider[_currentTurn1 + 6].name : "";// table.Rows[_currentTurn1 + 6][0].ToString();
                 _lblName48.Text = (_currentTurn1 + 7) < _solider.Length ? _solider[_currentTurn1 + 7].name : "";// table.Rows[_currentTurn1 + 7][0].ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             { }
         }
 
@@ -1729,108 +1887,8 @@ namespace ChamDiem
                 _lblName87.Text = (_currentTurn3 + 6) < _solider.Length ? _solider[_currentTurn3 + 6].name : "";// table.Rows[_currentTurn3 + 6][0].ToString();
                 _lblName88.Text = (_currentTurn3 + 7) < _solider.Length ? _solider[_currentTurn3 + 7].name : "";// table.Rows[_currentTurn3 + 7][0].ToString();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             { }
-        }
-
-        void LoadCamera3Bia()
-        {
-            LoadCameraUrl(_urlCamera[0], _spcSmallCamera41);
-            LoadCameraUrl(_urlCamera[1], _spcSmallCamera42);
-            LoadCameraUrl(_urlCamera[2], _spcSmallCamera43);
-            LoadCameraUrl(_urlCamera[3], _spcSmallCamera44);
-            LoadCameraUrl(_urlCamera[4], _spcSmallCamera45);
-            LoadCameraUrl(_urlCamera[5], _spcSmallCamera46);
-            LoadCameraUrl(_urlCamera[6], _spcSmallCamera47);
-            LoadCameraUrl(_urlCamera[7], _spcSmallCamera48);
-            LoadCameraUrl(_urlCamera[8], _spcSmallCamera71);
-            LoadCameraUrl(_urlCamera[9], _spcSmallCamera72);
-            LoadCameraUrl(_urlCamera[10], _spcSmallCamera73);
-            LoadCameraUrl(_urlCamera[11], _spcSmallCamera74);
-            LoadCameraUrl(_urlCamera[12], _spcSmallCamera75);
-            LoadCameraUrl(_urlCamera[13], _spcSmallCamera76);
-            LoadCameraUrl(_urlCamera[14], _spcSmallCamera77);
-            LoadCameraUrl(_urlCamera[15], _spcSmallCamera78);
-            LoadCameraUrl(_urlCamera[16], _spcSmallCamera81);
-            LoadCameraUrl(_urlCamera[17], _spcSmallCamera82);
-            LoadCameraUrl(_urlCamera[18], _spcSmallCamera83);
-            LoadCameraUrl(_urlCamera[19], _spcSmallCamera84);
-            LoadCameraUrl(_urlCamera[20], _spcSmallCamera85);
-            LoadCameraUrl(_urlCamera[21], _spcSmallCamera86);
-            LoadCameraUrl(_urlCamera[22], _spcSmallCamera87);
-            LoadCameraUrl(_urlCamera[23], _spcSmallCamera88);
-        }
-
-        void LoadCameraBia4()
-        {
-            LoadCameraUrl(_urlCamera[0], _spcSmallCamera41);
-            LoadCameraUrl(_urlCamera[1], _spcSmallCamera42);
-            LoadCameraUrl(_urlCamera[2], _spcSmallCamera43);
-            LoadCameraUrl(_urlCamera[3], _spcSmallCamera44);
-            LoadCameraUrl(_urlCamera[4], _spcSmallCamera45);
-            LoadCameraUrl(_urlCamera[5], _spcSmallCamera46);
-            LoadCameraUrl(_urlCamera[6], _spcSmallCamera47);
-            LoadCameraUrl(_urlCamera[7], _spcSmallCamera48);
-        }
-
-        void LoadCameraBia7()
-        {
-            LoadCameraUrl(_urlCamera[8], _spcSmallCamera71);
-            LoadCameraUrl(_urlCamera[9], _spcSmallCamera72);
-            LoadCameraUrl(_urlCamera[10], _spcSmallCamera73);
-            LoadCameraUrl(_urlCamera[11], _spcSmallCamera74);
-            LoadCameraUrl(_urlCamera[12], _spcSmallCamera75);
-            LoadCameraUrl(_urlCamera[13], _spcSmallCamera76);
-            LoadCameraUrl(_urlCamera[14], _spcSmallCamera77);
-            LoadCameraUrl(_urlCamera[15], _spcSmallCamera78);
-        }
-
-        void LoadCameraBia8()
-        {
-            LoadCameraUrl(_urlCamera[16], _spcSmallCamera81);
-            LoadCameraUrl(_urlCamera[17], _spcSmallCamera82);
-            LoadCameraUrl(_urlCamera[18], _spcSmallCamera83);
-            LoadCameraUrl(_urlCamera[19], _spcSmallCamera84);
-            LoadCameraUrl(_urlCamera[20], _spcSmallCamera85);
-            LoadCameraUrl(_urlCamera[21], _spcSmallCamera86);
-            LoadCameraUrl(_urlCamera[22], _spcSmallCamera87);
-            LoadCameraUrl(_urlCamera[23], _spcSmallCamera88);
-        }
-
-        void StopCameraBia4()
-        {
-            StopCameraSmall(_spcSmallCamera41);
-            StopCameraSmall(_spcSmallCamera42);
-            StopCameraSmall(_spcSmallCamera43);
-            StopCameraSmall(_spcSmallCamera44);
-            StopCameraSmall(_spcSmallCamera45);
-            StopCameraSmall(_spcSmallCamera46);
-            StopCameraSmall(_spcSmallCamera47);
-            StopCameraSmall(_spcSmallCamera48);
-        }
-
-        void StopCameraBia7()
-        {
-            StopCameraSmall(_spcSmallCamera71);
-            StopCameraSmall(_spcSmallCamera72);
-            StopCameraSmall(_spcSmallCamera73);
-            StopCameraSmall(_spcSmallCamera74);
-            StopCameraSmall(_spcSmallCamera75);
-            StopCameraSmall(_spcSmallCamera76);
-            StopCameraSmall(_spcSmallCamera77);
-            StopCameraSmall(_spcSmallCamera78);
-        }
-
-        void StopCameraBia8()
-        {
-            StopCameraSmall(_spcSmallCamera81);
-            StopCameraSmall(_spcSmallCamera82);
-            StopCameraSmall(_spcSmallCamera83);
-            StopCameraSmall(_spcSmallCamera84);
-            StopCameraSmall(_spcSmallCamera85);
-            StopCameraSmall(_spcSmallCamera86);
-            StopCameraSmall(_spcSmallCamera87);
-            StopCameraSmall(_spcSmallCamera88);
         }
 
         private void refreshControl()
@@ -1889,10 +1947,6 @@ namespace ChamDiem
 
         private void resetVariable()
         {
-            _luotBia1 = RESET_LUOT_KHOI_DAU;
-            _luotBia2 = RESET_LUOT_KHOI_DAU;
-            _luotBia3 = RESET_LUOT_KHOI_DAU;
-
             _currentMemberBia4 = RESET_MEMBER_KHOI_DAU;
             _currentMemberBia7 = RESET_MEMBER_KHOI_DAU;
             _currentMemberBia8 = RESET_MEMBER_KHOI_DAU;
@@ -1908,7 +1962,7 @@ namespace ChamDiem
                 PictureBox control = _panCam4.Controls[i] as PictureBox;
                 if (control == null)
                     continue;
-                control.Dispose();
+                control.Dispose();                
             }
             for (int i = _panCam7.Controls.Count - 1; i >= 0; i--)
             {
@@ -1917,6 +1971,63 @@ namespace ChamDiem
                     continue;
                 control.Dispose();
             }
+            for (int i = _panCam8.Controls.Count - 1; i >= 0; i--)
+            {
+                PictureBox control = _panCam8.Controls[i] as PictureBox;
+                if (control == null)
+                    continue;
+                control.Dispose();
+            }
+            _lstPbBia41.Clear();
+            _lstPbBia42.Clear();
+            _lstPbBia43.Clear();
+            _lstPbBia44.Clear();
+            _lstPbBia45.Clear();
+            _lstPbBia46.Clear();
+            _lstPbBia47.Clear();
+            _lstPbBia48.Clear();
+            _lstPbBia71.Clear();
+            _lstPbBia72.Clear();
+            _lstPbBia73.Clear();
+            _lstPbBia74.Clear();
+            _lstPbBia75.Clear();
+            _lstPbBia76.Clear();
+            _lstPbBia77.Clear();
+            _lstPbBia78.Clear();
+            _lstPbBia81.Clear();
+            _lstPbBia82.Clear();
+            _lstPbBia83.Clear();
+            _lstPbBia84.Clear();
+            _lstPbBia85.Clear();
+            _lstPbBia86.Clear();
+            _lstPbBia87.Clear();
+            _lstPbBia88.Clear();
+        }
+
+        private void XoaDiemBanBeSo4()
+        {
+            for (int i = _panCam4.Controls.Count - 1; i >= 0; i--)
+            {
+                PictureBox control = _panCam4.Controls[i] as PictureBox;
+                if (control == null)
+                    continue;
+                control.Dispose();
+            }
+        }
+
+        private void XoaDiemBanBeSo7()
+        {
+            for (int i = _panCam7.Controls.Count - 1; i >= 0; i--)
+            {
+                PictureBox control = _panCam7.Controls[i] as PictureBox;
+                if (control == null)
+                    continue;
+                control.Dispose();
+            }
+        }
+
+        private void XoaDiemBanBeSo8()
+        {
             for (int i = _panCam8.Controls.Count - 1; i >= 0; i--)
             {
                 PictureBox control = _panCam8.Controls[i] as PictureBox;

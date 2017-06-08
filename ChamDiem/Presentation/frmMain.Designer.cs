@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this._btnAddList = new DevExpress.XtraBars.BarButtonItem();
             this._btnExportScoreFile = new DevExpress.XtraBars.BarButtonItem();
@@ -52,7 +51,6 @@
             this._btnChooseBia8 = new DevExpress.XtraBars.BarButtonItem();
             this._btnChoose3Bia = new DevExpress.XtraBars.BarButtonItem();
             this._btnNextTurns = new DevExpress.XtraBars.BarButtonItem();
-            this._btnBack = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -69,21 +67,21 @@
             this._tabCamera4 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
-            this._spcSmallCamera41 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe41 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName41 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera42 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe42 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName42 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera43 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe43 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName43 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera44 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe44 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName44 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera45 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe45 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName45 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera46 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe46 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName46 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera47 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe47 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName47 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera48 = new WebEye.StreamPlayerControl();
+            this._btnLoadCameraBe48 = new DevExpress.XtraEditors.SimpleButton();
             this._lblName48 = new DevExpress.XtraEditors.LabelControl();
             this._panCam4 = new DevExpress.XtraEditors.PanelControl();
             this._transpCtrl4 = new CameraApp.TranspCtrl();
@@ -97,8 +95,27 @@
             this._gridControlScore4 = new DevExpress.XtraGrid.GridControl();
             this._gridViewScore4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this._tabCamera7 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraScrollableControl2 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this._btnLoadCameraBe71 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName71 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe72 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName72 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe73 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName73 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe74 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName74 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe75 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName75 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe76 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName76 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe77 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName77 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe78 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName78 = new DevExpress.XtraEditors.LabelControl();
             this._panCam7 = new DevExpress.XtraEditors.PanelControl();
             this._transpCtrl7 = new CameraApp.TranspCtrl();
+            this._spcCamera7 = new WebEye.StreamPlayerControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this._lblScore7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -107,8 +124,27 @@
             this._gridControlScore7 = new DevExpress.XtraGrid.GridControl();
             this._gridViewScore7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this._tabCamera8 = new DevExpress.XtraTab.XtraTabPage();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraScrollableControl3 = new DevExpress.XtraEditors.XtraScrollableControl();
+            this._btnLoadCameraBe81 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName81 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe82 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName82 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe83 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName83 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe84 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName84 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe85 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName85 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe86 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName86 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe87 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName87 = new DevExpress.XtraEditors.LabelControl();
+            this._btnLoadCameraBe88 = new DevExpress.XtraEditors.SimpleButton();
+            this._lblName88 = new DevExpress.XtraEditors.LabelControl();
             this._panCam8 = new DevExpress.XtraEditors.PanelControl();
             this._transpCtrl8 = new CameraApp.TranspCtrl();
+            this._spcCamera8 = new WebEye.StreamPlayerControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this._lblScore8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -116,44 +152,6 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this._gridControlScore8 = new DevExpress.XtraGrid.GridControl();
             this._gridViewScore8 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.xtraScrollableControl2 = new DevExpress.XtraEditors.XtraScrollableControl();
-            this._spcSmallCamera71 = new WebEye.StreamPlayerControl();
-            this._lblName71 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera72 = new WebEye.StreamPlayerControl();
-            this._lblName72 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera73 = new WebEye.StreamPlayerControl();
-            this._lblName73 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera74 = new WebEye.StreamPlayerControl();
-            this._lblName74 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera75 = new WebEye.StreamPlayerControl();
-            this._lblName75 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera76 = new WebEye.StreamPlayerControl();
-            this._lblName76 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera77 = new WebEye.StreamPlayerControl();
-            this._lblName77 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera78 = new WebEye.StreamPlayerControl();
-            this._lblName78 = new DevExpress.XtraEditors.LabelControl();
-            this._spcCamera7 = new WebEye.StreamPlayerControl();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.xtraScrollableControl3 = new DevExpress.XtraEditors.XtraScrollableControl();
-            this._spcSmallCamera81 = new WebEye.StreamPlayerControl();
-            this._lblName81 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera82 = new WebEye.StreamPlayerControl();
-            this._lblName82 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera83 = new WebEye.StreamPlayerControl();
-            this._lblName83 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera84 = new WebEye.StreamPlayerControl();
-            this._lblName84 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera85 = new WebEye.StreamPlayerControl();
-            this._lblName85 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera86 = new WebEye.StreamPlayerControl();
-            this._lblName86 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera87 = new WebEye.StreamPlayerControl();
-            this._lblName87 = new DevExpress.XtraEditors.LabelControl();
-            this._spcSmallCamera88 = new WebEye.StreamPlayerControl();
-            this._lblName88 = new DevExpress.XtraEditors.LabelControl();
-            this._spcCamera8 = new WebEye.StreamPlayerControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._tabControlCamera)).BeginInit();
@@ -170,6 +168,9 @@
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore4)).BeginInit();
             this._tabCamera7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
+            this.xtraScrollableControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._panCam7)).BeginInit();
             this._panCam7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -177,18 +178,15 @@
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore7)).BeginInit();
             this._tabCamera8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
+            this.panelControl6.SuspendLayout();
+            this.xtraScrollableControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._panCam8)).BeginInit();
             this._panCam8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
-            this.xtraScrollableControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
-            this.panelControl6.SuspendLayout();
-            this.xtraScrollableControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -217,17 +215,16 @@
             this._btnChooseBia7,
             this._btnChooseBia8,
             this._btnChoose3Bia,
-            this._btnNextTurns,
-            this._btnBack});
+            this._btnNextTurns});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 38;
+            this.ribbonControl1.MaxItemId = 40;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1311, 143);
+            this.ribbonControl1.Size = new System.Drawing.Size(1311, 141);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar2;
             // 
             // _btnAddList
@@ -305,8 +302,7 @@
             // 
             // _btnDeleteShot
             // 
-            this._btnDeleteShot.Caption = "Xóa điểm bắn";
-            this._btnDeleteShot.Enabled = false;
+            this._btnDeleteShot.Caption = "Thay bia";
             this._btnDeleteShot.Id = 15;
             this._btnDeleteShot.ImageUri.Uri = "Refresh";
             this._btnDeleteShot.Name = "_btnDeleteShot";
@@ -388,14 +384,6 @@
             this._btnNextTurns.Name = "_btnNextTurns";
             this._btnNextTurns.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnNextTurns_ItemClick);
             // 
-            // _btnBack
-            // 
-            this._btnBack.Caption = "Thu nhỏ camera";
-            this._btnBack.Id = 31;
-            this._btnBack.LargeGlyph = global::ChamDiem.Properties.Resources.table_grid;
-            this._btnBack.Name = "_btnBack";
-            this._btnBack.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this._btnBack_ItemClick);
-            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -428,7 +416,6 @@
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this._btnDeleteShot);
             this.ribbonPageGroup4.ItemLinks.Add(this._btnMissShot);
-            this.ribbonPageGroup4.ItemLinks.Add(this._btnBack);
             this.ribbonPageGroup4.ItemLinks.Add(this._btnNextTurns);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Thao tác";
@@ -448,7 +435,7 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this._barStaticItem4);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 636);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 638);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(1305, 27);
@@ -456,7 +443,7 @@
             // ribbonStatusBar3
             // 
             this.ribbonStatusBar3.ItemLinks.Add(this._barStaticItem8);
-            this.ribbonStatusBar3.Location = new System.Drawing.Point(0, 636);
+            this.ribbonStatusBar3.Location = new System.Drawing.Point(0, 638);
             this.ribbonStatusBar3.Name = "ribbonStatusBar3";
             this.ribbonStatusBar3.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar3.Size = new System.Drawing.Size(1305, 27);
@@ -470,7 +457,7 @@
             // ribbonStatusBar2
             // 
             this.ribbonStatusBar2.ItemLinks.Add(this._barStaticItem7);
-            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 636);
+            this.ribbonStatusBar2.Location = new System.Drawing.Point(0, 638);
             this.ribbonStatusBar2.Name = "ribbonStatusBar2";
             this.ribbonStatusBar2.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar2.Size = new System.Drawing.Size(1305, 27);
@@ -492,10 +479,10 @@
             // _tabControlCamera
             // 
             this._tabControlCamera.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._tabControlCamera.Location = new System.Drawing.Point(0, 143);
+            this._tabControlCamera.Location = new System.Drawing.Point(0, 141);
             this._tabControlCamera.Name = "_tabControlCamera";
             this._tabControlCamera.SelectedTabPage = this._tabCamera4;
-            this._tabControlCamera.Size = new System.Drawing.Size(1311, 691);
+            this._tabControlCamera.Size = new System.Drawing.Size(1311, 693);
             this._tabControlCamera.TabIndex = 8;
             this._tabControlCamera.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this._tabCamera4,
@@ -510,7 +497,7 @@
             this._tabCamera4.Controls.Add(this.panelControl1);
             this._tabCamera4.Controls.Add(this._gridControlScore4);
             this._tabCamera4.Name = "_tabCamera4";
-            this._tabCamera4.Size = new System.Drawing.Size(1305, 663);
+            this._tabCamera4.Size = new System.Drawing.Size(1305, 665);
             this._tabCamera4.Text = "Bắn bia số 4";
             // 
             // panelControl4
@@ -520,165 +507,173 @@
             this.panelControl4.Controls.Add(this.xtraScrollableControl1);
             this.panelControl4.Location = new System.Drawing.Point(4, 3);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(176, 623);
+            this.panelControl4.Size = new System.Drawing.Size(176, 625);
             this.panelControl4.TabIndex = 12;
             // 
             // xtraScrollableControl1
             // 
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera41);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe41);
             this.xtraScrollableControl1.Controls.Add(this._lblName41);
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera42);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe42);
             this.xtraScrollableControl1.Controls.Add(this._lblName42);
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera43);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe43);
             this.xtraScrollableControl1.Controls.Add(this._lblName43);
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera44);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe44);
             this.xtraScrollableControl1.Controls.Add(this._lblName44);
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera45);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe45);
             this.xtraScrollableControl1.Controls.Add(this._lblName45);
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera46);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe46);
             this.xtraScrollableControl1.Controls.Add(this._lblName46);
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera47);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe47);
             this.xtraScrollableControl1.Controls.Add(this._lblName47);
-            this.xtraScrollableControl1.Controls.Add(this._spcSmallCamera48);
+            this.xtraScrollableControl1.Controls.Add(this._btnLoadCameraBe48);
             this.xtraScrollableControl1.Controls.Add(this._lblName48);
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraScrollableControl1.Location = new System.Drawing.Point(2, 2);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(172, 619);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(172, 621);
             this.xtraScrollableControl1.TabIndex = 5;
             // 
-            // _spcSmallCamera41
+            // _btnLoadCameraBe41
             // 
-            this._spcSmallCamera41.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera41.Location = new System.Drawing.Point(2, 2);
-            this._spcSmallCamera41.Name = "_spcSmallCamera41";
-            this._spcSmallCamera41.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera41.TabIndex = 0;
-            this._spcSmallCamera41.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera41_MouseClick);
+            this._btnLoadCameraBe41.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe41.Location = new System.Drawing.Point(3, 4);
+            this._btnLoadCameraBe41.Name = "_btnLoadCameraBe41";
+            this._btnLoadCameraBe41.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe41.TabIndex = 2;
+            this._btnLoadCameraBe41.Text = "Hiện camera bệ số 1";
+            this._btnLoadCameraBe41.Click += new System.EventHandler(this._btnLoadCameraBe41_Click);
             // 
             // _lblName41
             // 
             this._lblName41.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName41.Location = new System.Drawing.Point(2, 140);
+            this._lblName41.Location = new System.Drawing.Point(3, 84);
             this._lblName41.Name = "_lblName41";
             this._lblName41.Size = new System.Drawing.Size(0, 16);
             this._lblName41.TabIndex = 1;
             // 
-            // _spcSmallCamera42
+            // _btnLoadCameraBe42
             // 
-            this._spcSmallCamera42.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera42.Location = new System.Drawing.Point(2, 170);
-            this._spcSmallCamera42.Name = "_spcSmallCamera42";
-            this._spcSmallCamera42.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera42.TabIndex = 0;
-            this._spcSmallCamera42.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera42_MouseClick);
+            this._btnLoadCameraBe42.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe42.Location = new System.Drawing.Point(3, 114);
+            this._btnLoadCameraBe42.Name = "_btnLoadCameraBe42";
+            this._btnLoadCameraBe42.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe42.TabIndex = 3;
+            this._btnLoadCameraBe42.Text = "Hiện camera bệ số 2";
+            this._btnLoadCameraBe42.Click += new System.EventHandler(this._btnLoadCameraBe42_Click);
             // 
             // _lblName42
             // 
             this._lblName42.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName42.Location = new System.Drawing.Point(2, 310);
+            this._lblName42.Location = new System.Drawing.Point(3, 194);
             this._lblName42.Name = "_lblName42";
             this._lblName42.Size = new System.Drawing.Size(0, 16);
             this._lblName42.TabIndex = 1;
             // 
-            // _spcSmallCamera43
+            // _btnLoadCameraBe43
             // 
-            this._spcSmallCamera43.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera43.Location = new System.Drawing.Point(0, 340);
-            this._spcSmallCamera43.Name = "_spcSmallCamera43";
-            this._spcSmallCamera43.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera43.TabIndex = 0;
-            this._spcSmallCamera43.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera43_MouseClick);
+            this._btnLoadCameraBe43.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe43.Location = new System.Drawing.Point(3, 224);
+            this._btnLoadCameraBe43.Name = "_btnLoadCameraBe43";
+            this._btnLoadCameraBe43.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe43.TabIndex = 4;
+            this._btnLoadCameraBe43.Text = "Hiện camera bệ số 3";
+            this._btnLoadCameraBe43.Click += new System.EventHandler(this._btnLoadCameraBe43_Click);
             // 
             // _lblName43
             // 
             this._lblName43.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName43.Location = new System.Drawing.Point(2, 480);
+            this._lblName43.Location = new System.Drawing.Point(3, 304);
             this._lblName43.Name = "_lblName43";
             this._lblName43.Size = new System.Drawing.Size(0, 16);
             this._lblName43.TabIndex = 1;
             // 
-            // _spcSmallCamera44
+            // _btnLoadCameraBe44
             // 
-            this._spcSmallCamera44.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera44.Location = new System.Drawing.Point(2, 510);
-            this._spcSmallCamera44.Name = "_spcSmallCamera44";
-            this._spcSmallCamera44.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera44.TabIndex = 0;
-            this._spcSmallCamera44.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera44_MouseClick);
+            this._btnLoadCameraBe44.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe44.Location = new System.Drawing.Point(3, 334);
+            this._btnLoadCameraBe44.Name = "_btnLoadCameraBe44";
+            this._btnLoadCameraBe44.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe44.TabIndex = 5;
+            this._btnLoadCameraBe44.Text = "Hiện camera bệ số 4";
+            this._btnLoadCameraBe44.Click += new System.EventHandler(this._btnLoadCameraBe44_Click);
             // 
             // _lblName44
             // 
             this._lblName44.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName44.Location = new System.Drawing.Point(2, 650);
+            this._lblName44.Location = new System.Drawing.Point(3, 414);
             this._lblName44.Name = "_lblName44";
             this._lblName44.Size = new System.Drawing.Size(0, 16);
             this._lblName44.TabIndex = 1;
             // 
-            // _spcSmallCamera45
+            // _btnLoadCameraBe45
             // 
-            this._spcSmallCamera45.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera45.Location = new System.Drawing.Point(2, 680);
-            this._spcSmallCamera45.Name = "_spcSmallCamera45";
-            this._spcSmallCamera45.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera45.TabIndex = 0;
-            this._spcSmallCamera45.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera45_MouseClick);
+            this._btnLoadCameraBe45.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe45.Location = new System.Drawing.Point(3, 444);
+            this._btnLoadCameraBe45.Name = "_btnLoadCameraBe45";
+            this._btnLoadCameraBe45.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe45.TabIndex = 6;
+            this._btnLoadCameraBe45.Text = "Hiện camera bệ số 5";
+            this._btnLoadCameraBe45.Click += new System.EventHandler(this._btnLoadCameraBe45_Click);
             // 
             // _lblName45
             // 
             this._lblName45.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName45.Location = new System.Drawing.Point(2, 820);
+            this._lblName45.Location = new System.Drawing.Point(3, 524);
             this._lblName45.Name = "_lblName45";
             this._lblName45.Size = new System.Drawing.Size(0, 16);
             this._lblName45.TabIndex = 1;
             // 
-            // _spcSmallCamera46
+            // _btnLoadCameraBe46
             // 
-            this._spcSmallCamera46.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera46.Location = new System.Drawing.Point(2, 850);
-            this._spcSmallCamera46.Name = "_spcSmallCamera46";
-            this._spcSmallCamera46.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera46.TabIndex = 0;
-            this._spcSmallCamera46.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera46_MouseClick);
+            this._btnLoadCameraBe46.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe46.Location = new System.Drawing.Point(3, 554);
+            this._btnLoadCameraBe46.Name = "_btnLoadCameraBe46";
+            this._btnLoadCameraBe46.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe46.TabIndex = 7;
+            this._btnLoadCameraBe46.Text = "Hiện camera bệ số 6";
+            this._btnLoadCameraBe46.Click += new System.EventHandler(this._btnLoadCameraBe46_Click);
             // 
             // _lblName46
             // 
             this._lblName46.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
-            this._lblName46.Location = new System.Drawing.Point(2, 990);
+            this._lblName46.Location = new System.Drawing.Point(3, 634);
             this._lblName46.Name = "_lblName46";
             this._lblName46.Size = new System.Drawing.Size(0, 16);
             this._lblName46.TabIndex = 1;
             // 
-            // _spcSmallCamera47
+            // _btnLoadCameraBe47
             // 
-            this._spcSmallCamera47.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera47.Location = new System.Drawing.Point(2, 1020);
-            this._spcSmallCamera47.Name = "_spcSmallCamera47";
-            this._spcSmallCamera47.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera47.TabIndex = 0;
-            this._spcSmallCamera47.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera47_MouseClick);
+            this._btnLoadCameraBe47.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe47.Location = new System.Drawing.Point(3, 664);
+            this._btnLoadCameraBe47.Name = "_btnLoadCameraBe47";
+            this._btnLoadCameraBe47.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe47.TabIndex = 8;
+            this._btnLoadCameraBe47.Text = "Hiện camera bệ số 7";
+            this._btnLoadCameraBe47.Click += new System.EventHandler(this._btnLoadCameraBe47_Click);
             // 
             // _lblName47
             // 
             this._lblName47.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName47.Location = new System.Drawing.Point(2, 1160);
+            this._lblName47.Location = new System.Drawing.Point(3, 744);
             this._lblName47.Name = "_lblName47";
             this._lblName47.Size = new System.Drawing.Size(0, 16);
             this._lblName47.TabIndex = 1;
             // 
-            // _spcSmallCamera48
+            // _btnLoadCameraBe48
             // 
-            this._spcSmallCamera48.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera48.Location = new System.Drawing.Point(2, 1190);
-            this._spcSmallCamera48.Name = "_spcSmallCamera48";
-            this._spcSmallCamera48.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera48.TabIndex = 0;
-            this._spcSmallCamera48.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera48_MouseClick);
+            this._btnLoadCameraBe48.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe48.Location = new System.Drawing.Point(3, 774);
+            this._btnLoadCameraBe48.Name = "_btnLoadCameraBe48";
+            this._btnLoadCameraBe48.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe48.TabIndex = 9;
+            this._btnLoadCameraBe48.Text = "Hiện camera bệ số 8";
+            this._btnLoadCameraBe48.Click += new System.EventHandler(this._btnLoadCameraBe48_Click);
             // 
             // _lblName48
             // 
             this._lblName48.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName48.Location = new System.Drawing.Point(2, 1330);
+            this._lblName48.Location = new System.Drawing.Point(3, 854);
             this._lblName48.Name = "_lblName48";
             this._lblName48.Size = new System.Drawing.Size(0, 16);
             this._lblName48.TabIndex = 1;
@@ -695,7 +690,7 @@
             this._panCam4.Controls.Add(this._ptbCamera);
             this._panCam4.Location = new System.Drawing.Point(182, 3);
             this._panCam4.Name = "_panCam4";
-            this._panCam4.Size = new System.Drawing.Size(567, 627);
+            this._panCam4.Size = new System.Drawing.Size(567, 629);
             this._panCam4.TabIndex = 4;
             // 
             // _transpCtrl4
@@ -706,9 +701,8 @@
             this._transpCtrl4.Location = new System.Drawing.Point(2, 2);
             this._transpCtrl4.Name = "_transpCtrl4";
             this._transpCtrl4.Opacity = 100;
-            this._transpCtrl4.Size = new System.Drawing.Size(563, 623);
+            this._transpCtrl4.Size = new System.Drawing.Size(563, 625);
             this._transpCtrl4.TabIndex = 3;
-            this._transpCtrl4.Text = "transpCtrl1";
             this._transpCtrl4.MouseDown += new System.Windows.Forms.MouseEventHandler(this._transpCtrl4_MouseDown);
             // 
             // _spcCamera4
@@ -716,7 +710,7 @@
             this._spcCamera4.Dock = System.Windows.Forms.DockStyle.Fill;
             this._spcCamera4.Location = new System.Drawing.Point(2, 2);
             this._spcCamera4.Name = "_spcCamera4";
-            this._spcCamera4.Size = new System.Drawing.Size(563, 623);
+            this._spcCamera4.Size = new System.Drawing.Size(563, 625);
             this._spcCamera4.TabIndex = 5;
             // 
             // _ptbCamera
@@ -724,7 +718,7 @@
             this._ptbCamera.Dock = System.Windows.Forms.DockStyle.Fill;
             this._ptbCamera.Location = new System.Drawing.Point(2, 2);
             this._ptbCamera.Name = "_ptbCamera";
-            this._ptbCamera.Size = new System.Drawing.Size(563, 623);
+            this._ptbCamera.Size = new System.Drawing.Size(563, 625);
             this._ptbCamera.TabIndex = 4;
             this._ptbCamera.TabStop = false;
             // 
@@ -783,7 +777,7 @@
             this._gridControlScore4.Location = new System.Drawing.Point(752, 64);
             this._gridControlScore4.MainView = this._gridViewScore4;
             this._gridControlScore4.Name = "_gridControlScore4";
-            this._gridControlScore4.Size = new System.Drawing.Size(550, 565);
+            this._gridControlScore4.Size = new System.Drawing.Size(550, 567);
             this._gridControlScore4.TabIndex = 3;
             this._gridControlScore4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this._gridViewScore4});
@@ -803,8 +797,186 @@
             this._tabCamera7.Controls.Add(this.panelControl2);
             this._tabCamera7.Controls.Add(this._gridControlScore7);
             this._tabCamera7.Name = "_tabCamera7";
-            this._tabCamera7.Size = new System.Drawing.Size(1305, 663);
+            this._tabCamera7.Size = new System.Drawing.Size(1305, 665);
             this._tabCamera7.Text = "Bắn bia số 7";
+            // 
+            // panelControl5
+            // 
+            this.panelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControl5.Controls.Add(this.xtraScrollableControl2);
+            this.panelControl5.Location = new System.Drawing.Point(4, 3);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(176, 623);
+            this.panelControl5.TabIndex = 13;
+            // 
+            // xtraScrollableControl2
+            // 
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe71);
+            this.xtraScrollableControl2.Controls.Add(this._lblName71);
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe72);
+            this.xtraScrollableControl2.Controls.Add(this._lblName72);
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe73);
+            this.xtraScrollableControl2.Controls.Add(this._lblName73);
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe74);
+            this.xtraScrollableControl2.Controls.Add(this._lblName74);
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe75);
+            this.xtraScrollableControl2.Controls.Add(this._lblName75);
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe76);
+            this.xtraScrollableControl2.Controls.Add(this._lblName76);
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe77);
+            this.xtraScrollableControl2.Controls.Add(this._lblName77);
+            this.xtraScrollableControl2.Controls.Add(this._btnLoadCameraBe78);
+            this.xtraScrollableControl2.Controls.Add(this._lblName78);
+            this.xtraScrollableControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl2.Location = new System.Drawing.Point(2, 2);
+            this.xtraScrollableControl2.Name = "xtraScrollableControl2";
+            this.xtraScrollableControl2.Size = new System.Drawing.Size(172, 619);
+            this.xtraScrollableControl2.TabIndex = 5;
+            // 
+            // _btnLoadCameraBe71
+            // 
+            this._btnLoadCameraBe71.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe71.Location = new System.Drawing.Point(3, 4);
+            this._btnLoadCameraBe71.Name = "_btnLoadCameraBe71";
+            this._btnLoadCameraBe71.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe71.TabIndex = 3;
+            this._btnLoadCameraBe71.Text = "Hiện camera bệ số 1";
+            this._btnLoadCameraBe71.Click += new System.EventHandler(this._btnLoadCameraBe71_Click);
+            // 
+            // _lblName71
+            // 
+            this._lblName71.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName71.Location = new System.Drawing.Point(3, 84);
+            this._lblName71.Name = "_lblName71";
+            this._lblName71.Size = new System.Drawing.Size(0, 16);
+            this._lblName71.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe72
+            // 
+            this._btnLoadCameraBe72.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe72.Location = new System.Drawing.Point(3, 114);
+            this._btnLoadCameraBe72.Name = "_btnLoadCameraBe72";
+            this._btnLoadCameraBe72.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe72.TabIndex = 4;
+            this._btnLoadCameraBe72.Text = "Hiện camera bệ số 2";
+            this._btnLoadCameraBe72.Click += new System.EventHandler(this._btnLoadCameraBe72_Click);
+            // 
+            // _lblName72
+            // 
+            this._lblName72.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName72.Location = new System.Drawing.Point(3, 194);
+            this._lblName72.Name = "_lblName72";
+            this._lblName72.Size = new System.Drawing.Size(0, 16);
+            this._lblName72.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe73
+            // 
+            this._btnLoadCameraBe73.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe73.Location = new System.Drawing.Point(3, 224);
+            this._btnLoadCameraBe73.Name = "_btnLoadCameraBe73";
+            this._btnLoadCameraBe73.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe73.TabIndex = 5;
+            this._btnLoadCameraBe73.Text = "Hiện camera bệ số 3";
+            this._btnLoadCameraBe73.Click += new System.EventHandler(this._btnLoadCameraBe73_Click);
+            // 
+            // _lblName73
+            // 
+            this._lblName73.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName73.Location = new System.Drawing.Point(3, 304);
+            this._lblName73.Name = "_lblName73";
+            this._lblName73.Size = new System.Drawing.Size(0, 16);
+            this._lblName73.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe74
+            // 
+            this._btnLoadCameraBe74.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe74.Location = new System.Drawing.Point(3, 334);
+            this._btnLoadCameraBe74.Name = "_btnLoadCameraBe74";
+            this._btnLoadCameraBe74.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe74.TabIndex = 6;
+            this._btnLoadCameraBe74.Text = "Hiện camera bệ số 4";
+            this._btnLoadCameraBe74.Click += new System.EventHandler(this._btnLoadCameraBe74_Click);
+            // 
+            // _lblName74
+            // 
+            this._lblName74.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName74.Location = new System.Drawing.Point(3, 414);
+            this._lblName74.Name = "_lblName74";
+            this._lblName74.Size = new System.Drawing.Size(0, 16);
+            this._lblName74.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe75
+            // 
+            this._btnLoadCameraBe75.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe75.Location = new System.Drawing.Point(3, 444);
+            this._btnLoadCameraBe75.Name = "_btnLoadCameraBe75";
+            this._btnLoadCameraBe75.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe75.TabIndex = 7;
+            this._btnLoadCameraBe75.Text = "Hiện camera bệ số 5";
+            this._btnLoadCameraBe75.Click += new System.EventHandler(this._btnLoadCameraBe75_Click);
+            // 
+            // _lblName75
+            // 
+            this._lblName75.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName75.Location = new System.Drawing.Point(3, 524);
+            this._lblName75.Name = "_lblName75";
+            this._lblName75.Size = new System.Drawing.Size(0, 16);
+            this._lblName75.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe76
+            // 
+            this._btnLoadCameraBe76.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe76.Location = new System.Drawing.Point(3, 554);
+            this._btnLoadCameraBe76.Name = "_btnLoadCameraBe76";
+            this._btnLoadCameraBe76.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe76.TabIndex = 8;
+            this._btnLoadCameraBe76.Text = "Hiện camera bệ số 6";
+            this._btnLoadCameraBe76.Click += new System.EventHandler(this._btnLoadCameraBe76_Click);
+            // 
+            // _lblName76
+            // 
+            this._lblName76.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
+            this._lblName76.Location = new System.Drawing.Point(3, 634);
+            this._lblName76.Name = "_lblName76";
+            this._lblName76.Size = new System.Drawing.Size(0, 16);
+            this._lblName76.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe77
+            // 
+            this._btnLoadCameraBe77.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe77.Location = new System.Drawing.Point(3, 664);
+            this._btnLoadCameraBe77.Name = "_btnLoadCameraBe77";
+            this._btnLoadCameraBe77.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe77.TabIndex = 9;
+            this._btnLoadCameraBe77.Text = "Hiện camera bệ số 7";
+            this._btnLoadCameraBe77.Click += new System.EventHandler(this._btnLoadCameraBe77_Click);
+            // 
+            // _lblName77
+            // 
+            this._lblName77.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName77.Location = new System.Drawing.Point(3, 744);
+            this._lblName77.Name = "_lblName77";
+            this._lblName77.Size = new System.Drawing.Size(0, 16);
+            this._lblName77.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe78
+            // 
+            this._btnLoadCameraBe78.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe78.Location = new System.Drawing.Point(3, 774);
+            this._btnLoadCameraBe78.Name = "_btnLoadCameraBe78";
+            this._btnLoadCameraBe78.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe78.TabIndex = 10;
+            this._btnLoadCameraBe78.Text = "Hiện camera bệ số 8";
+            this._btnLoadCameraBe78.Click += new System.EventHandler(this._btnLoadCameraBe78_Click);
+            // 
+            // _lblName78
+            // 
+            this._lblName78.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName78.Location = new System.Drawing.Point(3, 854);
+            this._lblName78.Name = "_lblName78";
+            this._lblName78.Size = new System.Drawing.Size(0, 16);
+            this._lblName78.TabIndex = 1;
             // 
             // _panCam7
             // 
@@ -832,6 +1004,14 @@
             this._transpCtrl7.TabIndex = 3;
             this._transpCtrl7.Text = "transpCtrl1";
             this._transpCtrl7.MouseDown += new System.Windows.Forms.MouseEventHandler(this._transpCtrl7_MouseDown);
+            // 
+            // _spcCamera7
+            // 
+            this._spcCamera7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._spcCamera7.Location = new System.Drawing.Point(2, 2);
+            this._spcCamera7.Name = "_spcCamera7";
+            this._spcCamera7.Size = new System.Drawing.Size(563, 623);
+            this._spcCamera7.TabIndex = 6;
             // 
             // panelControl2
             // 
@@ -908,8 +1088,186 @@
             this._tabCamera8.Controls.Add(this.panelControl3);
             this._tabCamera8.Controls.Add(this._gridControlScore8);
             this._tabCamera8.Name = "_tabCamera8";
-            this._tabCamera8.Size = new System.Drawing.Size(1305, 663);
+            this._tabCamera8.Size = new System.Drawing.Size(1305, 665);
             this._tabCamera8.Text = "Bắn bia số 8";
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControl6.Controls.Add(this.xtraScrollableControl3);
+            this.panelControl6.Location = new System.Drawing.Point(4, 3);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(176, 623);
+            this.panelControl6.TabIndex = 14;
+            // 
+            // xtraScrollableControl3
+            // 
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe81);
+            this.xtraScrollableControl3.Controls.Add(this._lblName81);
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe82);
+            this.xtraScrollableControl3.Controls.Add(this._lblName82);
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe83);
+            this.xtraScrollableControl3.Controls.Add(this._lblName83);
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe84);
+            this.xtraScrollableControl3.Controls.Add(this._lblName84);
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe85);
+            this.xtraScrollableControl3.Controls.Add(this._lblName85);
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe86);
+            this.xtraScrollableControl3.Controls.Add(this._lblName86);
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe87);
+            this.xtraScrollableControl3.Controls.Add(this._lblName87);
+            this.xtraScrollableControl3.Controls.Add(this._btnLoadCameraBe88);
+            this.xtraScrollableControl3.Controls.Add(this._lblName88);
+            this.xtraScrollableControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraScrollableControl3.Location = new System.Drawing.Point(2, 2);
+            this.xtraScrollableControl3.Name = "xtraScrollableControl3";
+            this.xtraScrollableControl3.Size = new System.Drawing.Size(172, 619);
+            this.xtraScrollableControl3.TabIndex = 5;
+            // 
+            // _btnLoadCameraBe81
+            // 
+            this._btnLoadCameraBe81.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe81.Location = new System.Drawing.Point(3, 4);
+            this._btnLoadCameraBe81.Name = "_btnLoadCameraBe81";
+            this._btnLoadCameraBe81.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe81.TabIndex = 4;
+            this._btnLoadCameraBe81.Text = "Hiện camera bệ số 1";
+            this._btnLoadCameraBe81.Click += new System.EventHandler(this._btnLoadCameraBe81_Click);
+            // 
+            // _lblName81
+            // 
+            this._lblName81.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName81.Location = new System.Drawing.Point(3, 84);
+            this._lblName81.Name = "_lblName81";
+            this._lblName81.Size = new System.Drawing.Size(0, 16);
+            this._lblName81.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe82
+            // 
+            this._btnLoadCameraBe82.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe82.Location = new System.Drawing.Point(3, 114);
+            this._btnLoadCameraBe82.Name = "_btnLoadCameraBe82";
+            this._btnLoadCameraBe82.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe82.TabIndex = 5;
+            this._btnLoadCameraBe82.Text = "Hiện camera bệ số 2";
+            this._btnLoadCameraBe82.Click += new System.EventHandler(this._btnLoadCameraBe82_Click);
+            // 
+            // _lblName82
+            // 
+            this._lblName82.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName82.Location = new System.Drawing.Point(3, 194);
+            this._lblName82.Name = "_lblName82";
+            this._lblName82.Size = new System.Drawing.Size(0, 16);
+            this._lblName82.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe83
+            // 
+            this._btnLoadCameraBe83.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe83.Location = new System.Drawing.Point(3, 224);
+            this._btnLoadCameraBe83.Name = "_btnLoadCameraBe83";
+            this._btnLoadCameraBe83.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe83.TabIndex = 6;
+            this._btnLoadCameraBe83.Text = "Hiện camera bệ số 3";
+            this._btnLoadCameraBe83.Click += new System.EventHandler(this._btnLoadCameraBe83_Click);
+            // 
+            // _lblName83
+            // 
+            this._lblName83.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName83.Location = new System.Drawing.Point(3, 304);
+            this._lblName83.Name = "_lblName83";
+            this._lblName83.Size = new System.Drawing.Size(0, 16);
+            this._lblName83.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe84
+            // 
+            this._btnLoadCameraBe84.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe84.Location = new System.Drawing.Point(3, 334);
+            this._btnLoadCameraBe84.Name = "_btnLoadCameraBe84";
+            this._btnLoadCameraBe84.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe84.TabIndex = 7;
+            this._btnLoadCameraBe84.Text = "Hiện camera bệ số 4";
+            this._btnLoadCameraBe84.Click += new System.EventHandler(this._btnLoadCameraBe84_Click);
+            // 
+            // _lblName84
+            // 
+            this._lblName84.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName84.Location = new System.Drawing.Point(3, 414);
+            this._lblName84.Name = "_lblName84";
+            this._lblName84.Size = new System.Drawing.Size(0, 16);
+            this._lblName84.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe85
+            // 
+            this._btnLoadCameraBe85.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe85.Location = new System.Drawing.Point(3, 444);
+            this._btnLoadCameraBe85.Name = "_btnLoadCameraBe85";
+            this._btnLoadCameraBe85.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe85.TabIndex = 8;
+            this._btnLoadCameraBe85.Text = "Hiện camera bệ số 5";
+            this._btnLoadCameraBe85.Click += new System.EventHandler(this._btnLoadCameraBe85_Click);
+            // 
+            // _lblName85
+            // 
+            this._lblName85.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName85.Location = new System.Drawing.Point(3, 524);
+            this._lblName85.Name = "_lblName85";
+            this._lblName85.Size = new System.Drawing.Size(0, 16);
+            this._lblName85.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe86
+            // 
+            this._btnLoadCameraBe86.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe86.Location = new System.Drawing.Point(3, 554);
+            this._btnLoadCameraBe86.Name = "_btnLoadCameraBe86";
+            this._btnLoadCameraBe86.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe86.TabIndex = 9;
+            this._btnLoadCameraBe86.Text = "Hiện camera bệ số 6";
+            this._btnLoadCameraBe86.Click += new System.EventHandler(this._btnLoadCameraBe86_Click);
+            // 
+            // _lblName86
+            // 
+            this._lblName86.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
+            this._lblName86.Location = new System.Drawing.Point(3, 634);
+            this._lblName86.Name = "_lblName86";
+            this._lblName86.Size = new System.Drawing.Size(0, 16);
+            this._lblName86.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe87
+            // 
+            this._btnLoadCameraBe87.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe87.Location = new System.Drawing.Point(3, 664);
+            this._btnLoadCameraBe87.Name = "_btnLoadCameraBe87";
+            this._btnLoadCameraBe87.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe87.TabIndex = 10;
+            this._btnLoadCameraBe87.Text = "Hiện camera bệ số 7";
+            this._btnLoadCameraBe87.Click += new System.EventHandler(this._btnLoadCameraBe87_Click);
+            // 
+            // _lblName87
+            // 
+            this._lblName87.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName87.Location = new System.Drawing.Point(3, 744);
+            this._lblName87.Name = "_lblName87";
+            this._lblName87.Size = new System.Drawing.Size(0, 16);
+            this._lblName87.TabIndex = 1;
+            // 
+            // _btnLoadCameraBe88
+            // 
+            this._btnLoadCameraBe88.Image = global::ChamDiem.Properties.Resources.camera;
+            this._btnLoadCameraBe88.Location = new System.Drawing.Point(3, 774);
+            this._btnLoadCameraBe88.Name = "_btnLoadCameraBe88";
+            this._btnLoadCameraBe88.Size = new System.Drawing.Size(149, 68);
+            this._btnLoadCameraBe88.TabIndex = 11;
+            this._btnLoadCameraBe88.Text = "Hiện camera bệ số 8";
+            this._btnLoadCameraBe88.Click += new System.EventHandler(this._btnLoadCameraBe88_Click);
+            // 
+            // _lblName88
+            // 
+            this._lblName88.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this._lblName88.Location = new System.Drawing.Point(3, 854);
+            this._lblName88.Name = "_lblName88";
+            this._lblName88.Size = new System.Drawing.Size(0, 16);
+            this._lblName88.TabIndex = 1;
             // 
             // _panCam8
             // 
@@ -937,6 +1295,14 @@
             this._transpCtrl8.TabIndex = 3;
             this._transpCtrl8.Text = "transpCtrl1";
             this._transpCtrl8.MouseDown += new System.Windows.Forms.MouseEventHandler(this._transpCtrl8_MouseDown);
+            // 
+            // _spcCamera8
+            // 
+            this._spcCamera8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._spcCamera8.Location = new System.Drawing.Point(2, 2);
+            this._spcCamera8.Name = "_spcCamera8";
+            this._spcCamera8.Size = new System.Drawing.Size(563, 623);
+            this._spcCamera8.TabIndex = 7;
             // 
             // panelControl3
             // 
@@ -1005,375 +1371,15 @@
             this._gridViewScore8.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             this._gridViewScore8.OptionsView.ShowGroupPanel = false;
             // 
-            // panelControl5
-            // 
-            this.panelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl5.Controls.Add(this.xtraScrollableControl2);
-            this.panelControl5.Location = new System.Drawing.Point(4, 3);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(176, 623);
-            this.panelControl5.TabIndex = 13;
-            // 
-            // xtraScrollableControl2
-            // 
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera71);
-            this.xtraScrollableControl2.Controls.Add(this._lblName71);
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera72);
-            this.xtraScrollableControl2.Controls.Add(this._lblName72);
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera73);
-            this.xtraScrollableControl2.Controls.Add(this._lblName73);
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera74);
-            this.xtraScrollableControl2.Controls.Add(this._lblName74);
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera75);
-            this.xtraScrollableControl2.Controls.Add(this._lblName75);
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera76);
-            this.xtraScrollableControl2.Controls.Add(this._lblName76);
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera77);
-            this.xtraScrollableControl2.Controls.Add(this._lblName77);
-            this.xtraScrollableControl2.Controls.Add(this._spcSmallCamera78);
-            this.xtraScrollableControl2.Controls.Add(this._lblName78);
-            this.xtraScrollableControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraScrollableControl2.Location = new System.Drawing.Point(2, 2);
-            this.xtraScrollableControl2.Name = "xtraScrollableControl2";
-            this.xtraScrollableControl2.Size = new System.Drawing.Size(172, 619);
-            this.xtraScrollableControl2.TabIndex = 5;
-            // 
-            // _spcSmallCamera71
-            // 
-            this._spcSmallCamera71.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera71.Location = new System.Drawing.Point(2, 2);
-            this._spcSmallCamera71.Name = "_spcSmallCamera71";
-            this._spcSmallCamera71.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera71.TabIndex = 0;
-            this._spcSmallCamera71.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera71_MouseClick);
-            // 
-            // _lblName71
-            // 
-            this._lblName71.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName71.Location = new System.Drawing.Point(2, 140);
-            this._lblName71.Name = "_lblName71";
-            this._lblName71.Size = new System.Drawing.Size(0, 16);
-            this._lblName71.TabIndex = 1;
-            // 
-            // _spcSmallCamera72
-            // 
-            this._spcSmallCamera72.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera72.Location = new System.Drawing.Point(2, 170);
-            this._spcSmallCamera72.Name = "_spcSmallCamera72";
-            this._spcSmallCamera72.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera72.TabIndex = 0;
-            this._spcSmallCamera72.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera72_MouseClick);
-            // 
-            // _lblName72
-            // 
-            this._lblName72.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName72.Location = new System.Drawing.Point(2, 310);
-            this._lblName72.Name = "_lblName72";
-            this._lblName72.Size = new System.Drawing.Size(0, 16);
-            this._lblName72.TabIndex = 1;
-            // 
-            // _spcSmallCamera73
-            // 
-            this._spcSmallCamera73.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera73.Location = new System.Drawing.Point(0, 340);
-            this._spcSmallCamera73.Name = "_spcSmallCamera73";
-            this._spcSmallCamera73.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera73.TabIndex = 0;
-            this._spcSmallCamera73.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera73_MouseClick);
-            // 
-            // _lblName73
-            // 
-            this._lblName73.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName73.Location = new System.Drawing.Point(2, 480);
-            this._lblName73.Name = "_lblName73";
-            this._lblName73.Size = new System.Drawing.Size(0, 16);
-            this._lblName73.TabIndex = 1;
-            // 
-            // _spcSmallCamera74
-            // 
-            this._spcSmallCamera74.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera74.Location = new System.Drawing.Point(2, 510);
-            this._spcSmallCamera74.Name = "_spcSmallCamera74";
-            this._spcSmallCamera74.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera74.TabIndex = 0;
-            this._spcSmallCamera74.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera74_MouseClick);
-            // 
-            // _lblName74
-            // 
-            this._lblName74.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName74.Location = new System.Drawing.Point(2, 650);
-            this._lblName74.Name = "_lblName74";
-            this._lblName74.Size = new System.Drawing.Size(0, 16);
-            this._lblName74.TabIndex = 1;
-            // 
-            // _spcSmallCamera75
-            // 
-            this._spcSmallCamera75.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera75.Location = new System.Drawing.Point(2, 680);
-            this._spcSmallCamera75.Name = "_spcSmallCamera75";
-            this._spcSmallCamera75.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera75.TabIndex = 0;
-            this._spcSmallCamera75.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera75_MouseClick);
-            // 
-            // _lblName75
-            // 
-            this._lblName75.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName75.Location = new System.Drawing.Point(2, 820);
-            this._lblName75.Name = "_lblName75";
-            this._lblName75.Size = new System.Drawing.Size(0, 16);
-            this._lblName75.TabIndex = 1;
-            // 
-            // _spcSmallCamera76
-            // 
-            this._spcSmallCamera76.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera76.Location = new System.Drawing.Point(2, 850);
-            this._spcSmallCamera76.Name = "_spcSmallCamera76";
-            this._spcSmallCamera76.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera76.TabIndex = 0;
-            this._spcSmallCamera76.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera76_MouseClick);
-            // 
-            // _lblName76
-            // 
-            this._lblName76.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
-            this._lblName76.Location = new System.Drawing.Point(2, 990);
-            this._lblName76.Name = "_lblName76";
-            this._lblName76.Size = new System.Drawing.Size(0, 16);
-            this._lblName76.TabIndex = 1;
-            // 
-            // _spcSmallCamera77
-            // 
-            this._spcSmallCamera77.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera77.Location = new System.Drawing.Point(2, 1020);
-            this._spcSmallCamera77.Name = "_spcSmallCamera77";
-            this._spcSmallCamera77.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera77.TabIndex = 0;
-            this._spcSmallCamera77.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera77_MouseClick);
-            // 
-            // _lblName77
-            // 
-            this._lblName77.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName77.Location = new System.Drawing.Point(2, 1160);
-            this._lblName77.Name = "_lblName77";
-            this._lblName77.Size = new System.Drawing.Size(0, 16);
-            this._lblName77.TabIndex = 1;
-            // 
-            // _spcSmallCamera78
-            // 
-            this._spcSmallCamera78.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera78.Location = new System.Drawing.Point(2, 1190);
-            this._spcSmallCamera78.Name = "_spcSmallCamera78";
-            this._spcSmallCamera78.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera78.TabIndex = 0;
-            this._spcSmallCamera78.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera78_MouseClick);
-            // 
-            // _lblName78
-            // 
-            this._lblName78.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName78.Location = new System.Drawing.Point(2, 1330);
-            this._lblName78.Name = "_lblName78";
-            this._lblName78.Size = new System.Drawing.Size(0, 16);
-            this._lblName78.TabIndex = 1;
-            // 
-            // _spcCamera7
-            // 
-            this._spcCamera7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._spcCamera7.Location = new System.Drawing.Point(2, 2);
-            this._spcCamera7.Name = "_spcCamera7";
-            this._spcCamera7.Size = new System.Drawing.Size(563, 623);
-            this._spcCamera7.TabIndex = 6;
-            // 
-            // panelControl6
-            // 
-            this.panelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl6.Controls.Add(this.xtraScrollableControl3);
-            this.panelControl6.Location = new System.Drawing.Point(4, 3);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(176, 623);
-            this.panelControl6.TabIndex = 14;
-            // 
-            // xtraScrollableControl3
-            // 
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera81);
-            this.xtraScrollableControl3.Controls.Add(this._lblName81);
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera82);
-            this.xtraScrollableControl3.Controls.Add(this._lblName82);
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera83);
-            this.xtraScrollableControl3.Controls.Add(this._lblName83);
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera84);
-            this.xtraScrollableControl3.Controls.Add(this._lblName84);
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera85);
-            this.xtraScrollableControl3.Controls.Add(this._lblName85);
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera86);
-            this.xtraScrollableControl3.Controls.Add(this._lblName86);
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera87);
-            this.xtraScrollableControl3.Controls.Add(this._lblName87);
-            this.xtraScrollableControl3.Controls.Add(this._spcSmallCamera88);
-            this.xtraScrollableControl3.Controls.Add(this._lblName88);
-            this.xtraScrollableControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraScrollableControl3.Location = new System.Drawing.Point(2, 2);
-            this.xtraScrollableControl3.Name = "xtraScrollableControl3";
-            this.xtraScrollableControl3.Size = new System.Drawing.Size(172, 619);
-            this.xtraScrollableControl3.TabIndex = 5;
-            // 
-            // _spcSmallCamera81
-            // 
-            this._spcSmallCamera81.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera81.Location = new System.Drawing.Point(2, 2);
-            this._spcSmallCamera81.Name = "_spcSmallCamera81";
-            this._spcSmallCamera81.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera81.TabIndex = 0;
-            this._spcSmallCamera81.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera81_MouseClick);
-            // 
-            // _lblName81
-            // 
-            this._lblName81.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName81.Location = new System.Drawing.Point(2, 140);
-            this._lblName81.Name = "_lblName81";
-            this._lblName81.Size = new System.Drawing.Size(0, 16);
-            this._lblName81.TabIndex = 1;
-            // 
-            // _spcSmallCamera82
-            // 
-            this._spcSmallCamera82.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera82.Location = new System.Drawing.Point(2, 170);
-            this._spcSmallCamera82.Name = "_spcSmallCamera82";
-            this._spcSmallCamera82.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera82.TabIndex = 0;
-            this._spcSmallCamera82.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera82_MouseClick);
-            // 
-            // _lblName82
-            // 
-            this._lblName82.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName82.Location = new System.Drawing.Point(2, 310);
-            this._lblName82.Name = "_lblName82";
-            this._lblName82.Size = new System.Drawing.Size(0, 16);
-            this._lblName82.TabIndex = 1;
-            // 
-            // _spcSmallCamera83
-            // 
-            this._spcSmallCamera83.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera83.Location = new System.Drawing.Point(0, 340);
-            this._spcSmallCamera83.Name = "_spcSmallCamera83";
-            this._spcSmallCamera83.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera83.TabIndex = 0;
-            this._spcSmallCamera83.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera83_MouseClick);
-            // 
-            // _lblName83
-            // 
-            this._lblName83.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName83.Location = new System.Drawing.Point(2, 480);
-            this._lblName83.Name = "_lblName83";
-            this._lblName83.Size = new System.Drawing.Size(0, 16);
-            this._lblName83.TabIndex = 1;
-            // 
-            // _spcSmallCamera84
-            // 
-            this._spcSmallCamera84.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera84.Location = new System.Drawing.Point(2, 510);
-            this._spcSmallCamera84.Name = "_spcSmallCamera84";
-            this._spcSmallCamera84.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera84.TabIndex = 0;
-            this._spcSmallCamera84.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera84_MouseClick);
-            // 
-            // _lblName84
-            // 
-            this._lblName84.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName84.Location = new System.Drawing.Point(2, 650);
-            this._lblName84.Name = "_lblName84";
-            this._lblName84.Size = new System.Drawing.Size(0, 16);
-            this._lblName84.TabIndex = 1;
-            // 
-            // _spcSmallCamera85
-            // 
-            this._spcSmallCamera85.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera85.Location = new System.Drawing.Point(2, 680);
-            this._spcSmallCamera85.Name = "_spcSmallCamera85";
-            this._spcSmallCamera85.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera85.TabIndex = 0;
-            this._spcSmallCamera85.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera85_MouseClick);
-            // 
-            // _lblName85
-            // 
-            this._lblName85.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName85.Location = new System.Drawing.Point(2, 820);
-            this._lblName85.Name = "_lblName85";
-            this._lblName85.Size = new System.Drawing.Size(0, 16);
-            this._lblName85.TabIndex = 1;
-            // 
-            // _spcSmallCamera86
-            // 
-            this._spcSmallCamera86.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera86.Location = new System.Drawing.Point(2, 850);
-            this._spcSmallCamera86.Name = "_spcSmallCamera86";
-            this._spcSmallCamera86.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera86.TabIndex = 0;
-            this._spcSmallCamera86.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera86_MouseClick);
-            // 
-            // _lblName86
-            // 
-            this._lblName86.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(14)));
-            this._lblName86.Location = new System.Drawing.Point(2, 990);
-            this._lblName86.Name = "_lblName86";
-            this._lblName86.Size = new System.Drawing.Size(0, 16);
-            this._lblName86.TabIndex = 1;
-            // 
-            // _spcSmallCamera87
-            // 
-            this._spcSmallCamera87.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera87.Location = new System.Drawing.Point(2, 1020);
-            this._spcSmallCamera87.Name = "_spcSmallCamera87";
-            this._spcSmallCamera87.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera87.TabIndex = 0;
-            this._spcSmallCamera87.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera87_MouseClick);
-            // 
-            // _lblName87
-            // 
-            this._lblName87.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName87.Location = new System.Drawing.Point(2, 1160);
-            this._lblName87.Name = "_lblName87";
-            this._lblName87.Size = new System.Drawing.Size(0, 16);
-            this._lblName87.TabIndex = 1;
-            // 
-            // _spcSmallCamera88
-            // 
-            this._spcSmallCamera88.BackColor = System.Drawing.Color.Silver;
-            this._spcSmallCamera88.Location = new System.Drawing.Point(2, 1190);
-            this._spcSmallCamera88.Name = "_spcSmallCamera88";
-            this._spcSmallCamera88.Size = new System.Drawing.Size(150, 126);
-            this._spcSmallCamera88.TabIndex = 0;
-            this._spcSmallCamera88.MouseClick += new System.Windows.Forms.MouseEventHandler(this._spcSmallCamera88_MouseClick);
-            // 
-            // _lblName88
-            // 
-            this._lblName88.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this._lblName88.Location = new System.Drawing.Point(2, 1330);
-            this._lblName88.Name = "_lblName88";
-            this._lblName88.Size = new System.Drawing.Size(0, 16);
-            this._lblName88.TabIndex = 1;
-            // 
-            // _spcCamera8
-            // 
-            this._spcCamera8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._spcCamera8.Location = new System.Drawing.Point(2, 2);
-            this._spcCamera8.Name = "_spcCamera8";
-            this._spcCamera8.Size = new System.Drawing.Size(563, 623);
-            this._spcCamera8.TabIndex = 7;
-            // 
             // frmMain
             // 
-            this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1311, 834);
             this.Controls.Add(this._tabControlCamera);
             this.Controls.Add(this.ribbonControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMain";
-            this.Ribbon = this.ribbonControl1;
-            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Chấm điểm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -1395,6 +1401,10 @@
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore4)).EndInit();
             this._tabCamera7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            this.xtraScrollableControl2.ResumeLayout(false);
+            this.xtraScrollableControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._panCam7)).EndInit();
             this._panCam7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -1403,6 +1413,10 @@
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore7)).EndInit();
             this._tabCamera8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
+            this.panelControl6.ResumeLayout(false);
+            this.xtraScrollableControl3.ResumeLayout(false);
+            this.xtraScrollableControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._panCam8)).EndInit();
             this._panCam8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
@@ -1410,14 +1424,6 @@
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this._gridControlScore8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._gridViewScore8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
-            this.xtraScrollableControl2.ResumeLayout(false);
-            this.xtraScrollableControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
-            this.panelControl6.ResumeLayout(false);
-            this.xtraScrollableControl3.ResumeLayout(false);
-            this.xtraScrollableControl3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1492,64 +1498,62 @@
         private DevExpress.XtraBars.BarButtonItem _btnChooseBia8;
         private DevExpress.XtraBars.BarButtonItem _btnChoose3Bia;
         private DevExpress.XtraEditors.LabelControl _lblName41;
-        private WebEye.StreamPlayerControl _spcSmallCamera41;
         private DevExpress.XtraEditors.LabelControl _lblName43;
-        private WebEye.StreamPlayerControl _spcSmallCamera43;
         private DevExpress.XtraEditors.LabelControl _lblName42;
-        private WebEye.StreamPlayerControl _spcSmallCamera42;
         private DevExpress.XtraEditors.LabelControl _lblName44;
-        private WebEye.StreamPlayerControl _spcSmallCamera44;
         private DevExpress.XtraEditors.LabelControl _lblName48;
-        private WebEye.StreamPlayerControl _spcSmallCamera48;
         private DevExpress.XtraEditors.LabelControl _lblName47;
-        private WebEye.StreamPlayerControl _spcSmallCamera47;
         private DevExpress.XtraEditors.LabelControl _lblName46;
-        private WebEye.StreamPlayerControl _spcSmallCamera46;
         private DevExpress.XtraEditors.LabelControl _lblName45;
-        private WebEye.StreamPlayerControl _spcSmallCamera45;
         private DevExpress.XtraBars.BarButtonItem _btnNextTurns;
-        private DevExpress.XtraBars.BarButtonItem _btnBack;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
         private WebEye.StreamPlayerControl _spcCamera4;
-        private DevExpress.XtraEditors.PanelControl panelControl5;
-        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl2;
-        private WebEye.StreamPlayerControl _spcSmallCamera71;
-        private DevExpress.XtraEditors.LabelControl _lblName71;
-        private WebEye.StreamPlayerControl _spcSmallCamera72;
-        private DevExpress.XtraEditors.LabelControl _lblName72;
-        private WebEye.StreamPlayerControl _spcSmallCamera73;
-        private DevExpress.XtraEditors.LabelControl _lblName73;
-        private WebEye.StreamPlayerControl _spcSmallCamera74;
-        private DevExpress.XtraEditors.LabelControl _lblName74;
-        private WebEye.StreamPlayerControl _spcSmallCamera75;
-        private DevExpress.XtraEditors.LabelControl _lblName75;
-        private WebEye.StreamPlayerControl _spcSmallCamera76;
-        private DevExpress.XtraEditors.LabelControl _lblName76;
-        private WebEye.StreamPlayerControl _spcSmallCamera77;
-        private DevExpress.XtraEditors.LabelControl _lblName77;
-        private WebEye.StreamPlayerControl _spcSmallCamera78;
-        private DevExpress.XtraEditors.LabelControl _lblName78;
         private WebEye.StreamPlayerControl _spcCamera7;
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl3;
-        private WebEye.StreamPlayerControl _spcSmallCamera81;
         private DevExpress.XtraEditors.LabelControl _lblName81;
-        private WebEye.StreamPlayerControl _spcSmallCamera82;
         private DevExpress.XtraEditors.LabelControl _lblName82;
-        private WebEye.StreamPlayerControl _spcSmallCamera83;
         private DevExpress.XtraEditors.LabelControl _lblName83;
-        private WebEye.StreamPlayerControl _spcSmallCamera84;
         private DevExpress.XtraEditors.LabelControl _lblName84;
-        private WebEye.StreamPlayerControl _spcSmallCamera85;
         private DevExpress.XtraEditors.LabelControl _lblName85;
-        private WebEye.StreamPlayerControl _spcSmallCamera86;
         private DevExpress.XtraEditors.LabelControl _lblName86;
-        private WebEye.StreamPlayerControl _spcSmallCamera87;
         private DevExpress.XtraEditors.LabelControl _lblName87;
-        private WebEye.StreamPlayerControl _spcSmallCamera88;
         private DevExpress.XtraEditors.LabelControl _lblName88;
         private WebEye.StreamPlayerControl _spcCamera8;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe41;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe42;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe43;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe44;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe45;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe46;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe47;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe48;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe81;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe82;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe83;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe84;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe85;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe86;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe87;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe88;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl2;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe71;
+        private DevExpress.XtraEditors.LabelControl _lblName71;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe72;
+        private DevExpress.XtraEditors.LabelControl _lblName72;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe73;
+        private DevExpress.XtraEditors.LabelControl _lblName73;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe74;
+        private DevExpress.XtraEditors.LabelControl _lblName74;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe75;
+        private DevExpress.XtraEditors.LabelControl _lblName75;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe76;
+        private DevExpress.XtraEditors.LabelControl _lblName76;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe77;
+        private DevExpress.XtraEditors.LabelControl _lblName77;
+        private DevExpress.XtraEditors.SimpleButton _btnLoadCameraBe78;
+        private DevExpress.XtraEditors.LabelControl _lblName78;
     }
 }
-

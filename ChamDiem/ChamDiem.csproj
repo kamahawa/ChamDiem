@@ -52,7 +52,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>M4A1.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -144,13 +145,13 @@
     <Compile Include="Presentation\frmInputCameraUrl.Designer.cs">
       <DependentUpon>frmInputCameraUrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Help\ExcelHelp.cs" />
     <Compile Include="Presentation\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Help\ExcelHelp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\frmAbout.resx">
@@ -159,14 +160,14 @@
     <EmbeddedResource Include="Presentation\frmEditBox.resx">
       <DependentUpon>frmEditBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmInputCameraUrl.resx">
       <DependentUpon>frmInputCameraUrl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -179,7 +180,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\app.manifest" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,7 +202,6 @@
   <ItemGroup>
     <Content Include="libs\FoxLearn.License.dll" />
     <Content Include="libs\WebEye.StreamPlayerControl.dll" />
-    <Content Include="M4A1.ico" />
     <None Include="Resources\table-grid.png" />
     <None Include="Resources\Tong_diem_ban_la.wav" />
     <None Include="Resources\target-icon.png" />
